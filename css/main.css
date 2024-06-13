@@ -1303,7 +1303,7 @@ input::-moz-focus-inner {
 .home-content__text p {
   font-size: 1.8rem;
   line-height: 2;
-  color: rgba(255, 255, 255, 0.3);
+  color: rgb(255, 255, 255);
   margin-top: 6.6rem;
   margin-right: 15%;
 }
@@ -2019,7 +2019,7 @@ html.no-csstransitions .home-content__main {
   width: 100%;
   height: 100%;
   background-color: #111111;
-  color: rgba(255, 255, 255, 0.3);
+  color: rgb(255, 255, 255);
   padding: 21rem 0 9rem;
   overflow-y: auto;
   overflow-x: hidden;
@@ -2032,6 +2032,10 @@ html.no-csstransitions .home-content__main {
   color: #FFFFFF;
   display: inline-block;
   border-bottom: 1px solid transparent;
+}
+
+.s-info h2 {
+  color: #ec008c;
 }
 
 .s-info a:hover,
