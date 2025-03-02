@@ -5,20 +5,17 @@
 
 // Duration.
 	$duration: (
-		menu:				0.45s,
-		transition:			0.2s
+		menu:				0.35s,
+		transition:			0.2s,
+		banner:				2.5s
 	);
 
 // Size.
 	$size: (
 		border-radius:		4px,
-		border-width:		1px,
-		element-height:		3em,
+		element-height:		2.75em,
 		element-margin:		2em,
-		gutter:				2.5em,
-		field-gutter:		2em,
-		inner:				68em,
-		menu:				22em
+		inner:				65em
 	);
 
 // Font.
@@ -26,25 +23,25 @@
 		family:				('Source Sans Pro', Helvetica, sans-serif),
 		family-fixed:		('Courier New', monospace),
 		weight:				300,
-		weight-bold:		900,
-		weight-bold-alt:	700,
-		letter-spacing:		0.35em,
-		letter-spacing-alt:	-0.035em
+		weight-bold:		600,
+		letter-spacing:		0.025em,
+		letter-spacing-alt:	0.25em
 	);
 
 // Palette.
 	$palette: (
-		bg:					#ffffff,
-		bg-accent:			#333333,
-		bg-alt:				#f6f6f6,
-		fg:					#585858,
-		fg-accent:			#ffffff,
-		border:				#c9c9c9,
-		border-bg:			rgba(144,144,144,0.075),
-		accent1:			#f2849e,
-		accent2:			#7ecaf6,
-		accent3:			#7bd0c1,
-		accent4:			#c75b9b,
-		accent5:			#ae85ca,
-		accent6:			#8499e7,
+		bg:					#242943,
+		bg-alt:				#2a2f4a,
+		fg:					#ffffff,
+		fg-bold:			#ffffff,
+		fg-light:			rgba(244,244,255,0.2),
+		border:				rgba(212,212,255,0.1),
+		border-bg:			rgba(212,212,255,0.035),
+		highlight:			#9bf1ff,
+		accent1:			#6fc3df,
+		accent2:			#8d82c4,
+		accent3:			#ec8d81,
+		accent4:			#e7b788,
+		accent5:			#8ea9e8,
+		accent6:			#87c5a4
 	);

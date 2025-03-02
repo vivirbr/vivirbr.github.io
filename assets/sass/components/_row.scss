@@ -1,5 +1,5 @@
 ///
-/// Phantom by HTML5 UP
+/// Forty by HTML5 UP
 /// html5up.net | @ajlkn
 /// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 ///
@@ -14,7 +14,7 @@
 		}
 
 		@include breakpoint('<=large') {
-			@include html-grid(2em, 'large');
+			@include html-grid(1.5em, 'large');
 		}
 
 		@include breakpoint('<=medium') {
@@ -22,10 +22,10 @@
 		}
 
 		@include breakpoint('<=small') {
-			@include html-grid(1em, 'small');
+			@include html-grid(1.25em, 'small');
 		}
 
 		@include breakpoint('<=xsmall') {
-			@include html-grid(1em, 'xsmall');
+			@include html-grid(1.25em, 'xsmall');
 		}
 	}
