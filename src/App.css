@@ -1,0 +1,48 @@
+/* Base styles for Diversa website */
+
+#root {
+  width: 100%;
+  margin: 0 auto;
+}
+
+html, body {
+  scroll-behavior: smooth;
+}
+
+/* Focus states */
+:focus-visible {
+  outline: 2px solid #5A9A8E;
+  outline-offset: 2px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #5A9A8E;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #E85504;
+}
