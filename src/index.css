@@ -2,39 +2,46 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
+/* Diversa Socioenvironmental Consultancy Design System
+Brand Colors: #CD5C08 (orange), #6A9C89 (green), #FFF5E4 (cream)
+Circular theme inspired by logo design
 */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Brand Colors */
+    --diversa-orange: 20 90% 42%;     /* #CD5C08 */
+    --diversa-green: 164 28% 51%;     /* #6A9C89 */
+    --diversa-cream: 44 75% 96%;      /* #FFF5E4 */
+    
+    /* Semantic Colors */
+    --background: 44 75% 96%;         /* Cream background */
+    --foreground: 164 28% 25%;        /* Dark green text */
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 164 28% 25%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 164 28% 25%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 20 90% 42%;            /* Orange primary */
+    --primary-foreground: 44 75% 96%; /* Cream on orange */
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 164 28% 51%;         /* Green secondary */
+    --secondary-foreground: 44 75% 96%; /* Cream on green */
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 44 20% 90%;
+    --muted-foreground: 164 15% 40%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 164 28% 51%;
+    --accent-foreground: 44 75% 96%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 44 75% 96%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 164 15% 85%;
+    --input: 0 0% 100%;
+    --ring: 20 90% 42%;
 
     --radius: 0.5rem;
 
@@ -56,41 +63,41 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 164 28% 15%;
+    --foreground: 44 75% 96%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 164 28% 20%;
+    --card-foreground: 44 75% 96%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 164 28% 20%;
+    --popover-foreground: 44 75% 96%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 20 90% 42%;
+    --primary-foreground: 44 75% 96%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 164 28% 25%;
+    --secondary-foreground: 44 75% 96%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 164 15% 25%;
+    --muted-foreground: 44 20% 70%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 164 28% 25%;
+    --accent-foreground: 44 75% 96%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 44 75% 96%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --border: 164 15% 30%;
+    --input: 164 15% 30%;
+    --ring: 20 90% 42%;
+    --sidebar-background: 164 28% 15%;
+    --sidebar-foreground: 44 75% 96%;
+    --sidebar-primary: 20 90% 42%;
+    --sidebar-primary-foreground: 44 75% 96%;
+    --sidebar-accent: 164 28% 25%;
+    --sidebar-accent-foreground: 44 75% 96%;
+    --sidebar-border: 164 15% 30%;
+    --sidebar-ring: 20 90% 42%;
   }
 }
 
@@ -100,6 +107,42 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-body;
+  }
+
+  /* Circular design elements inspired by logo */
+  .circle-accent {
+    border-radius: 50%;
+  }
+
+  .circle-bg-pattern {
+    background-image: radial-gradient(circle at 20% 50%, hsl(var(--diversa-orange) / 0.1) 0%, transparent 50%),
+                      radial-gradient(circle at 80% 20%, hsl(var(--diversa-green) / 0.1) 0%, transparent 50%);
+  }
+
+  .gradient-primary {
+    background: linear-gradient(135deg, hsl(var(--diversa-orange)), hsl(var(--diversa-green)));
+  }
+
+  .gradient-orange {
+    background: linear-gradient(135deg, hsl(var(--diversa-orange)), hsl(var(--diversa-orange) / 0.8));
+  }
+
+  .gradient-green {
+    background: linear-gradient(135deg, hsl(var(--diversa-green)), hsl(var(--diversa-green) / 0.8));
+  }
+
+  /* Smooth transitions */
+  .transition-smooth {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Custom shadows with brand colors */
+  .shadow-orange {
+    box-shadow: 0 10px 30px -10px hsl(var(--diversa-orange) / 0.3);
+  }
+
+  .shadow-green {
+    box-shadow: 0 10px 30px -10px hsl(var(--diversa-green) / 0.3);
   }
 }

@@ -13,7 +13,17 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        'body': ['Gill Sans', 'sans-serif'],
+        'heading': ['Gill Sans', 'sans-serif'],
+      },
       colors: {
+        /* Brand Colors */
+        'diversa-orange': 'hsl(var(--diversa-orange))',
+        'diversa-green': 'hsl(var(--diversa-green))',
+        'diversa-cream': 'hsl(var(--diversa-cream))',
+        
+        /* Semantic Colors */
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
