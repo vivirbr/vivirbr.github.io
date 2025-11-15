@@ -51,10 +51,10 @@ export const Footer = () => {
             </p>
             <div className="flex space-x-4">
               <a
-                href="mailto:info@diversaconsultancy.com"
+                href="mailto:info@diversa.earth"
                 className="text-muted-foreground hover:text-primary transition-smooth"
               >
-                info@diversaconsultancy.com
+                info@diversa.earth
               </a>
             </div>
           </div>

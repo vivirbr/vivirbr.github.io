@@ -54,7 +54,7 @@ export const Contact = () => {
         `\nMessage:\n${validatedData.message}`
       );
 
-      const mailtoLink = `mailto:info@diversaconsultancy.com?subject=${subject}&body=${body}`;
+      const mailtoLink = `mailto:info@diversa.earth?subject=${subject}&body=${body}`;
       window.location.href = mailtoLink;
 
       // Reset form
@@ -96,8 +96,8 @@ export const Contact = () => {
     {
       icon: Mail,
       title: 'Email',
-      details: 'info@diversaconsultancy.com',
-      action: 'mailto:info@diversaconsultancy.com'
+      details: 'info@diversa.earth',
+      action: 'mailto:info@diversa.earth'
     },
     {
       icon: MapPin,
@@ -109,7 +109,7 @@ export const Contact = () => {
       icon: Phone,
       title: 'Consultation',
       details: 'Schedule a Call',
-      action: 'mailto:info@diversaconsultancy.com?subject=Consultation Request'
+      action: 'mailto:info@diversa.earth?subject=Consultation Request'
     }
   ];
 
