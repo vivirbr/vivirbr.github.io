@@ -25,8 +25,13 @@ export const Navigation = () => {
   const handleLinkClick = (path: string) => {
     setIsOpen(false);
     if (path.startsWith('#')) {
-      const element = document.querySelector(path);
-      element?.scrollIntoView({ behavior: 'smooth' });
+      // If we're not on the home page, navigate there first
+      if (location.pathname !== '/') {
+        window.location.href = '/' + path;
+      } else {
+        const element = document.querySelector(path);
+        element?.scrollIntoView({ behavior: 'smooth' });
+      }
     }
   };
 
