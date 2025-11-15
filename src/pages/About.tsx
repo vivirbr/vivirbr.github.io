@@ -39,28 +39,18 @@ const About = () => {
 
   const team = [
     {
-      name: 'Dr. Sarah Chen',
-      role: 'Founder & Lead Consultant',
-      expertise: 'Environmental Data Science, Policy Analysis',
-      background: '15+ years in international development and sustainability research',
+      name: 'Vivian Ribeiro',
+      role: 'Co-Founder & Principal Consultant',
+      expertise: 'Environmental Policy, Sustainability Data Analysis, International Development',
+      background: 'Expert in translating complex environmental data into actionable strategies with extensive international experience',
+      initials: 'VR'
     },
     {
-      name: 'Miguel Rodriguez',
-      role: 'Data Solutions Director',
-      expertise: 'Database Architecture, Dashboard Development',
-      background: 'Former tech lead at major environmental NGO',
-    },
-    {
-      name: 'Aisha Patel',
-      role: 'Community Engagement Lead',
-      expertise: 'Stakeholder Facilitation, Campaign Development',
-      background: 'Extensive experience in multi-stakeholder processes',
-    },
-    {
-      name: 'Dr. James Wilson',
-      role: 'Policy Research Specialist',
-      expertise: 'Environmental Policy, White Paper Development',
-      background: 'Former policy advisor to international organizations',
+      name: 'Gabriela Russo Lopes',
+      role: 'Co-Founder & Principal Consultant',
+      expertise: 'Socio-Environmental Research, Community Engagement, Policy Development',
+      background: 'Specialist in stakeholder engagement and sustainable development with deep field expertise',
+      initials: 'GRL'
     },
   ];
 
@@ -170,27 +160,37 @@ const About = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
             {team.map((member, index) => (
               <Card key={index} className="border-border hover:shadow-lg transition-smooth">
-                <CardContent className="p-6 text-center">
-                  <div className="w-20 h-20 mx-auto mb-4 gradient-primary circle-accent flex items-center justify-center">
-                    <span className="text-white font-heading font-semibold text-lg">
-                      {member.name.split(' ').map(n => n[0]).join('')}
-                    </span>
+                <CardContent className="p-8">
+                  <div className="flex flex-col items-center text-center mb-6">
+                    <div className="w-32 h-32 mb-6 gradient-primary circle-accent flex items-center justify-center">
+                      <span className="text-white font-heading font-semibold text-3xl">
+                        {member.initials}
+                      </span>
+                    </div>
+                    <h3 className="text-xl font-heading font-semibold text-foreground mb-2">
+                      {member.name}
+                    </h3>
+                    <p className="text-primary text-base font-medium mb-4">
+                      {member.role}
+                    </p>
                   </div>
-                  <h3 className="font-heading font-semibold text-foreground mb-1">
-                    {member.name}
-                  </h3>
-                  <p className="text-primary text-sm font-medium mb-2">
-                    {member.role}
-                  </p>
-                  <p className="text-muted-foreground text-xs mb-3">
-                    {member.expertise}
-                  </p>
-                  <p className="text-muted-foreground text-xs leading-relaxed">
-                    {member.background}
-                  </p>
+                  <div className="space-y-4">
+                    <div>
+                      <h4 className="text-sm font-semibold text-foreground mb-2">Expertise</h4>
+                      <p className="text-muted-foreground text-sm leading-relaxed">
+                        {member.expertise}
+                      </p>
+                    </div>
+                    <div>
+                      <h4 className="text-sm font-semibold text-foreground mb-2">Background</h4>
+                      <p className="text-muted-foreground text-sm leading-relaxed">
+                        {member.background}
+                      </p>
+                    </div>
+                  </div>
                 </CardContent>
               </Card>
             ))}

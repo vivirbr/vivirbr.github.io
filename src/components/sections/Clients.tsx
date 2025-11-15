@@ -1,84 +1,56 @@
 import { Card, CardContent } from '@/components/ui/card';
+import { Building2 } from 'lucide-react';
 
 export const Clients = () => {
-  const clientLogos = [
-    { name: 'International NGO', sector: 'Environmental Conservation' },
-    { name: 'Government Agency', sector: 'Policy Development' },
-    { name: 'Tech Company', sector: 'Sustainability Reporting' },
-    { name: 'Research Institute', sector: 'Academic Research' },
-    { name: 'UN Organization', sector: 'Global Development' },
-    { name: 'Private Foundation', sector: 'Climate Action' },
-  ];
-
-  const testimonials = [
-    {
-      quote: "Diversa transformed our complex environmental data into clear, actionable insights that drove real policy change.",
-      author: "Environmental Policy Director",
-      company: "International Conservation Organization"
-    },
-    {
-      quote: "Their community engagement approach helped us build unprecedented stakeholder alignment for our sustainability initiative.",
-      author: "Sustainability Manager",
-      company: "Global Technology Company"
-    },
-    {
-      quote: "The data solutions they developed became the foundation for our organization's evidence-based decision making.",
-      author: "Research Director",
-      company: "Climate Research Institute"
-    }
-  ];
+  // Create 10 placeholder organizations
+  const clients = Array.from({ length: 10 }, (_, i) => ({
+    name: `Organization ${i + 1}`,
+    id: i + 1
+  }));
 
   return (
     <section id="clients" className="py-20 bg-muted/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-heading font-semibold text-foreground mb-4">
-            Trusted by Leading Organizations
+            Trusted by Leading Organizations and Companies
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            We partner with diverse organizations worldwide to create sustainable impact 
-            through data-driven solutions and community engagement.
+            We work with forward-thinking organizations committed to creating 
+            sustainable impact through data-driven decision making.
           </p>
         </div>
 
-        {/* Client Types */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
-          {clientLogos.map((client, index) => (
-            <Card key={index} className="border-border hover:shadow-lg transition-smooth">
-              <CardContent className="p-6 text-center">
-                <div className="w-16 h-16 mx-auto mb-4 gradient-primary circle-accent flex items-center justify-center">
-                  <span className="text-white font-heading font-semibold text-sm">
-                    {client.name.split(' ').map(word => word[0]).join('')}
-                  </span>
-                </div>
-                <h3 className="font-heading font-semibold text-foreground mb-2">
-                  {client.name}
-                </h3>
-                <p className="text-sm text-muted-foreground">{client.sector}</p>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-
-        {/* Testimonials */}
-        <div className="grid lg:grid-cols-3 gap-8">
-          {testimonials.map((testimonial, index) => (
-            <Card key={index} className="border-border bg-card">
-              <CardContent className="p-6">
-                <p className="text-muted-foreground italic leading-relaxed mb-4">
-                  "{testimonial.quote}"
-                </p>
-                <div className="border-t border-border pt-4">
-                  <p className="font-heading font-semibold text-foreground text-sm">
-                    {testimonial.author}
+        {/* Horizontal Carousel */}
+        <div className="relative overflow-hidden">
+          <div className="flex gap-8 animate-scroll-x">
+            {/* First set */}
+            {clients.map((client) => (
+              <Card key={`first-${client.id}`} className="border-border hover:shadow-lg transition-smooth group flex-shrink-0 w-48">
+                <CardContent className="p-6 flex flex-col items-center justify-center h-32">
+                  <div className="w-16 h-16 mb-3 gradient-primary circle-accent flex items-center justify-center group-hover:scale-110 transition-smooth">
+                    <Building2 className="h-8 w-8 text-white" />
+                  </div>
+                  <p className="text-xs text-center text-muted-foreground font-medium">
+                    {client.name}
                   </p>
-                  <p className="text-xs text-muted-foreground">
-                    {testimonial.company}
+                </CardContent>
+              </Card>
+            ))}
+            {/* Duplicate set for seamless loop */}
+            {clients.map((client) => (
+              <Card key={`second-${client.id}`} className="border-border hover:shadow-lg transition-smooth group flex-shrink-0 w-48">
+                <CardContent className="p-6 flex flex-col items-center justify-center h-32">
+                  <div className="w-16 h-16 mb-3 gradient-primary circle-accent flex items-center justify-center group-hover:scale-110 transition-smooth">
+                    <Building2 className="h-8 w-8 text-white" />
+                  </div>
+                  <p className="text-xs text-center text-muted-foreground font-medium">
+                    {client.name}
                   </p>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         </div>
       </div>
     </section>
