@@ -10,11 +10,11 @@ export const Services = () => {
       title: 'Data Solutions',
       description: 'Comprehensive data services that transform information into actionable insights',
       features: [
-        'Methodologies & Frameworks',
-        'Databases & Data Management',
-        'Interactive Dashboards',
-        'Toolkits & Applications',
-        'Custom Platforms'
+        'Methodologies',
+        'Databases',
+        'Dashboards',
+        'Toolkits',
+        'Apps and Platforms'
       ],
       color: 'orange'
     },
@@ -23,11 +23,11 @@ export const Services = () => {
       title: 'Policy Analysis',
       description: 'Evidence-based research and analysis for informed decision-making',
       features: [
-        'Policy Reports & Analysis',
-        'Strategic Guidelines',
+        'Reports',
+        'Guidelines',
         'Policy Briefs',
         'White Papers',
-        'Research Articles'
+        'Articles'
       ],
       color: 'green'
     },
@@ -36,11 +36,10 @@ export const Services = () => {
       title: 'Community Engagement',
       description: 'Building bridges between stakeholders for sustainable impact',
       features: [
-        'Stakeholder Alignment',
+        'Letters to Policy Makers',
         'Workshop Facilitation',
-        'Media Content Creation',
-        'Advocacy Campaigns',
-        'Policy Maker Outreach'
+        'Media Content',
+        'Alignment Building'
       ],
       color: 'primary'
     }

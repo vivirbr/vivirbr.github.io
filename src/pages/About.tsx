@@ -94,10 +94,13 @@ const About = () => {
                   Our Mission
                 </h2>
                 <p className="text-muted-foreground leading-relaxed">
-                  To bridge the gap between complex sustainability data and meaningful 
-                  action on the ground by combining analytical integrity with on-the-ground 
-                  experience and respect for diverse perspectives. We transform raw 
-                  information into clear insights that drive sustainable change.
+                  To bridge the gap between complex data and action on the ground by navigating 
+                  global, national and local dimensions. We build data solutions such as dashboards, 
+                  databases, platforms, and apps, transforming raw information into clear insights. 
+                  Based on our international and fieldwork expertise, we produce compelling reports, 
+                  policy briefs, and white papers that guide your strategy. Beyond the data, we 
+                  specialise in community engagement, from developing media content and advocacy 
+                  campaigns to building critical alignment between diverse stakeholders.
                 </p>
               </CardContent>
             </Card>

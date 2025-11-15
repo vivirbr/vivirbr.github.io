@@ -34,8 +34,12 @@ export const About = () => {
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             We bridge the gap between complex data and action on the ground by navigating 
-            global, national and local dimensions with analytical integrity and respect 
-            for diverse perspectives.
+            global, national and local dimensions. We build data solutions such as dashboards, 
+            databases, platforms, and apps, transforming raw information into clear insights. 
+            Based on our international and fieldwork expertise, we produce compelling reports, 
+            policy briefs, and white papers that guide your strategy. Beyond the data, we 
+            specialise in community engagement, from developing media content and advocacy 
+            campaigns to building critical alignment between diverse stakeholders.
           </p>
         </div>
 
