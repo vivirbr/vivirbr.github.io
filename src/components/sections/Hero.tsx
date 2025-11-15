@@ -49,58 +49,31 @@ export const Hero = () => {
               </Button>
             </div>
 
-            {/* Stats */}
-            <div className="grid grid-cols-3 gap-8 pt-8">
-              <div className="text-center">
-                <div className="w-12 h-12 mx-auto mb-3 rounded-full bg-primary/10 flex items-center justify-center">
-                  <BarChart3 className="h-6 w-6 text-primary" />
-                </div>
-                <div className="text-2xl font-heading font-semibold text-foreground">50+</div>
-                <div className="text-sm text-muted-foreground">Projects</div>
-              </div>
-              <div className="text-center">
-                <div className="w-12 h-12 mx-auto mb-3 rounded-full bg-secondary/20 flex items-center justify-center">
-                  <Users className="h-6 w-6 text-secondary" />
-                </div>
-                <div className="text-2xl font-heading font-semibold text-foreground">25+</div>
-                <div className="text-sm text-muted-foreground">Clients</div>
-              </div>
-              <div className="text-center">
-                <div className="w-12 h-12 mx-auto mb-3 rounded-full bg-accent/20 flex items-center justify-center">
-                  <Globe className="h-6 w-6 text-accent" />
-                </div>
-                <div className="text-2xl font-heading font-semibold text-foreground">15+</div>
-                <div className="text-sm text-muted-foreground">Countries</div>
-              </div>
-            </div>
           </div>
 
-          {/* Right Content - Visual Element */}
-          <div className="relative">
-            <div className="relative z-10">
-              {/* Large circular design inspired by logo */}
-              <div className="w-96 h-96 mx-auto relative">
-                <div className="absolute inset-0 gradient-primary circle-accent opacity-20"></div>
-                <div className="absolute inset-8 bg-secondary circle-accent opacity-30"></div>
-                <div className="absolute inset-16 bg-background circle-accent shadow-green"></div>
-                <div className="absolute inset-24 gradient-green circle-accent opacity-80"></div>
-                <div className="absolute inset-32 bg-diversa-cream circle-accent flex items-center justify-center">
-                  <div className="text-center">
-                    <h3 className="text-lg font-heading font-semibold text-foreground mb-2">
-                      Data Driven
-                    </h3>
-                    <p className="text-sm text-muted-foreground">
-                      Sustainable Solutions
-                    </p>
-                  </div>
-                </div>
-              </div>
+          {/* Right Content - Dynamic Animated Circles */}
+          <div className="relative h-96 overflow-hidden">
+            <div className="absolute inset-0">
+              {/* Large primary ball */}
+              <div className="absolute top-10 left-20 w-32 h-32 gradient-primary circle-accent opacity-40 animate-float"></div>
+              
+              {/* Medium orange balls */}
+              <div className="absolute top-40 right-10 w-24 h-24 gradient-orange circle-accent opacity-50 animate-float-delayed"></div>
+              <div className="absolute bottom-20 left-10 w-20 h-20 gradient-orange circle-accent opacity-45 animate-float-slow"></div>
+              
+              {/* Medium green balls */}
+              <div className="absolute top-20 right-40 w-28 h-28 gradient-green circle-accent opacity-35 animate-float-slow"></div>
+              <div className="absolute bottom-32 right-20 w-24 h-24 gradient-green circle-accent opacity-40 animate-float"></div>
+              
+              {/* Small accent balls */}
+              <div className="absolute top-60 left-40 w-16 h-16 bg-primary circle-accent opacity-30 animate-float-delayed"></div>
+              <div className="absolute bottom-10 left-32 w-14 h-14 bg-secondary circle-accent opacity-35 animate-float"></div>
+              <div className="absolute top-32 left-60 w-12 h-12 bg-diversa-orange circle-accent opacity-30 animate-float-slow"></div>
+              <div className="absolute bottom-40 right-32 w-18 h-18 bg-diversa-green circle-accent opacity-25 animate-float-delayed"></div>
+              
+              {/* Tiny accent balls */}
+              <div className="absolute top-12 left-12 w-8 h-8 gradient-primary circle-accent opacity-25 animate-float"></div>
             </div>
-
-            {/* Floating elements */}
-            <div className="absolute top-10 left-10 w-16 h-16 gradient-orange circle-accent opacity-60 animate-pulse"></div>
-            <div className="absolute bottom-20 right-10 w-12 h-12 gradient-green circle-accent opacity-70 animate-pulse delay-150"></div>
-            <div className="absolute top-1/2 -left-6 w-8 h-8 bg-primary circle-accent opacity-50 animate-pulse delay-300"></div>
           </div>
         </div>
       </div>
