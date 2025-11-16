@@ -53,17 +53,23 @@ export const Contact = () => {
       // Validate form data
       const validatedData = contactSchema.parse(formData);
 
-      // Create mailto link with sanitized data
-      const subject = encodeURIComponent(validatedData.subject);
-      const body = encodeURIComponent(
-        `Name: ${validatedData.name}\n` +
-          `Email: ${validatedData.email}\n` +
-          (validatedData.organization ? `Organization: ${validatedData.organization}\n` : "") +
-          `\nMessage:\n${validatedData.message}`,
+      // Send email via edge function
+      const response = await fetch(
+        `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/send-contact-email`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(validatedData),
+        }
       );
 
-      const mailtoLink = `mailto:info@diversa.earth?subject=${subject}&body=${body}`;
-      window.location.href = mailtoLink;
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.error || "Failed to send message");
+      }
 
       // Reset form
       setFormData({
@@ -75,8 +81,8 @@ export const Contact = () => {
       });
 
       toast({
-        title: "Email client opened",
-        description: "Your default email client should open with the message pre-filled.",
+        title: "Message sent!",
+        description: "We've received your message and will get back to you soon.",
       });
     } catch (error) {
       if (error instanceof z.ZodError) {
