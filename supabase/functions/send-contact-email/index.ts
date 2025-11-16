@@ -128,7 +128,7 @@ const handler = async (req: Request): Promise<Response> => {
       },
       body: JSON.stringify({
         from: "Contact Form <onboarding@resend.dev>",
-        to: ["your-email@example.com"], // Replace with your actual email
+        to: ["info@diversa.earth"],
         subject: `Contact Form: ${escapeHtml(subject)}`,
         html: `
           <h2>New Contact Form Submission</h2>
