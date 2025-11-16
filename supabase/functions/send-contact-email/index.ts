@@ -120,6 +120,8 @@ const handler = async (req: Request): Promise<Response> => {
     console.log("Processing contact email from:", email);
 
     // Send email using Resend API directly with sanitized HTML
+    console.log("Attempting to send email via Resend...");
+    
     const emailResponse = await fetch("https://api.resend.com/emails", {
       method: "POST",
       headers: {
@@ -144,9 +146,12 @@ const handler = async (req: Request): Promise<Response> => {
     });
 
     const result = await emailResponse.json();
+    console.log("Resend API response status:", emailResponse.status);
+    console.log("Resend API response:", JSON.stringify(result));
+    
     if (!emailResponse.ok) {
       console.error("Resend API error:", result);
-      throw new Error("Failed to send email");
+      throw new Error(`Resend API error: ${result.message || 'Unknown error'}`);
     }
 
     console.log("Email sent successfully");
