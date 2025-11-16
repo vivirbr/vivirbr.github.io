@@ -10,8 +10,8 @@ export const Navigation = () => {
 
   const navItems = [
     { name: 'Home', path: '/' },
-    { name: 'About', path: '/about' },
-    { name: 'Services', path: '/services' },
+    { name: 'About', path: '/about', disabled: true },
+    { name: 'Services', path: '/services', disabled: true },
     { name: 'Contact', path: '#contact' },
   ];
 
@@ -59,7 +59,15 @@ export const Navigation = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
-              item.path.startsWith('#') ? (
+              item.disabled ? (
+                <span
+                  key={item.name}
+                  className="text-sm font-medium text-muted-foreground/50 cursor-not-allowed"
+                  title="Coming soon"
+                >
+                  {item.name}
+                </span>
+              ) : item.path.startsWith('#') ? (
                 <button
                   key={item.name}
                   onClick={() => handleLinkClick(item.path)}
@@ -102,7 +110,15 @@ export const Navigation = () => {
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-background border-b border-border">
             {navItems.map((item) => (
-              item.path.startsWith('#') ? (
+              item.disabled ? (
+                <span
+                  key={item.name}
+                  className="block px-3 py-2 text-base font-medium text-muted-foreground/50 cursor-not-allowed"
+                  title="Coming soon"
+                >
+                  {item.name}
+                </span>
+              ) : item.path.startsWith('#') ? (
                 <button
                   key={item.name}
                   onClick={() => handleLinkClick(item.path)}
