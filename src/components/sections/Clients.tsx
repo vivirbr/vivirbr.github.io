@@ -9,16 +9,16 @@ import wwfLogo from "@/assets/clients/wwf.png";
 
 export const Clients = () => {
   const clients = [
-    { name: "Imaflora", logo: imafloraLogo, id: 1 },
+    { name: "WWF", logo: wwfLogo, id: 1 },
     { name: "Global Canopy", logo: globalCanopyLogo, id: 2 },
-    { name: "ISPN", logo: ispnLogo, id: 3 },
-    { name: "Boi na Linha", logo: boiNaLinhaLogo, id: 4 },
-    { name: "Trase", logo: traseLogo, id: 5 },
-    { name: "Fern", logo: fernLogo, id: 6 },
-    { name: "WWF", logo: wwfLogo, id: 7 },
-    { name: "Imaflora", logo: imafloraLogo, id: 8 },
+    { name: "Trase", logo: traseLogo, id: 3 },
+    { name: "Fern", logo: fernLogo, id: 4 },
+    { name: "Imaflora", logo: imafloraLogo, id: 5 },
+    { name: "Boi na Linha", logo: boiNaLinhaLogo, id: 6 },
+    { name: "ISPN", logo: ispnLogo, id: 7 },
+    { name: "WWF", logo: wwfLogo, id: 8 },
     { name: "Global Canopy", logo: globalCanopyLogo, id: 9 },
-    { name: "ISPN", logo: ispnLogo, id: 10 },
+    { name: "Trase", logo: traseLogo, id: 10 },
   ];
 
   return (
