@@ -202,7 +202,7 @@ Circular theme inspired by logo design
   }
 
   .animate-scroll-x {
-    animation: scroll-x 30s linear infinite;
+    animation: scroll-x 15s linear infinite;
   }
 
   .animate-scroll-x:hover {
