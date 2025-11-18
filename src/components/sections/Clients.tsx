@@ -52,10 +52,25 @@ export const Clients = () => {
                 </CardContent>
               </Card>
             ))}
-            {/* Duplicate set for seamless loop */}
+            {/* Second set for seamless loop */}
             {clients.map((client) => (
               <Card
                 key={`second-${client.id}`}
+                className="border-border hover:shadow-lg transition-smooth group flex-shrink-0 w-64 bg-background"
+              >
+                <CardContent className="p-6 flex items-center justify-center h-32">
+                  <img
+                    src={client.logo}
+                    alt={client.name}
+                    className="max-w-full max-h-20 object-contain filter grayscale hover:grayscale-0 transition-smooth"
+                  />
+                </CardContent>
+              </Card>
+            ))}
+            {/* Third set for extra smooth continuous scrolling */}
+            {clients.map((client) => (
+              <Card
+                key={`third-${client.id}`}
                 className="border-border hover:shadow-lg transition-smooth group flex-shrink-0 w-64 bg-background"
               >
                 <CardContent className="p-6 flex items-center justify-center h-32">
