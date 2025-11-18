@@ -34,55 +34,22 @@ export const Clients = () => {
           </p>
         </div>
 
-        {/* Horizontal Carousel */}
-        <div className="relative overflow-hidden">
-          <div className="flex gap-8 animate-scroll-x">
-            {/* First set */}
-            {clients.map((client) => (
-              <Card
-                key={`first-${client.id}`}
-                className="border-border hover:shadow-lg transition-smooth group flex-shrink-0 w-64 bg-background"
-              >
-                <CardContent className="p-6 flex items-center justify-center h-32">
-                  <img
-                    src={client.logo}
-                    alt={client.name}
-                    className="max-w-full max-h-20 object-contain filter grayscale hover:grayscale-0 transition-smooth"
-                  />
-                </CardContent>
-              </Card>
-            ))}
-            {/* Second set for seamless loop */}
-            {clients.map((client) => (
-              <Card
-                key={`second-${client.id}`}
-                className="border-border hover:shadow-lg transition-smooth group flex-shrink-0 w-64 bg-background"
-              >
-                <CardContent className="p-6 flex items-center justify-center h-32">
-                  <img
-                    src={client.logo}
-                    alt={client.name}
-                    className="max-w-full max-h-20 object-contain filter grayscale hover:grayscale-0 transition-smooth"
-                  />
-                </CardContent>
-              </Card>
-            ))}
-            {/* Third set for extra smooth continuous scrolling */}
-            {clients.map((client) => (
-              <Card
-                key={`third-${client.id}`}
-                className="border-border hover:shadow-lg transition-smooth group flex-shrink-0 w-64 bg-background"
-              >
-                <CardContent className="p-6 flex items-center justify-center h-32">
-                  <img
-                    src={client.logo}
-                    alt={client.name}
-                    className="max-w-full max-h-20 object-contain filter grayscale hover:grayscale-0 transition-smooth"
-                  />
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+        {/* Logo Gallery */}
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 max-w-5xl mx-auto">
+          {clients.slice(0, 7).map((client) => (
+            <Card
+              key={client.id}
+              className="border-border hover:shadow-lg transition-smooth group bg-background"
+            >
+              <CardContent className="p-6 flex items-center justify-center h-32">
+                <img
+                  src={client.logo}
+                  alt={client.name}
+                  className="max-w-full max-h-20 object-contain filter grayscale hover:grayscale-0 transition-smooth"
+                />
+              </CardContent>
+            </Card>
+          ))}
         </div>
       </div>
     </section>
