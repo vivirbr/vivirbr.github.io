@@ -56,16 +56,13 @@ export const Contact = () => {
       const validatedData = contactSchema.parse(formData);
 
       // Send email via edge function
-      const response = await fetch(
-        `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/send-contact-email`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(validatedData),
-        }
-      );
+      const response = await fetch(`${import.meta.env.VITE_SUPABASE_URL}/functions/v1/send-contact-email`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(validatedData),
+      });
 
       const result = await response.json();
 
@@ -132,18 +129,16 @@ export const Contact = () => {
     <section id="contact" className="py-24 relative overflow-hidden bg-background">
       {/* Section divider at top */}
       <div className="section-divider mb-20"></div>
-      
+
       {/* Background gradient accent */}
       <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-primary/5 to-transparent pointer-events-none"></div>
-      
+
       <div ref={elementRef} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-20">
           <div className="inline-block mb-4">
-            <span className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-semibold">
-              Let's Talk
-            </span>
+            <span className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-semibold">Let's Talk</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-6">Get in Touch</h2>
+          <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-6">Get in touch</h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Let's discuss how we can help your organization.
           </p>
@@ -151,14 +146,14 @@ export const Contact = () => {
 
         <div className="grid lg:grid-cols-3 gap-12">
           {/* Contact Information */}
-          <div className={`space-y-6 ${isVisible ? 'animate-fade-up' : 'opacity-0'}`}>
+          <div className={`space-y-6 ${isVisible ? "animate-fade-up" : "opacity-0"}`}>
             <h3 className="text-2xl font-heading font-bold text-foreground mb-8">Contact Information</h3>
             {contactInfo.map((info, index) => {
               const Icon = info.icon;
               const content = (
-                <div 
+                <div
                   className={`flex items-start space-x-4 p-6 rounded-2xl bg-white shadow-modern hover-lift hover-glow-primary transition-all duration-300 ${
-                    isVisible ? 'animate-scale-in' : 'opacity-0'
+                    isVisible ? "animate-scale-in" : "opacity-0"
                   }`}
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
@@ -183,7 +178,7 @@ export const Contact = () => {
           </div>
 
           {/* Contact Form */}
-          <div className={`lg:col-span-2 ${isVisible ? 'animate-fade-up animation-delay-200' : 'opacity-0'}`}>
+          <div className={`lg:col-span-2 ${isVisible ? "animate-fade-up animation-delay-200" : "opacity-0"}`}>
             <Card className="bg-white shadow-modern-lg border-0">
               <CardHeader className="pb-6 pt-8">
                 <CardTitle className="text-2xl font-heading font-bold text-foreground">Send us a Message</CardTitle>
