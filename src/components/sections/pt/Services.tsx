@@ -42,8 +42,7 @@ export const ServicesPt = () => {
           </div>
           <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-6">Nossos serviços</h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Soluções abrangentes que fazem a ponte entre dados complexos de sustentabilidade social e 
-            ação significativa no campo.
+            Soluções abrangentes que fazem a ponte entre dados socioambientais complexos e impacto no chão.
           </p>
         </div>
 
