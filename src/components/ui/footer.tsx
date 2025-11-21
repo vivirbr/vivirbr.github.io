@@ -1,8 +1,10 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import logo from '@/assets/logo.png';
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const location = useLocation();
+  const isPortuguese = location.pathname.startsWith('/pt');
 
   const footerLinks = {
     company: [
@@ -40,7 +42,7 @@ export const Footer = () => {
                 Diversa
               </span>
               <span className="text-xs text-muted-foreground -mt-1">
-                Socioenvironmental Consultancy
+                {isPortuguese ? 'Consultoria socioambiental' : 'Socioenvironmental Consultancy'}
               </span>
             </div>
           </div>
@@ -48,7 +50,9 @@ export const Footer = () => {
           {/* Right: Headline and Email */}
           <div className="space-y-2 md:text-right">
             <p className="text-muted-foreground text-sm leading-relaxed">
-              Translating complex sustainability data into actionable change.
+              {isPortuguese 
+                ? 'Traduzindo dados socioambientais complexos em impacto.' 
+                : 'Translating complex sustainability data into actionable change.'}
             </p>
             <a
               href="mailto:info@diversa.earth"
