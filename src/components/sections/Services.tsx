@@ -34,15 +34,13 @@ export const Services = () => {
     <section id="services" className="py-24 bg-background section-with-shapes relative">
       {/* Section divider at top */}
       <div className="section-divider mb-20"></div>
-      
+
       <div ref={elementRef} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-20">
           <div className="inline-block mb-4">
-            <span className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-semibold">
-              What We Do
-            </span>
+            <span className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-semibold">What We Do</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-6">Our Services</h2>
+          <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-6">Our services</h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Comprehensive solutions that bridge the gap between complex social and sustainability data and meaningful
             action on the ground.
@@ -52,21 +50,23 @@ export const Services = () => {
         <div className="grid lg:grid-cols-3 gap-8 mb-12">
           {services.map((service, index) => {
             const Icon = service.icon;
-            const glowClass = service.color === "orange" 
-              ? "hover-glow-orange" 
-              : service.color === "green" 
-                ? "hover-glow-green" 
-                : "hover-glow-primary";
-            const borderClass = service.color === "orange" 
-              ? "gradient-border-orange" 
-              : service.color === "green" 
-                ? "gradient-border-green" 
-                : "gradient-border-primary";
+            const glowClass =
+              service.color === "orange"
+                ? "hover-glow-orange"
+                : service.color === "green"
+                  ? "hover-glow-green"
+                  : "hover-glow-primary";
+            const borderClass =
+              service.color === "orange"
+                ? "gradient-border-orange"
+                : service.color === "green"
+                  ? "gradient-border-green"
+                  : "gradient-border-primary";
             return (
-              <Card 
-                key={index} 
+              <Card
+                key={index}
                 className={`bg-white shadow-modern-lg hover-lift ${glowClass} transition-all duration-300 group border-0 ${borderClass} ${
-                  isVisible ? 'animate-fade-up' : 'opacity-0'
+                  isVisible ? "animate-fade-up" : "opacity-0"
                 }`}
                 style={{ animationDelay: `${index * 150}ms` }}
               >
@@ -108,7 +108,7 @@ export const Services = () => {
           })}
         </div>
 
-        <div className={`text-center ${isVisible ? 'animate-fade-up animation-delay-500' : 'opacity-0'}`}>
+        <div className={`text-center ${isVisible ? "animate-fade-up animation-delay-500" : "opacity-0"}`}>
           <Link to="/services">
             <Button
               size="lg"
