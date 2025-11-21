@@ -26,13 +26,13 @@ export const HeroPt = () => {
             <div className="space-y-6">
               <div className="inline-block">
                 <span className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-semibold">
-                  Especialistas em Dados de Sustentabilidade
+                  Especialistas em soluções socioambientais
                 </span>
               </div>
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-heading font-semibold text-foreground leading-tight">
                 Traduzindo{' '}
                 <span className="gradient-text">dados complexos de sustentabilidade</span>{' '}
-                em mudança acionável
+                em impacto
               </h1>
               <p className="text-xl text-muted-foreground leading-relaxed max-w-xl">
                 Combinamos integridade analítica com experiência de campo e 
