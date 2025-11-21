@@ -24,7 +24,10 @@ export const Clients = () => {
   ];
 
   return (
-    <section id="clients" className="py-20 bg-muted/30 section-with-circles">
+    <section id="clients" className="py-20 bg-gradient-to-br from-secondary/5 via-muted/30 to-secondary/15 section-with-circles relative">
+      {/* Section divider at top */}
+      <div className="section-divider mb-20"></div>
+      
       <div ref={elementRef} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-heading font-semibold text-foreground mb-4">
@@ -41,7 +44,7 @@ export const Clients = () => {
           {clients.slice(0, 7).map((client, index) => (
             <Card
               key={client.id}
-              className={`border-border hover-lift hover-glow-green transition-all duration-300 group bg-background ${
+              className={`border-2 border-transparent hover:border-secondary/30 hover-lift hover-glow-green transition-all duration-300 group bg-background ${
                 isVisible ? 'animate-scale-in' : 'opacity-0'
               }`}
               style={{ animationDelay: `${index * 80}ms` }}

@@ -32,7 +32,10 @@ export const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-muted/30 section-with-circles">
+    <section id="about" className="py-20 bg-gradient-to-br from-secondary/10 via-muted/30 to-secondary/5 section-with-circles relative">
+      {/* Section divider at top */}
+      <div className="section-divider mb-20"></div>
+      
       <div ref={elementRef} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-heading font-semibold text-foreground mb-4">Who we are</h2>
@@ -49,16 +52,20 @@ export const About = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {capabilities.map((capability, index) => {
             const Icon = capability.icon;
+            const isOrange = index % 2 === 0;
+            const gradientClass = isOrange ? "gradient-orange" : "gradient-green";
+            const borderClass = isOrange ? "gradient-border-orange" : "gradient-border-green";
+            
             return (
               <Card 
                 key={index} 
-                className={`border-border hover-lift hover-glow-primary transition-all duration-300 bg-card ${
+                className={`border-0 ${borderClass} hover-lift hover-glow-primary transition-all duration-300 bg-card ${
                   isVisible ? 'animate-fade-up' : 'opacity-0'
                 }`}
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <CardContent className="p-6 text-center">
-                  <div className="w-16 h-16 mx-auto mb-4 gradient-primary circle-accent flex items-center justify-center">
+                  <div className={`w-16 h-16 mx-auto mb-4 ${gradientClass} circle-accent flex items-center justify-center`}>
                     <Icon className="h-8 w-8 text-white" />
                   </div>
                   <h3 className="text-lg font-heading font-semibold text-foreground mb-3">{capability.title}</h3>
@@ -71,7 +78,7 @@ export const About = () => {
 
         {/* Mission Statement */}
         <div className={`mt-20 ${isVisible ? 'animate-scale-in animation-delay-400' : 'opacity-0'}`}>
-          <Card className="border-primary/20 bg-gradient-to-r from-primary/5 to-secondary/5 hover-lift hover-glow-orange transition-all duration-300">
+          <Card className="border-0 gradient-border-primary hover-lift hover-glow-orange transition-all duration-300 bg-gradient-to-r from-primary/10 via-card to-secondary/10">
             <CardContent className="p-8 md:p-12 text-center">
               <h3 className="text-2xl md:text-3xl font-heading font-semibold text-foreground mb-6">
                 Technology with impact
