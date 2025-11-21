@@ -130,8 +130,11 @@ export const Contact = () => {
 
   return (
     <section id="contact" className="py-20 relative overflow-hidden">
+      {/* Section divider at top */}
+      <div className="section-divider mb-20"></div>
+      
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background pointer-events-none"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/8 via-background to-secondary/8 pointer-events-none"></div>
       
       <div ref={elementRef} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
@@ -176,7 +179,7 @@ export const Contact = () => {
 
           {/* Contact Form */}
           <div className={`lg:col-span-2 ${isVisible ? 'animate-fade-up animation-delay-200' : 'opacity-0'}`}>
-            <Card className="border-border hover-glow-orange transition-all duration-300">
+            <Card className="border-0 gradient-border-primary hover-glow-orange transition-all duration-300">
               <CardHeader>
                 <CardTitle className="text-xl font-heading font-semibold text-foreground">Send us a message</CardTitle>
               </CardHeader>
@@ -190,7 +193,7 @@ export const Contact = () => {
                         value={formData.name}
                         onChange={(e) => handleInputChange("name", e.target.value)}
                         placeholder="Your full name"
-                        className={errors.name ? "border-destructive" : ""}
+                        className={`${errors.name ? "border-destructive" : ""} focus:border-primary focus:ring-primary/20`}
                       />
                       {errors.name && <p className="text-sm text-destructive">{errors.name}</p>}
                     </div>
@@ -202,7 +205,7 @@ export const Contact = () => {
                         value={formData.email}
                         onChange={(e) => handleInputChange("email", e.target.value)}
                         placeholder="your.email@example.com"
-                        className={errors.email ? "border-destructive" : ""}
+                        className={`${errors.email ? "border-destructive" : ""} focus:border-secondary focus:ring-secondary/20`}
                       />
                       {errors.email && <p className="text-sm text-destructive">{errors.email}</p>}
                     </div>
@@ -215,7 +218,7 @@ export const Contact = () => {
                       value={formData.organization}
                       onChange={(e) => handleInputChange("organization", e.target.value)}
                       placeholder="Your organization or company"
-                      className={errors.organization ? "border-destructive" : ""}
+                      className={`${errors.organization ? "border-destructive" : ""} focus:border-primary focus:ring-primary/20`}
                     />
                     {errors.organization && <p className="text-sm text-destructive">{errors.organization}</p>}
                   </div>
@@ -227,7 +230,7 @@ export const Contact = () => {
                       value={formData.subject}
                       onChange={(e) => handleInputChange("subject", e.target.value)}
                       placeholder="How can we help you?"
-                      className={errors.subject ? "border-destructive" : ""}
+                      className={`${errors.subject ? "border-destructive" : ""} focus:border-secondary focus:ring-secondary/20`}
                     />
                     {errors.subject && <p className="text-sm text-destructive">{errors.subject}</p>}
                   </div>
@@ -240,7 +243,7 @@ export const Contact = () => {
                       onChange={(e) => handleInputChange("message", e.target.value)}
                       placeholder="Tell us about your project or consultation needs..."
                       rows={5}
-                      className={errors.message ? "border-destructive" : ""}
+                      className={`${errors.message ? "border-destructive" : ""} focus:border-primary focus:ring-primary/20`}
                     />
                     {errors.message && <p className="text-sm text-destructive">{errors.message}</p>}
                   </div>

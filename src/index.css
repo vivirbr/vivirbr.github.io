@@ -342,4 +342,47 @@ Circular theme inspired by logo design
     position: relative;
     z-index: 1;
   }
+
+  /* Gradient section divider */
+  .section-divider {
+    height: 2px;
+    background: linear-gradient(90deg, transparent 0%, hsl(var(--diversa-orange)) 25%, hsl(var(--diversa-green)) 75%, transparent 100%);
+    margin: 0 auto;
+    max-width: 200px;
+  }
+
+  /* Gradient borders for cards */
+  .gradient-border-orange {
+    border: 2px solid transparent;
+    background: linear-gradient(hsl(var(--background)), hsl(var(--background))) padding-box,
+                linear-gradient(135deg, hsl(var(--diversa-orange)), hsl(var(--diversa-orange) / 0.5)) border-box;
+  }
+
+  .gradient-border-green {
+    border: 2px solid transparent;
+    background: linear-gradient(hsl(var(--background)), hsl(var(--background))) padding-box,
+                linear-gradient(135deg, hsl(var(--diversa-green)), hsl(var(--diversa-green) / 0.5)) border-box;
+  }
+
+  .gradient-border-primary {
+    border: 2px solid transparent;
+    background: linear-gradient(hsl(var(--background)), hsl(var(--background))) padding-box,
+                linear-gradient(135deg, hsl(var(--diversa-orange)), hsl(var(--diversa-green))) border-box;
+  }
+
+  /* Dark mode gradient borders */
+  .dark .gradient-border-orange {
+    background: linear-gradient(hsl(var(--card)), hsl(var(--card))) padding-box,
+                linear-gradient(135deg, hsl(var(--diversa-orange)), hsl(var(--diversa-orange) / 0.5)) border-box;
+  }
+
+  .dark .gradient-border-green {
+    background: linear-gradient(hsl(var(--card)), hsl(var(--card))) padding-box,
+                linear-gradient(135deg, hsl(var(--diversa-green)), hsl(var(--diversa-green) / 0.5)) border-box;
+  }
+
+  .dark .gradient-border-primary {
+    background: linear-gradient(hsl(var(--card)), hsl(var(--card))) padding-box,
+                linear-gradient(135deg, hsl(var(--diversa-orange)), hsl(var(--diversa-green))) border-box;
+  }
 }

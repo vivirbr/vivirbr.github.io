@@ -31,7 +31,10 @@ export const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-20 section-with-circles">
+    <section id="services" className="py-20 bg-gradient-to-br from-primary/5 via-background to-primary/10 section-with-circles relative">
+      {/* Section divider at top */}
+      <div className="section-divider mb-20"></div>
+      
       <div ref={elementRef} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-heading font-semibold text-foreground mb-4">Our services</h2>
@@ -49,10 +52,15 @@ export const Services = () => {
               : service.color === "green" 
                 ? "hover-glow-green" 
                 : "hover-glow-primary";
+            const borderClass = service.color === "orange" 
+              ? "gradient-border-orange" 
+              : service.color === "green" 
+                ? "gradient-border-green" 
+                : "gradient-border-primary";
             return (
               <Card 
                 key={index} 
-                className={`border-border hover-lift ${glowClass} transition-all duration-300 group ${
+                className={`border-0 ${borderClass} hover-lift ${glowClass} transition-all duration-300 group ${
                   isVisible ? 'animate-fade-up' : 'opacity-0'
                 }`}
                 style={{ animationDelay: `${index * 150}ms` }}
