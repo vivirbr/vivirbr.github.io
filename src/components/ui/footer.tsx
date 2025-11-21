@@ -26,9 +26,9 @@ export const Footer = () => {
 
   return (
     <footer className="bg-muted/50 border-t border-border">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="flex flex-col items-center text-center space-y-4">
-          {/* Logo */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="grid md:grid-cols-2 gap-8 items-center">
+          {/* Left: Logo */}
           <div className="flex items-center space-x-3">
             <img
               src={logo}
@@ -45,24 +45,21 @@ export const Footer = () => {
             </div>
           </div>
           
-          {/* Headline */}
-          <p className="text-muted-foreground leading-relaxed max-w-md">
-            Translating complex sustainability data into actionable change. 
-            Technology with impact for meaningful, lasting transformation.
-          </p>
-          
-          {/* Email */}
-          <a
-            href="mailto:info@diversa.earth"
-            className="text-muted-foreground hover:text-primary transition-smooth"
-          >
-            info@diversa.earth
-          </a>
-          
-          {/* Copyright */}
-          <p className="text-muted-foreground text-sm pt-4">
-            © {currentYear} Diversa Socioenvironmental Consultancy. All rights reserved.
-          </p>
+          {/* Right: Headline and Email */}
+          <div className="space-y-2 md:text-right">
+            <p className="text-muted-foreground text-sm leading-relaxed">
+              Translating complex sustainability data into actionable change.
+            </p>
+            <a
+              href="mailto:info@diversa.earth"
+              className="text-muted-foreground hover:text-primary transition-smooth text-sm block"
+            >
+              info@diversa.earth
+            </a>
+            <p className="text-muted-foreground text-xs pt-2">
+              © {currentYear} Diversa. All rights reserved.
+            </p>
+          </div>
         </div>
       </div>
     </footer>
