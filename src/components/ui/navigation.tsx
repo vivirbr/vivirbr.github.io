@@ -62,7 +62,7 @@ export const Navigation = () => {
                 Diversa
               </span>
               <span className="text-xs text-muted-foreground -mt-1">
-                Socioenvironmental Consultancy
+                {isPortuguese ? 'Consultoria socioambiental' : 'Socioenvironmental Consultancy'}
               </span>
             </div>
           </Link>
