@@ -27,7 +27,7 @@ export const Clients = () => {
     <section id="clients" className="py-24 bg-gradient-subtle-green section-with-shapes relative">
       {/* Section divider at top */}
       <div className="section-divider mb-20"></div>
-      
+
       <div ref={elementRef} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-20">
           <div className="inline-block mb-4">
@@ -36,7 +36,7 @@ export const Clients = () => {
             </span>
           </div>
           <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-6">
-            Trusted by Leading Organizations
+            Trusted by leading organizations
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             We work with forward-thinking organizations committed to creating sustainable impact through data-driven
@@ -50,7 +50,7 @@ export const Clients = () => {
             <Card
               key={client.id}
               className={`bg-white border-0 shadow-modern hover-lift hover-glow-green transition-all duration-300 group ${
-                isVisible ? 'animate-scale-in' : 'opacity-0'
+                isVisible ? "animate-scale-in" : "opacity-0"
               }`}
               style={{ animationDelay: `${index * 80}ms` }}
             >
