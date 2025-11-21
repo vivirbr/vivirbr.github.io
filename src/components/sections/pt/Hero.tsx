@@ -31,7 +31,7 @@ export const HeroPt = () => {
               </div>
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-heading font-semibold text-foreground leading-tight">
                 Traduzindo{' '}
-                <span className="gradient-text">dados complexos de sustentabilidade</span>{' '}
+                <span className="gradient-text">dados socioambientais complexos</span>{' '}
                 em impacto
               </h1>
               <p className="text-xl text-muted-foreground leading-relaxed max-w-xl">
