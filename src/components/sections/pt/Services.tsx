@@ -1,7 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Database, FileBarChart, Users, ArrowRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+import { Database, FileBarChart, Users } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 export const ServicesPt = () => {
@@ -107,17 +105,6 @@ export const ServicesPt = () => {
           })}
         </div>
 
-        <div className={`text-center ${isVisible ? "animate-fade-up animation-delay-500" : "opacity-0"}`}>
-          <Link to="/pt/services">
-            <Button
-              size="lg"
-              className="gradient-primary text-white hover:opacity-90 hover:scale-105 transition-all duration-300 shadow-modern-lg text-base px-8 py-6 h-auto"
-            >
-              Ver nosso portfólio de projetos
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-          </Link>
-        </div>
       </div>
     </section>
   );
