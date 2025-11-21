@@ -83,23 +83,6 @@ export const About = () => {
           })}
         </div>
 
-        {/* Mission Statement */}
-        <div className={`mt-24 ${isVisible ? 'animate-scale-in animation-delay-400' : 'opacity-0'}`}>
-          <Card className="bg-gradient-to-br from-primary/5 to-secondary/5 border-0 shadow-modern-lg hover-lift transition-all duration-300">
-            <CardContent className="p-12 md:p-16">
-              <div className="max-w-4xl mx-auto text-center">
-                <h3 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-6">
-                  Technology with Impact
-                </h3>
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  We combine analytical integrity with on-the-ground experience and respect for diverse perspectives to
-                  create meaningful, lasting change. Our approach ensures that complex sustainability data becomes the
-                  foundation for actionable strategies that work in the real world.
-                </p>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
       </div>
     </section>
   );

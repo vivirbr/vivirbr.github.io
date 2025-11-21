@@ -29,24 +29,13 @@ export const Hero = () => {
                   Sustainability Data Experts
                 </span>
               </div>
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-foreground leading-tight">
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-heading font-semibold text-foreground leading-tight">
                 Translating complex{' '}
-                <span className="relative inline-block">
-                  <span className="gradient-text">sustainability data</span>
-                  <svg className="absolute -bottom-2 left-0 w-full" height="8" viewBox="0 0 200 8" fill="none">
-                    <path d="M0 4C50 1 100 1 150 4C150 4 175 6 200 4" stroke="url(#gradient)" strokeWidth="3" fill="none"/>
-                    <defs>
-                      <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                        <stop offset="0%" stopColor="hsl(20, 90%, 42%)" />
-                        <stop offset="100%" stopColor="hsl(164, 28%, 51%)" />
-                      </linearGradient>
-                    </defs>
-                  </svg>
-                </span>{' '}
+                <span className="gradient-text">sustainability data</span>{' '}
                 into actionable change
               </h1>
               <p className="text-xl text-muted-foreground leading-relaxed max-w-xl">
-                Technology with impact. We combine analytical integrity with on-the-ground 
+                We combine analytical integrity with on-the-ground 
                 experience and respect for diverse perspectives to create meaningful, lasting change.
               </p>
             </div>
@@ -72,26 +61,26 @@ export const Hero = () => {
           </div>
 
           {/* Right Content - Stats/Features */}
-          <div className="grid grid-cols-2 gap-6 animation-delay-300 animate-fade-up">
-            <div className="bg-white p-6 rounded-2xl shadow-modern hover-lift hover-glow-orange transition-all duration-300 border-l-accent-orange">
-              <BarChart3 className="h-10 w-10 text-primary mb-3" />
-              <div className="text-3xl font-bold text-foreground mb-1">Data</div>
-              <div className="text-sm text-muted-foreground">Solutions & Analytics</div>
+          <div className="grid grid-cols-2 gap-8 animation-delay-300 animate-fade-up">
+            <div className="bg-white w-40 h-40 rounded-full shadow-modern hover-lift hover-glow-orange transition-all duration-300 flex flex-col items-center justify-center text-center p-6">
+              <BarChart3 className="h-10 w-10 text-primary mb-2" />
+              <div className="text-2xl font-bold text-foreground mb-1">Data</div>
+              <div className="text-xs text-muted-foreground">Solutions & Analytics</div>
             </div>
-            <div className="bg-white p-6 rounded-2xl shadow-modern hover-lift hover-glow-green transition-all duration-300 border-l-accent-green mt-8">
-              <Users className="h-10 w-10 text-secondary mb-3" />
-              <div className="text-3xl font-bold text-foreground mb-1">Community</div>
-              <div className="text-sm text-muted-foreground">Engagement & Impact</div>
+            <div className="bg-white w-40 h-40 rounded-full shadow-modern hover-lift hover-glow-green transition-all duration-300 flex flex-col items-center justify-center text-center p-6 mt-12">
+              <Users className="h-10 w-10 text-secondary mb-2" />
+              <div className="text-2xl font-bold text-foreground mb-1">Community</div>
+              <div className="text-xs text-muted-foreground">Engagement & Impact</div>
             </div>
-            <div className="bg-white p-6 rounded-2xl shadow-modern hover-lift hover-glow-primary transition-all duration-300 border-l-accent-orange">
-              <Globe className="h-10 w-10 text-primary mb-3" />
-              <div className="text-3xl font-bold text-foreground mb-1">Global</div>
-              <div className="text-sm text-muted-foreground">Reach & Expertise</div>
+            <div className="bg-white w-40 h-40 rounded-full shadow-modern hover-lift hover-glow-primary transition-all duration-300 flex flex-col items-center justify-center text-center p-6">
+              <Globe className="h-10 w-10 text-primary mb-2" />
+              <div className="text-2xl font-bold text-foreground mb-1">Global</div>
+              <div className="text-xs text-muted-foreground">Reach & Expertise</div>
             </div>
-            <div className="bg-gradient-to-br from-primary to-secondary p-6 rounded-2xl shadow-modern-lg hover-lift transition-all duration-300 mt-8">
+            <div className="bg-gradient-to-br from-primary to-secondary w-40 h-40 rounded-full shadow-modern-lg hover-lift transition-all duration-300 flex flex-col items-center justify-center text-center p-6 mt-12">
               <div className="text-white">
-                <div className="text-4xl font-bold mb-1">10+</div>
-                <div className="text-sm opacity-90">Years Experience</div>
+                <div className="text-3xl font-bold mb-1">10+</div>
+                <div className="text-xs opacity-90">Years Experience</div>
               </div>
             </div>
           </div>
