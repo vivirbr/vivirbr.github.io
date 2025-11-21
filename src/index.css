@@ -166,16 +166,16 @@ Circular theme inspired by logo design
     box-shadow: 0 10px 30px -10px hsl(var(--diversa-green) / 0.3);
   }
 
-  /* Float animations for hero circles - soft and gentle */
+  /* Float animations for hero circles - very soft and gentle with wide range */
   @keyframes float {
     0%, 100% {
       transform: translateY(0) translateX(0);
     }
     33% {
-      transform: translateY(-15px) translateX(8px);
+      transform: translateY(-25px) translateX(15px);
     }
     66% {
-      transform: translateY(8px) translateX(-8px);
+      transform: translateY(15px) translateX(-15px);
     }
   }
 
@@ -184,10 +184,10 @@ Circular theme inspired by logo design
       transform: translateY(0) translateX(0);
     }
     33% {
-      transform: translateY(12px) translateX(-10px);
+      transform: translateY(20px) translateX(-18px);
     }
     66% {
-      transform: translateY(-8px) translateX(10px);
+      transform: translateY(-15px) translateX(18px);
     }
   }
 
@@ -196,7 +196,7 @@ Circular theme inspired by logo design
       transform: translateY(0) translateX(0);
     }
     50% {
-      transform: translateY(-12px) translateX(8px);
+      transform: translateY(-20px) translateX(15px);
     }
   }
 
@@ -241,15 +241,15 @@ Circular theme inspired by logo design
   }
 
   .animate-float {
-    animation: float 20s ease-in-out infinite;
+    animation: float 35s ease-in-out infinite;
   }
 
   .animate-float-delayed {
-    animation: float-delayed 22s ease-in-out infinite;
+    animation: float-delayed 40s ease-in-out infinite;
   }
 
   .animate-float-slow {
-    animation: float-slow 25s ease-in-out infinite;
+    animation: float-slow 45s ease-in-out infinite;
   }
 
   .animate-scroll-x {
