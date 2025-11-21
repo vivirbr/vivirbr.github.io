@@ -35,7 +35,7 @@ export const About = () => {
     <section id="about" className="py-24 bg-muted/30 section-with-shapes relative">
       {/* Section divider at top */}
       <div className="section-divider mb-20"></div>
-      
+
       <div ref={elementRef} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-20">
           <div className="inline-block mb-4">
@@ -43,16 +43,11 @@ export const About = () => {
               Who We Are
             </span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-6">
-            Bridging Data and Action
-          </h2>
+          <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-6">Bridging Data and Action</h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            We bridge the gap between complex data and action on the ground by navigating global, national, and local
-            dimensions. We build data solutions such as dashboards, databases, platforms, and apps, transforming raw
-            information into clear insights. Based on our international and fieldwork expertise, we produce compelling
-            reports, policy briefs, and white papers that guide your strategy. Beyond the data, we specialise in
-            community engagement, from developing media content and advocacy campaigns to build critical alignment
-            between diverse stakeholders.
+            We build custom data solutions and leverage our international and fieldwork expertise to produce strategic
+            reports and policy briefs. We also specialize in community engagement and advocacy to build stakeholder
+            alignment.
           </p>
         </div>
 
@@ -62,17 +57,19 @@ export const About = () => {
             const isOrange = index % 2 === 0;
             const gradientClass = isOrange ? "gradient-orange" : "gradient-green";
             const borderClass = isOrange ? "gradient-border-orange" : "gradient-border-green";
-            
+
             return (
-              <Card 
-                key={index} 
+              <Card
+                key={index}
                 className={`bg-white shadow-modern hover-lift hover-glow-primary transition-all duration-300 border-0 ${
-                  isOrange ? 'border-l-accent-orange' : 'border-l-accent-green'
-                } ${isVisible ? 'animate-fade-up' : 'opacity-0'}`}
+                  isOrange ? "border-l-accent-orange" : "border-l-accent-green"
+                } ${isVisible ? "animate-fade-up" : "opacity-0"}`}
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <CardContent className="p-8 text-center">
-                  <div className={`w-20 h-20 mx-auto mb-6 ${gradientClass} rounded-2xl flex items-center justify-center shadow-modern-lg`}>
+                  <div
+                    className={`w-20 h-20 mx-auto mb-6 ${gradientClass} rounded-2xl flex items-center justify-center shadow-modern-lg`}
+                  >
                     <Icon className="h-10 w-10 text-white" />
                   </div>
                   <h3 className="text-xl font-heading font-bold text-foreground mb-4">{capability.title}</h3>
@@ -82,7 +79,6 @@ export const About = () => {
             );
           })}
         </div>
-
       </div>
     </section>
   );
