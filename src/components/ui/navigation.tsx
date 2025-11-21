@@ -1,12 +1,15 @@
 import { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Menu, X, Globe } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import logo from '@/assets/logo.png';
 
 export const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
+
+  const isPortuguese = location.pathname.startsWith('/pt');
 
   const navItems = [
     { name: 'Home', path: '/' },
@@ -32,6 +35,14 @@ export const Navigation = () => {
         const element = document.querySelector(path);
         element?.scrollIntoView({ behavior: 'smooth' });
       }
+    }
+  };
+
+  const toggleLanguage = () => {
+    if (isPortuguese) {
+      navigate('/');
+    } else {
+      navigate('/pt');
     }
   };
 
@@ -89,6 +100,15 @@ export const Navigation = () => {
                 </Link>
               )
             ))}
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={toggleLanguage}
+              className="flex items-center gap-2 text-sm font-medium"
+            >
+              <Globe className="h-4 w-4" />
+              {isPortuguese ? 'EN' : 'PT'}
+            </Button>
           </div>
 
           {/* Mobile menu button */}
@@ -141,6 +161,15 @@ export const Navigation = () => {
                 </Link>
               )
             ))}
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={toggleLanguage}
+              className="flex items-center gap-2 mx-3 my-2"
+            >
+              <Globe className="h-4 w-4" />
+              {isPortuguese ? 'English' : 'Português'}
+            </Button>
           </div>
         </div>
       )}
