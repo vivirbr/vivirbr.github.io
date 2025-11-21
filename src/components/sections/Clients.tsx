@@ -7,6 +7,7 @@ import boiNaLinhaLogo from "@/assets/clients/boi-na-linha.png";
 import traseLogo from "@/assets/clients/trase.png";
 import fernLogo from "@/assets/clients/fern.jpeg";
 import wwfLogo from "@/assets/clients/wwf.png";
+import beyondBordersLogo from "@/assets/clients/beyond-borders-media.png";
 
 export const Clients = () => {
   const { elementRef, isVisible } = useScrollReveal();
@@ -18,9 +19,7 @@ export const Clients = () => {
     { name: "Imaflora", logo: imafloraLogo, id: 5 },
     { name: "Boi na Linha", logo: boiNaLinhaLogo, id: 6 },
     { name: "ISPN", logo: ispnLogo, id: 7 },
-    { name: "WWF", logo: wwfLogo, id: 8 },
-    { name: "Global Canopy", logo: globalCanopyLogo, id: 9 },
-    { name: "Trase", logo: traseLogo, id: 10 },
+    { name: "Beyond Borders Media", logo: beyondBordersLogo, id: 8 },
   ];
 
   return (
@@ -46,7 +45,7 @@ export const Clients = () => {
 
         {/* Logo Gallery */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-          {clients.slice(0, 7).map((client, index) => (
+          {clients.map((client, index) => (
             <Card
               key={client.id}
               className={`bg-white border-0 shadow-modern hover-lift hover-glow-green transition-all duration-300 group ${
