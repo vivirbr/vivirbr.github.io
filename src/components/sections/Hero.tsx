@@ -62,25 +62,25 @@ export const Hero = () => {
 
           {/* Right Content - Stats/Features */}
           <div className="grid grid-cols-2 gap-8 animation-delay-300 animate-fade-up">
-            <div className="bg-white w-40 h-40 rounded-full shadow-modern hover-lift hover-glow-orange transition-all duration-300 flex flex-col items-center justify-center text-center p-6">
+            <div className="bg-white w-40 h-40 rounded-full shadow-modern hover-lift hover-glow-orange transition-all duration-300 flex flex-col items-center justify-center text-center p-6 animate-float">
               <BarChart3 className="h-10 w-10 text-primary mb-2" />
               <div className="text-2xl font-bold text-foreground mb-1">Data</div>
-              <div className="text-xs text-muted-foreground">Solutions & Analytics</div>
+              <div className="text-xs text-muted-foreground">Solutions and analytics</div>
             </div>
-            <div className="bg-white w-40 h-40 rounded-full shadow-modern hover-lift hover-glow-green transition-all duration-300 flex flex-col items-center justify-center text-center p-6 mt-12">
+            <div className="bg-white w-40 h-40 rounded-full shadow-modern hover-lift hover-glow-green transition-all duration-300 flex flex-col items-center justify-center text-center p-6 mt-12 animate-float-delayed">
               <Users className="h-10 w-10 text-secondary mb-2" />
               <div className="text-2xl font-bold text-foreground mb-1">Community</div>
-              <div className="text-xs text-muted-foreground">Engagement & Impact</div>
+              <div className="text-xs text-muted-foreground">Engagement and impact</div>
             </div>
-            <div className="bg-white w-40 h-40 rounded-full shadow-modern hover-lift hover-glow-primary transition-all duration-300 flex flex-col items-center justify-center text-center p-6">
+            <div className="bg-white w-40 h-40 rounded-full shadow-modern hover-lift hover-glow-primary transition-all duration-300 flex flex-col items-center justify-center text-center p-6 animate-float-slow">
               <Globe className="h-10 w-10 text-primary mb-2" />
               <div className="text-2xl font-bold text-foreground mb-1">Global</div>
-              <div className="text-xs text-muted-foreground">Reach & Expertise</div>
+              <div className="text-xs text-muted-foreground">Reach and expertise</div>
             </div>
-            <div className="bg-gradient-to-br from-primary to-secondary w-40 h-40 rounded-full shadow-modern-lg hover-lift transition-all duration-300 flex flex-col items-center justify-center text-center p-6 mt-12">
+            <div className="bg-gradient-to-br from-primary to-secondary w-40 h-40 rounded-full shadow-modern-lg hover-lift transition-all duration-300 flex flex-col items-center justify-center text-center p-6 mt-12 animate-float">
               <div className="text-white">
                 <div className="text-3xl font-bold mb-1">10+</div>
-                <div className="text-xs opacity-90">Years Experience</div>
+                <div className="text-xs opacity-90">Years of experience</div>
               </div>
             </div>
           </div>
