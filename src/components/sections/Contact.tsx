@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { Mail, MapPin, Phone, Send } from "lucide-react";
 import { z } from "zod";
 
@@ -26,6 +27,7 @@ const contactSchema = z.object({
 
 export const Contact = () => {
   const { toast } = useToast();
+  const { elementRef, isVisible } = useScrollReveal();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -127,8 +129,11 @@ export const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="contact" className="py-20 relative overflow-hidden">
+      {/* Background gradient */}
+      <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background pointer-events-none"></div>
+      
+      <div ref={elementRef} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-heading font-semibold text-foreground mb-4">Get in touch</h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
@@ -138,12 +143,17 @@ export const Contact = () => {
 
         <div className="grid lg:grid-cols-3 gap-12">
           {/* Contact Information */}
-          <div className="space-y-6">
+          <div className={`space-y-6 ${isVisible ? 'animate-fade-up' : 'opacity-0'}`}>
             <h3 className="text-xl font-heading font-semibold text-foreground mb-6">Contact Information</h3>
             {contactInfo.map((info, index) => {
               const Icon = info.icon;
               const content = (
-                <div className="flex items-start space-x-4 p-4 rounded-lg border border-border hover:shadow-md transition-smooth">
+                <div 
+                  className={`flex items-start space-x-4 p-4 rounded-lg border border-border hover-lift hover-glow-primary transition-all duration-300 ${
+                    isVisible ? 'animate-scale-in' : 'opacity-0'
+                  }`}
+                  style={{ animationDelay: `${index * 100}ms` }}
+                >
                   <div className="w-12 h-12 gradient-primary circle-accent flex items-center justify-center flex-shrink-0">
                     <Icon className="h-6 w-6 text-white" />
                   </div>
@@ -165,8 +175,8 @@ export const Contact = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="lg:col-span-2">
-            <Card className="border-border">
+          <div className={`lg:col-span-2 ${isVisible ? 'animate-fade-up animation-delay-200' : 'opacity-0'}`}>
+            <Card className="border-border hover-glow-orange transition-all duration-300">
               <CardHeader>
                 <CardTitle className="text-xl font-heading font-semibold text-foreground">Send us a message</CardTitle>
               </CardHeader>
@@ -239,7 +249,7 @@ export const Contact = () => {
                     type="submit"
                     size="lg"
                     disabled={isSubmitting}
-                    className="w-full gradient-primary text-white hover:opacity-90 transition-smooth shadow-orange"
+                    className="w-full gradient-primary text-white hover:opacity-90 hover:scale-105 transition-all duration-300 shadow-orange hover:shadow-xl"
                   >
                     {isSubmitting ? "Opening Email..." : "Send Message"}
                     <Send className="ml-2 h-5 w-5" />

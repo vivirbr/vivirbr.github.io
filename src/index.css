@@ -189,6 +189,37 @@ Circular theme inspired by logo design
     }
   }
 
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes scale-in {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes glow-pulse {
+    0%, 100% {
+      box-shadow: 0 0 20px hsl(var(--diversa-orange) / 0.3);
+    }
+    50% {
+      box-shadow: 0 0 40px hsl(var(--diversa-orange) / 0.5);
+    }
+  }
+
   .animate-float {
     animation: float 8s ease-in-out infinite;
   }
@@ -207,5 +238,108 @@ Circular theme inspired by logo design
 
   .animate-scroll-x:hover {
     animation-play-state: paused;
+  }
+
+  .animate-fade-up {
+    animation: fade-up 0.6s ease-out forwards;
+  }
+
+  .animate-scale-in {
+    animation: scale-in 0.5s ease-out forwards;
+  }
+
+  /* Staggered animation delays */
+  .animation-delay-100 {
+    animation-delay: 100ms;
+  }
+
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+
+  .animation-delay-300 {
+    animation-delay: 300ms;
+  }
+
+  .animation-delay-400 {
+    animation-delay: 400ms;
+  }
+
+  .animation-delay-500 {
+    animation-delay: 500ms;
+  }
+
+  .animation-delay-600 {
+    animation-delay: 600ms;
+  }
+
+  /* Enhanced hover effects with colored glows */
+  .hover-lift {
+    @apply transition-all duration-300 ease-out;
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-8px) scale(1.02);
+  }
+
+  .hover-glow-orange:hover {
+    box-shadow: 0 20px 40px -15px hsl(var(--diversa-orange) / 0.4),
+                0 0 0 1px hsl(var(--diversa-orange) / 0.1);
+  }
+
+  .hover-glow-green:hover {
+    box-shadow: 0 20px 40px -15px hsl(var(--diversa-green) / 0.4),
+                0 0 0 1px hsl(var(--diversa-green) / 0.1);
+  }
+
+  .hover-glow-primary:hover {
+    box-shadow: 0 20px 40px -15px hsl(var(--primary) / 0.4),
+                0 0 0 1px hsl(var(--primary) / 0.1);
+  }
+
+  /* Gradient text */
+  .gradient-text {
+    background: linear-gradient(135deg, hsl(var(--diversa-orange)), hsl(var(--diversa-green)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Section with circular gradient overlays */
+  .section-with-circles {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .section-with-circles::before,
+  .section-with-circles::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .section-with-circles::before {
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, hsl(var(--diversa-orange) / 0.08) 0%, transparent 70%);
+    top: -200px;
+    right: -200px;
+    animation: float-slow 20s ease-in-out infinite;
+  }
+
+  .section-with-circles::after {
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, hsl(var(--diversa-green) / 0.08) 0%, transparent 70%);
+    bottom: -150px;
+    left: -150px;
+    animation: float-delayed 15s ease-in-out infinite;
+  }
+
+  .section-with-circles > * {
+    position: relative;
+    z-index: 1;
   }
 }
