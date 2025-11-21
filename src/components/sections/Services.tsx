@@ -2,8 +2,10 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Database, FileBarChart, Users, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 export const Services = () => {
+  const { elementRef, isVisible } = useScrollReveal();
   const services = [
     {
       icon: Database,
@@ -29,8 +31,8 @@ export const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="services" className="py-20 section-with-circles">
+      <div ref={elementRef} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-heading font-semibold text-foreground mb-4">Our services</h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
@@ -42,11 +44,22 @@ export const Services = () => {
         <div className="grid lg:grid-cols-3 gap-8 mb-12">
           {services.map((service, index) => {
             const Icon = service.icon;
+            const glowClass = service.color === "orange" 
+              ? "hover-glow-orange" 
+              : service.color === "green" 
+                ? "hover-glow-green" 
+                : "hover-glow-primary";
             return (
-              <Card key={index} className="border-border hover:shadow-lg transition-smooth group">
+              <Card 
+                key={index} 
+                className={`border-border hover-lift ${glowClass} transition-all duration-300 group ${
+                  isVisible ? 'animate-fade-up' : 'opacity-0'
+                }`}
+                style={{ animationDelay: `${index * 150}ms` }}
+              >
                 <CardHeader className="text-center pb-4">
                   <div
-                    className={`w-20 h-20 mx-auto mb-4 circle-accent flex items-center justify-center ${
+                    className={`w-20 h-20 mx-auto mb-4 circle-accent flex items-center justify-center transition-transform duration-300 group-hover:scale-110 ${
                       service.color === "orange"
                         ? "gradient-orange"
                         : service.color === "green"
@@ -54,7 +67,7 @@ export const Services = () => {
                           : "gradient-primary"
                     }`}
                   >
-                    <Icon className="h-10 w-10 text-white" />
+                    <Icon className="h-10 w-10 text-white transition-transform duration-300 group-hover:rotate-12" />
                   </div>
                   <CardTitle className="text-xl font-heading font-semibold text-foreground">{service.title}</CardTitle>
                 </CardHeader>
@@ -82,12 +95,12 @@ export const Services = () => {
           })}
         </div>
 
-        <div className="text-center">
+        <div className={`text-center ${isVisible ? 'animate-fade-up animation-delay-500' : 'opacity-0'}`}>
           <Link to="/services">
             <Button
               size="lg"
               variant="outline"
-              className="border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-smooth"
+              className="border-primary text-primary hover:bg-primary hover:text-primary-foreground hover:scale-105 transition-all duration-300"
             >
               View our project portfolio
               <ArrowRight className="ml-2 h-5 w-5" />
