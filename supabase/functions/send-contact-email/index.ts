@@ -129,7 +129,7 @@ const handler = async (req: Request): Promise<Response> => {
         "Authorization": `Bearer ${RESEND_API_KEY}`,
       },
       body: JSON.stringify({
-        from: "Diversa Contact Form <onboarding@resend.dev>",
+        from: "Diversa Contact Form <contact@diversa.earth>",
         to: ["info@diversa.earth"],
         subject: `Contact Form: ${escapeHtml(subject)}`,
         html: `
