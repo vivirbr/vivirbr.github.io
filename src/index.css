@@ -14,88 +14,81 @@ Circular theme inspired by logo design
     --diversa-green: 164 28% 51%;     /* #6A9C89 */
     --diversa-cream: 44 75% 96%;      /* #FFF5E4 */
     
-    /* Semantic Colors */
-    --background: 44 75% 96%;         /* Cream background */
-    --foreground: 164 28% 25%;        /* Dark green text */
+    /* Semantic Colors - Modern white base */
+    --background: 0 0% 100%;          /* Pure white background */
+    --foreground: 220 20% 20%;        /* Darker, more modern text */
 
     --card: 0 0% 100%;
-    --card-foreground: 164 28% 25%;
+    --card-foreground: 220 20% 20%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 164 28% 25%;
+    --popover-foreground: 220 20% 20%;
 
     --primary: 20 90% 42%;            /* Orange primary */
-    --primary-foreground: 44 75% 96%; /* Cream on orange */
+    --primary-foreground: 0 0% 100%;  /* White on orange */
 
     --secondary: 164 28% 51%;         /* Green secondary */
-    --secondary-foreground: 44 75% 96%; /* Cream on green */
+    --secondary-foreground: 0 0% 100%; /* White on green */
 
-    --muted: 44 20% 90%;
-    --muted-foreground: 164 15% 40%;
+    --muted: 220 15% 96%;             /* Cool gray instead of cream */
+    --muted-foreground: 220 10% 45%;
 
     --accent: 164 28% 51%;
-    --accent-foreground: 44 75% 96%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 44 75% 96%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 164 15% 85%;
-    --input: 0 0% 100%;
+    --border: 220 15% 90%;
+    --input: 220 15% 95%;
     --ring: 20 90% 42%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;                /* Larger radius for modern feel */
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
   .dark {
     --background: 164 28% 15%;
-    --foreground: 44 75% 96%;
+    --foreground: 0 0% 100%;
 
     --card: 164 28% 20%;
-    --card-foreground: 44 75% 96%;
+    --card-foreground: 0 0% 100%;
 
     --popover: 164 28% 20%;
-    --popover-foreground: 44 75% 96%;
+    --popover-foreground: 0 0% 100%;
 
     --primary: 20 90% 42%;
-    --primary-foreground: 44 75% 96%;
+    --primary-foreground: 0 0% 100%;
 
     --secondary: 164 28% 25%;
-    --secondary-foreground: 44 75% 96%;
+    --secondary-foreground: 0 0% 100%;
 
     --muted: 164 15% 25%;
-    --muted-foreground: 44 20% 70%;
+    --muted-foreground: 220 10% 70%;
 
     --accent: 164 28% 25%;
-    --accent-foreground: 44 75% 96%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 62.8% 50%;
-    --destructive-foreground: 44 75% 96%;
+    --destructive-foreground: 0 0% 100%;
 
     --border: 164 15% 30%;
     --input: 164 15% 30%;
     --ring: 20 90% 42%;
     --sidebar-background: 164 28% 15%;
-    --sidebar-foreground: 44 75% 96%;
+    --sidebar-foreground: 0 0% 100%;
     --sidebar-primary: 20 90% 42%;
-    --sidebar-primary-foreground: 44 75% 96%;
+    --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 164 28% 25%;
-    --sidebar-accent-foreground: 44 75% 96%;
+    --sidebar-accent-foreground: 0 0% 100%;
     --sidebar-border: 164 15% 30%;
     --sidebar-ring: 20 90% 42%;
   }
@@ -110,26 +103,53 @@ Circular theme inspired by logo design
     @apply bg-background text-foreground font-body;
   }
 
-  /* Circular design elements inspired by logo */
-  .circle-accent {
+  /* Modern geometric accents */
+  .geometric-accent {
+    position: absolute;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  .geometric-square {
+    width: 120px;
+    height: 120px;
+    border-radius: 20px;
+    opacity: 0.08;
+  }
+
+  .geometric-circle {
     border-radius: 50%;
+    opacity: 0.08;
   }
 
-  .circle-bg-pattern {
-    background-image: radial-gradient(circle at 20% 50%, hsl(var(--diversa-orange) / 0.1) 0%, transparent 50%),
-                      radial-gradient(circle at 80% 20%, hsl(var(--diversa-green) / 0.1) 0%, transparent 50%);
+  /* Colored left border for cards */
+  .border-l-accent-orange {
+    border-left: 4px solid hsl(var(--diversa-orange));
   }
 
+  .border-l-accent-green {
+    border-left: 4px solid hsl(var(--diversa-green));
+  }
+
+  /* Modern gradients - subtle and clean */
   .gradient-primary {
-    background: linear-gradient(135deg, hsl(var(--diversa-orange)), hsl(var(--diversa-green)));
+    background: linear-gradient(135deg, hsl(var(--diversa-orange)), hsl(var(--diversa-orange) / 0.85));
   }
 
   .gradient-orange {
-    background: linear-gradient(135deg, hsl(var(--diversa-orange)), hsl(var(--diversa-orange) / 0.8));
+    background: linear-gradient(135deg, hsl(var(--diversa-orange)), hsl(var(--diversa-orange) / 0.9));
   }
 
   .gradient-green {
-    background: linear-gradient(135deg, hsl(var(--diversa-green)), hsl(var(--diversa-green) / 0.8));
+    background: linear-gradient(135deg, hsl(var(--diversa-green)), hsl(var(--diversa-green) / 0.9));
+  }
+
+  .gradient-subtle-orange {
+    background: linear-gradient(135deg, hsl(var(--diversa-orange) / 0.05), hsl(var(--diversa-orange) / 0.02));
+  }
+
+  .gradient-subtle-green {
+    background: linear-gradient(135deg, hsl(var(--diversa-green) / 0.05), hsl(var(--diversa-green) / 0.02));
   }
 
   /* Smooth transitions */
@@ -283,18 +303,27 @@ Circular theme inspired by logo design
   }
 
   .hover-glow-orange:hover {
-    box-shadow: 0 20px 40px -15px hsl(var(--diversa-orange) / 0.4),
+    box-shadow: 0 25px 50px -12px hsl(var(--diversa-orange) / 0.25),
                 0 0 0 1px hsl(var(--diversa-orange) / 0.1);
   }
 
   .hover-glow-green:hover {
-    box-shadow: 0 20px 40px -15px hsl(var(--diversa-green) / 0.4),
+    box-shadow: 0 25px 50px -12px hsl(var(--diversa-green) / 0.25),
                 0 0 0 1px hsl(var(--diversa-green) / 0.1);
   }
 
   .hover-glow-primary:hover {
-    box-shadow: 0 20px 40px -15px hsl(var(--primary) / 0.4),
+    box-shadow: 0 25px 50px -12px hsl(var(--primary) / 0.25),
                 0 0 0 1px hsl(var(--primary) / 0.1);
+  }
+
+  /* Enhanced card shadows for depth */
+  .shadow-modern {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  }
+
+  .shadow-modern-lg {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
   }
 
   /* Gradient text */
@@ -305,40 +334,40 @@ Circular theme inspired by logo design
     background-clip: text;
   }
 
-  /* Section with circular gradient overlays */
-  .section-with-circles {
+  /* Section with geometric elements */
+  .section-with-shapes {
     position: relative;
     overflow: hidden;
   }
 
-  .section-with-circles::before,
-  .section-with-circles::after {
+  .section-with-shapes::before {
     content: '';
     position: absolute;
-    border-radius: 50%;
-    pointer-events: none;
+    width: 400px;
+    height: 400px;
+    border-radius: 30px;
+    background: linear-gradient(135deg, hsl(var(--diversa-orange) / 0.06), transparent);
+    top: -100px;
+    right: -100px;
+    transform: rotate(15deg);
     z-index: 0;
+    pointer-events: none;
   }
 
-  .section-with-circles::before {
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(circle, hsl(var(--diversa-orange) / 0.08) 0%, transparent 70%);
-    top: -200px;
-    right: -200px;
-    animation: float-slow 20s ease-in-out infinite;
+  .section-with-shapes::after {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, hsl(var(--diversa-green) / 0.06), transparent);
+    bottom: -80px;
+    left: -80px;
+    z-index: 0;
+    pointer-events: none;
   }
 
-  .section-with-circles::after {
-    width: 500px;
-    height: 500px;
-    background: radial-gradient(circle, hsl(var(--diversa-green) / 0.08) 0%, transparent 70%);
-    bottom: -150px;
-    left: -150px;
-    animation: float-delayed 15s ease-in-out infinite;
-  }
-
-  .section-with-circles > * {
+  .section-with-shapes > * {
     position: relative;
     z-index: 1;
   }

@@ -24,32 +24,37 @@ export const Clients = () => {
   ];
 
   return (
-    <section id="clients" className="py-20 bg-gradient-to-br from-secondary/5 via-muted/30 to-secondary/15 section-with-circles relative">
+    <section id="clients" className="py-24 bg-gradient-subtle-green section-with-shapes relative">
       {/* Section divider at top */}
       <div className="section-divider mb-20"></div>
       
       <div ref={elementRef} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-heading font-semibold text-foreground mb-4">
-            Trusted by leading organizations
+        <div className="text-center mb-20">
+          <div className="inline-block mb-4">
+            <span className="px-4 py-2 bg-secondary/10 text-secondary rounded-full text-sm font-semibold">
+              Our Partners
+            </span>
+          </div>
+          <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-6">
+            Trusted by Leading Organizations
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             We work with forward-thinking organizations committed to creating sustainable impact through data-driven
             decision making.
           </p>
         </div>
 
         {/* Logo Gallery */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 max-w-5xl mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
           {clients.slice(0, 7).map((client, index) => (
             <Card
               key={client.id}
-              className={`border-2 border-transparent hover:border-secondary/30 hover-lift hover-glow-green transition-all duration-300 group bg-background ${
+              className={`bg-white border-0 shadow-modern hover-lift hover-glow-green transition-all duration-300 group ${
                 isVisible ? 'animate-scale-in' : 'opacity-0'
               }`}
               style={{ animationDelay: `${index * 80}ms` }}
             >
-              <CardContent className="p-6 flex items-center justify-center h-32">
+              <CardContent className="p-8 flex items-center justify-center h-36">
                 <img
                   src={client.logo}
                   alt={client.name}

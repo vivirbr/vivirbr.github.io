@@ -31,14 +31,19 @@ export const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-20 bg-gradient-to-br from-primary/5 via-background to-primary/10 section-with-circles relative">
+    <section id="services" className="py-24 bg-background section-with-shapes relative">
       {/* Section divider at top */}
       <div className="section-divider mb-20"></div>
       
       <div ref={elementRef} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-heading font-semibold text-foreground mb-4">Our services</h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+        <div className="text-center mb-20">
+          <div className="inline-block mb-4">
+            <span className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-semibold">
+              What We Do
+            </span>
+          </div>
+          <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-6">Our Services</h2>
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Comprehensive solutions that bridge the gap between complex social and sustainability data and meaningful
             action on the ground.
           </p>
@@ -60,14 +65,14 @@ export const Services = () => {
             return (
               <Card 
                 key={index} 
-                className={`border-0 ${borderClass} hover-lift ${glowClass} transition-all duration-300 group ${
+                className={`bg-white shadow-modern-lg hover-lift ${glowClass} transition-all duration-300 group border-0 ${borderClass} ${
                   isVisible ? 'animate-fade-up' : 'opacity-0'
                 }`}
                 style={{ animationDelay: `${index * 150}ms` }}
               >
-                <CardHeader className="text-center pb-4">
+                <CardHeader className="text-center pb-6 pt-8">
                   <div
-                    className={`w-20 h-20 mx-auto mb-4 circle-accent flex items-center justify-center transition-transform duration-300 group-hover:scale-110 ${
+                    className={`w-24 h-24 mx-auto mb-6 rounded-2xl flex items-center justify-center transition-transform duration-300 group-hover:scale-110 shadow-modern-lg ${
                       service.color === "orange"
                         ? "gradient-orange"
                         : service.color === "green"
@@ -75,17 +80,17 @@ export const Services = () => {
                           : "gradient-primary"
                     }`}
                   >
-                    <Icon className="h-10 w-10 text-white transition-transform duration-300 group-hover:rotate-12" />
+                    <Icon className="h-12 w-12 text-white transition-transform duration-300 group-hover:rotate-12" />
                   </div>
-                  <CardTitle className="text-xl font-heading font-semibold text-foreground">{service.title}</CardTitle>
+                  <CardTitle className="text-2xl font-heading font-bold text-foreground">{service.title}</CardTitle>
                 </CardHeader>
-                <CardContent className="text-center">
-                  <p className="text-muted-foreground mb-6 leading-relaxed">{service.description}</p>
-                  <ul className="space-y-2 text-sm text-left">
+                <CardContent className="text-center px-8 pb-8">
+                  <p className="text-muted-foreground mb-8 leading-relaxed text-base">{service.description}</p>
+                  <ul className="space-y-3 text-sm text-left">
                     {service.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-start space-x-2">
+                      <li key={idx} className="flex items-start space-x-3">
                         <div
-                          className={`w-2 h-2 circle-accent mt-2 ${
+                          className={`w-2 h-2 rounded-full mt-2 flex-shrink-0 ${
                             service.color === "orange"
                               ? "bg-diversa-orange"
                               : service.color === "green"
@@ -107,8 +112,7 @@ export const Services = () => {
           <Link to="/services">
             <Button
               size="lg"
-              variant="outline"
-              className="border-primary text-primary hover:bg-primary hover:text-primary-foreground hover:scale-105 transition-all duration-300"
+              className="gradient-primary text-white hover:opacity-90 hover:scale-105 transition-all duration-300 shadow-modern-lg text-base px-8 py-6 h-auto"
             >
               View our project portfolio
               <ArrowRight className="ml-2 h-5 w-5" />
