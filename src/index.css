@@ -172,10 +172,10 @@ Circular theme inspired by logo design
       transform: translateY(0) translateX(0);
     }
     33% {
-      transform: translateY(-8px) translateX(4px);
+      transform: translateY(-15px) translateX(8px);
     }
     66% {
-      transform: translateY(4px) translateX(-4px);
+      transform: translateY(8px) translateX(-8px);
     }
   }
 
@@ -184,10 +184,10 @@ Circular theme inspired by logo design
       transform: translateY(0) translateX(0);
     }
     33% {
-      transform: translateY(6px) translateX(-6px);
+      transform: translateY(12px) translateX(-10px);
     }
     66% {
-      transform: translateY(-4px) translateX(6px);
+      transform: translateY(-8px) translateX(10px);
     }
   }
 
@@ -196,7 +196,7 @@ Circular theme inspired by logo design
       transform: translateY(0) translateX(0);
     }
     50% {
-      transform: translateY(-6px) translateX(4px);
+      transform: translateY(-12px) translateX(8px);
     }
   }
 
@@ -241,15 +241,15 @@ Circular theme inspired by logo design
   }
 
   .animate-float {
-    animation: float 12s ease-in-out infinite;
+    animation: float 20s ease-in-out infinite;
   }
 
   .animate-float-delayed {
-    animation: float-delayed 14s ease-in-out infinite;
+    animation: float-delayed 22s ease-in-out infinite;
   }
 
   .animate-float-slow {
-    animation: float-slow 16s ease-in-out infinite;
+    animation: float-slow 25s ease-in-out infinite;
   }
 
   .animate-scroll-x {
