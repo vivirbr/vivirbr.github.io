@@ -43,7 +43,7 @@ export const About = () => {
               Who We Are
             </span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-6">Bridging Data and Action</h2>
+          <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-6">Bridging data and action</h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             We build custom data solutions and leverage our international and fieldwork expertise to produce strategic
             reports and policy briefs. We also specialize in community engagement and advocacy to build stakeholder
