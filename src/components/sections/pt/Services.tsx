@@ -29,12 +29,12 @@ export const ServicesPt = () => {
   ];
 
   return (
-    <section id="services" className="py-24 bg-background section-with-shapes relative">
+    <section id="services" className="py-14 bg-background section-with-shapes relative">
       {/* Section divider at top */}
-      <div className="section-divider mb-20"></div>
+      <div className="section-divider mb-10"></div>
 
       <div ref={elementRef} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-20">
+        <div className="text-center mb-12">
           <div className="inline-block mb-4">
             <span className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-semibold">O Que Fazemos</span>
           </div>

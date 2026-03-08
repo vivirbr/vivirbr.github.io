@@ -25,11 +25,11 @@ export const Clients = () => {
   const marqueeClients = [...clients, ...clients];
 
   return (
-    <section id="clients" className="py-24 bg-muted/30 relative overflow-hidden">
-      <div className="section-divider mb-20"></div>
+    <section id="clients" className="py-14 bg-muted/30 relative overflow-hidden">
+      <div className="section-divider mb-10"></div>
 
       <div ref={elementRef} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className={`text-center mb-16 ${isVisible ? "animate-fade-up" : "opacity-0"}`}>
+        <div className={`text-center mb-10 ${isVisible ? "animate-fade-up" : "opacity-0"}`}>
           <div className="inline-block mb-4">
             <span className="px-4 py-2 bg-secondary/10 text-secondary rounded-full text-sm font-semibold">
               Our Partners
@@ -55,9 +55,9 @@ export const Clients = () => {
           {marqueeClients.map((client, index) => (
             <div
               key={`${client.id}-${index}`}
-              className="flex-shrink-0 mx-6 md:mx-10"
+              className="flex-shrink-0 mx-3 md:mx-5"
             >
-              <div className="bg-white rounded-2xl shadow-modern hover-lift transition-all duration-300 p-8 w-44 h-28 flex items-center justify-center group">
+              <div className="bg-white rounded-2xl shadow-modern hover-lift transition-all duration-300 p-6 w-36 h-24 flex items-center justify-center group">
                 <img
                   src={client.logo}
                   alt={client.name}

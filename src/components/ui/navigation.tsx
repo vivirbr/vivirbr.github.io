@@ -11,12 +11,17 @@ export const Navigation = () => {
 
   const isPortuguese = location.pathname.startsWith('/pt');
 
-  const navItems = [
-    { name: 'Home', path: '/' },
-    { name: 'About', path: '/about', disabled: true },
-    { name: 'Services', path: '/services', disabled: true },
-    { name: 'Contact', path: '#contact' },
-  ];
+  const navItems = isPortuguese
+    ? [
+        { name: 'Início', path: '/pt' },
+        { name: 'Sobre', path: '/pt/about' },
+        { name: 'Contato', path: '#contact' },
+      ]
+    : [
+        { name: 'Home', path: '/' },
+        { name: 'About', path: '/about' },
+        { name: 'Contact', path: '#contact' },
+      ];
 
   const isActive = (path: string) => {
     if (path.startsWith('#')) {
