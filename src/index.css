@@ -14,8 +14,8 @@ Circular theme inspired by logo design
     --diversa-green: 164 28% 51%;     /* #6A9C89 */
     --diversa-cream: 44 75% 96%;      /* #FFF5E4 */
     
-    /* Semantic Colors - Modern white base */
-    --background: 0 0% 100%;          /* Pure white background */
+    /* Semantic Colors - Warm cream base */
+    --background: 36 100% 98%;         /* Warm cream background */
     --foreground: 220 20% 20%;        /* Darker, more modern text */
 
     --card: 0 0% 100%;
@@ -30,7 +30,7 @@ Circular theme inspired by logo design
     --secondary: 164 28% 51%;         /* Green secondary */
     --secondary-foreground: 0 0% 100%; /* White on green */
 
-    --muted: 220 15% 96%;             /* Cool gray instead of cream */
+    --muted: 36 40% 95%;                /* Warm muted */
     --muted-foreground: 220 10% 45%;
 
     --accent: 164 28% 51%;
@@ -39,8 +39,8 @@ Circular theme inspired by logo design
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 15% 90%;
-    --input: 220 15% 95%;
+    --border: 36 30% 90%;
+    --input: 36 25% 95%;
     --ring: 20 90% 42%;
 
     --radius: 0.75rem;                /* Larger radius for modern feel */
