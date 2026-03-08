@@ -29,7 +29,10 @@ export const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-14 bg-background section-with-shapes relative">
+    <section id="services" className="py-14 section-bg-orange-tint section-with-shapes relative">
+      {/* Floating blobs */}
+      <div className="floating-blob blob-orange w-[350px] h-[350px] top-[-5%] left-[-8%] animate-float" />
+      <div className="floating-blob blob-green w-[250px] h-[250px] bottom-[10%] right-[-3%] animate-float-slow" />
       {/* Section divider at top */}
       <div className="section-divider mb-10"></div>
 

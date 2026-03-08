@@ -25,7 +25,10 @@ export const Clients = () => {
   const marqueeClients = [...clients, ...clients];
 
   return (
-    <section id="clients" className="py-14 bg-muted/30 relative overflow-hidden">
+    <section id="clients" className="py-14 section-bg-cream relative overflow-hidden">
+      {/* Floating blobs */}
+      <div className="floating-blob blob-green w-[280px] h-[280px] top-[5%] left-[-5%] animate-float-delayed" />
+      <div className="floating-blob blob-cream w-[200px] h-[200px] bottom-[-5%] right-[10%] animate-float" />
       <div className="section-divider mb-10"></div>
 
       <div ref={elementRef} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

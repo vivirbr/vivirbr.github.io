@@ -32,7 +32,10 @@ export const About = () => {
   ];
 
   return (
-    <section id="about" className="py-14 bg-muted/30 section-with-shapes relative">
+    <section id="about" className="py-14 section-bg-green-tint section-with-shapes relative">
+      {/* Floating blobs */}
+      <div className="floating-blob blob-green w-[300px] h-[300px] top-[10%] right-[-5%] animate-float-slow" />
+      <div className="floating-blob blob-orange w-[200px] h-[200px] bottom-[5%] left-[10%] animate-float-delayed" />
       {/* Section divider at top */}
       <div className="section-divider mb-10"></div>
 

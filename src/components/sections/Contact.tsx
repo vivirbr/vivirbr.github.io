@@ -126,9 +126,13 @@ export const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-14 relative overflow-hidden bg-background">
+    <section id="contact" className="py-14 relative overflow-hidden section-bg-green-tint">
       {/* Section divider at top */}
       <div className="section-divider mb-10"></div>
+
+      {/* Floating blobs */}
+      <div className="floating-blob blob-orange w-[300px] h-[300px] top-[10%] right-[-5%] animate-float" />
+      <div className="floating-blob blob-green w-[220px] h-[220px] bottom-[-5%] left-[5%] animate-float-slow" />
 
       {/* Background gradient accent */}
       <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-primary/5 to-transparent pointer-events-none"></div>
