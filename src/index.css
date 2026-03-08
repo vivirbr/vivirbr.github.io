@@ -410,4 +410,38 @@ Circular theme inspired by logo design
     background: linear-gradient(hsl(var(--card)), hsl(var(--card))) padding-box,
                 linear-gradient(135deg, hsl(var(--diversa-orange)), hsl(var(--diversa-green))) border-box;
   }
+
+  /* Alternating warm section backgrounds */
+  .section-bg-cream {
+    background: linear-gradient(180deg, hsl(36 60% 97%), hsl(36 50% 95%));
+  }
+
+  .section-bg-green-tint {
+    background: linear-gradient(180deg, hsl(164 25% 96%), hsl(164 20% 94%));
+  }
+
+  .section-bg-orange-tint {
+    background: linear-gradient(180deg, hsl(20 60% 97%), hsl(20 50% 95%));
+  }
+
+  /* Floating decorative blobs */
+  .floating-blob {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 0;
+    filter: blur(80px);
+  }
+
+  .blob-orange {
+    background: hsl(var(--diversa-orange) / 0.12);
+  }
+
+  .blob-green {
+    background: hsl(var(--diversa-green) / 0.12);
+  }
+
+  .blob-cream {
+    background: hsl(var(--diversa-cream) / 0.4);
+  }
 }
