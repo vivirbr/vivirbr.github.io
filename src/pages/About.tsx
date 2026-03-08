@@ -2,8 +2,8 @@ import { Navigation } from '@/components/ui/navigation';
 import { Footer } from '@/components/ui/footer';
 import { Card, CardContent } from '@/components/ui/card';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
-import vivianPhoto from '@/assets/team/vivian-ribeiro.jpg';
-import gabrielaPhoto from '@/assets/team/gabriela-russo-lopes.jpg';
+import vivianPhoto from '@/assets/team/gabriela-russo-lopes.jpg';
+import gabrielaPhoto from '@/assets/team/vivian-ribeiro.jpg';
 import waynerPhoto from '@/assets/team/wayner-maia.jpg';
 import marianaPhoto from '@/assets/team/mariana-oliveira.png';
 

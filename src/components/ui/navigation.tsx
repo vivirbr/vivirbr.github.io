@@ -14,7 +14,7 @@ export const Navigation = () => {
   const navItems = isPortuguese
     ? [
         { name: 'Início', path: '/pt' },
-        { name: 'Sobre', path: '/pt/about' },
+        { name: 'Sobre nós', path: '/pt/about' },
         { name: 'Contato', path: '#contact' },
       ]
     : [
