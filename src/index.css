@@ -205,7 +205,7 @@ Circular theme inspired by logo design
       transform: translateX(0);
     }
     100% {
-      transform: translateX(calc(-100% / 3));
+      transform: translateX(-50%);
     }
   }
 
@@ -253,11 +253,7 @@ Circular theme inspired by logo design
   }
 
   .animate-scroll-x {
-    animation: scroll-x 15s linear infinite;
-  }
-
-  .animate-scroll-x:hover {
-    animation-play-state: paused;
+    animation: scroll-x 30s linear infinite;
   }
 
   .animate-fade-up {
