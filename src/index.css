@@ -169,34 +169,43 @@ Circular theme inspired by logo design
   /* Float animations for hero circles - very soft and gentle with wide range */
   @keyframes float {
     0%, 100% {
-      transform: translateY(0) translateX(0);
+      transform: translateY(0) translateX(0) scale(1);
     }
-    33% {
-      transform: translateY(-25px) translateX(15px);
+    25% {
+      transform: translateY(-40px) translateX(30px) scale(1.1);
     }
-    66% {
-      transform: translateY(15px) translateX(-15px);
+    50% {
+      transform: translateY(10px) translateX(-20px) scale(0.95);
+    }
+    75% {
+      transform: translateY(-20px) translateX(-30px) scale(1.05);
     }
   }
 
   @keyframes float-delayed {
     0%, 100% {
-      transform: translateY(0) translateX(0);
+      transform: translateY(0) translateX(0) scale(1);
     }
-    33% {
-      transform: translateY(20px) translateX(-18px);
+    25% {
+      transform: translateY(35px) translateX(-35px) scale(1.08);
     }
-    66% {
-      transform: translateY(-15px) translateX(18px);
+    50% {
+      transform: translateY(-25px) translateX(25px) scale(0.92);
+    }
+    75% {
+      transform: translateY(15px) translateX(40px) scale(1.12);
     }
   }
 
   @keyframes float-slow {
     0%, 100% {
-      transform: translateY(0) translateX(0);
+      transform: translateY(0) translateX(0) scale(1);
     }
-    50% {
-      transform: translateY(-20px) translateX(15px);
+    33% {
+      transform: translateY(-35px) translateX(25px) scale(1.1);
+    }
+    66% {
+      transform: translateY(20px) translateX(-30px) scale(0.9);
     }
   }
 
@@ -241,15 +250,15 @@ Circular theme inspired by logo design
   }
 
   .animate-float {
-    animation: float 35s ease-in-out infinite;
+    animation: float 18s ease-in-out infinite;
   }
 
   .animate-float-delayed {
-    animation: float-delayed 40s ease-in-out infinite;
+    animation: float-delayed 22s ease-in-out infinite;
   }
 
   .animate-float-slow {
-    animation: float-slow 45s ease-in-out infinite;
+    animation: float-slow 26s ease-in-out infinite;
   }
 
   .animate-scroll-x {
