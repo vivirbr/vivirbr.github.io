@@ -51,8 +51,8 @@ export const Clients = () => {
       {/* Marquee */}
       <div className={`relative ${isVisible ? "animate-fade-up animation-delay-200" : "opacity-0"}`}>
         {/* Fade edges */}
-        <div className="absolute left-0 top-0 bottom-0 w-24 md:w-40 bg-gradient-to-r from-muted/80 to-transparent z-10 pointer-events-none" />
-        <div className="absolute right-0 top-0 bottom-0 w-24 md:w-40 bg-gradient-to-l from-muted/80 to-transparent z-10 pointer-events-none" />
+        <div className="absolute left-0 top-0 bottom-0 w-24 md:w-40 bg-gradient-to-r from-[hsl(36_60%_97%)] to-transparent z-10 pointer-events-none" />
+        <div className="absolute right-0 top-0 bottom-0 w-24 md:w-40 bg-gradient-to-l from-[hsl(36_60%_97%)] to-transparent z-10 pointer-events-none" />
         
         <div className="flex animate-scroll-x hover:[animation-play-state:paused]">
           {marqueeClients.map((client, index) => (
