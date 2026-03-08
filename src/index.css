@@ -434,14 +434,14 @@ Circular theme inspired by logo design
   }
 
   .blob-orange {
-    background: hsl(var(--diversa-orange) / 0.12);
+    background: hsl(var(--diversa-orange) / 0.25);
   }
 
   .blob-green {
-    background: hsl(var(--diversa-green) / 0.12);
+    background: hsl(var(--diversa-green) / 0.25);
   }
 
   .blob-cream {
-    background: hsl(var(--diversa-cream) / 0.4);
+    background: hsl(var(--diversa-cream) / 0.6);
   }
 }
