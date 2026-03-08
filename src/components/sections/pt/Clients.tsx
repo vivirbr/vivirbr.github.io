@@ -1,4 +1,3 @@
-import { Card, CardContent } from "@/components/ui/card";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import imafloraLogo from "@/assets/clients/imaflora.webp";
 import globalCanopyLogo from "@/assets/clients/global-canopy.png";
@@ -22,13 +21,14 @@ export const ClientsPt = () => {
     { name: "Beyond Borders Media", logo: beyondBordersLogo, id: 8 },
   ];
 
+  const marqueeClients = [...clients, ...clients];
+
   return (
-    <section id="clients" className="py-24 bg-gradient-subtle-green section-with-shapes relative">
-      {/* Section divider at top */}
-      <div className="section-divider mb-20"></div>
+    <section id="clients" className="py-14 bg-muted/30 relative overflow-hidden">
+      <div className="section-divider mb-10"></div>
 
       <div ref={elementRef} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-20">
+        <div className={`text-center mb-10 ${isVisible ? "animate-fade-up" : "opacity-0"}`}>
           <div className="inline-block mb-4">
             <span className="px-4 py-2 bg-secondary/10 text-secondary rounded-full text-sm font-semibold">
               Nossos Parceiros
@@ -38,29 +38,31 @@ export const ClientsPt = () => {
             Confiados por organizações líderes
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Trabalhamos com organizações inovadoras comprometidas em criar impacto sustentável através de 
+            Trabalhamos com organizações inovadoras comprometidas em criar impacto sustentável através de
             decisões baseadas em dados.
           </p>
         </div>
+      </div>
 
-        {/* Logo Gallery */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-          {clients.map((client, index) => (
-            <Card
-              key={client.id}
-              className={`bg-white border-0 shadow-modern hover-lift hover-glow-green transition-all duration-300 group ${
-                isVisible ? "animate-scale-in" : "opacity-0"
-              }`}
-              style={{ animationDelay: `${index * 80}ms` }}
+      {/* Marquee */}
+      <div className={`relative ${isVisible ? "animate-fade-up animation-delay-200" : "opacity-0"}`}>
+        <div className="absolute left-0 top-0 bottom-0 w-24 md:w-40 bg-gradient-to-r from-muted/80 to-transparent z-10 pointer-events-none" />
+        <div className="absolute right-0 top-0 bottom-0 w-24 md:w-40 bg-gradient-to-l from-muted/80 to-transparent z-10 pointer-events-none" />
+        
+        <div className="flex animate-scroll-x hover:[animation-play-state:paused]">
+          {marqueeClients.map((client, index) => (
+            <div
+              key={`${client.id}-${index}`}
+              className="flex-shrink-0 mx-3 md:mx-5"
             >
-              <CardContent className="p-8 flex items-center justify-center h-36">
+              <div className="bg-white rounded-2xl shadow-modern hover-lift transition-all duration-300 p-6 w-36 h-24 flex items-center justify-center group">
                 <img
                   src={client.logo}
                   alt={client.name}
-                  className="max-w-full max-h-20 object-contain filter grayscale hover:grayscale-0 transition-smooth"
+                  className="max-w-full max-h-16 object-contain filter grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500"
                 />
-              </CardContent>
-            </Card>
+              </div>
+            </div>
           ))}
         </div>
       </div>

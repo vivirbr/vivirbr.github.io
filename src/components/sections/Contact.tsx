@@ -126,15 +126,15 @@ export const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-24 relative overflow-hidden bg-background">
+    <section id="contact" className="py-14 relative overflow-hidden bg-background">
       {/* Section divider at top */}
-      <div className="section-divider mb-20"></div>
+      <div className="section-divider mb-10"></div>
 
       {/* Background gradient accent */}
       <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-primary/5 to-transparent pointer-events-none"></div>
 
       <div ref={elementRef} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-20">
+        <div className="text-center mb-12">
           <div className="inline-block mb-4">
             <span className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-semibold">Let's Talk</span>
           </div>

@@ -11,12 +11,17 @@ export const Navigation = () => {
 
   const isPortuguese = location.pathname.startsWith('/pt');
 
-  const navItems = [
-    { name: 'Home', path: '/' },
-    { name: 'About', path: '/about', disabled: true },
-    { name: 'Services', path: '/services', disabled: true },
-    { name: 'Contact', path: '#contact' },
-  ];
+  const navItems = isPortuguese
+    ? [
+        { name: 'Início', path: '/pt' },
+        { name: 'Sobre', path: '/pt/about' },
+        { name: 'Contato', path: '#contact' },
+      ]
+    : [
+        { name: 'Home', path: '/' },
+        { name: 'About', path: '/about' },
+        { name: 'Contact', path: '#contact' },
+      ];
 
   const isActive = (path: string) => {
     if (path.startsWith('#')) {
@@ -70,15 +75,7 @@ export const Navigation = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
-              item.disabled ? (
-                <span
-                  key={item.name}
-                  className="text-sm font-medium text-muted-foreground/50 cursor-not-allowed"
-                  title="Coming soon"
-                >
-                  {item.name}
-                </span>
-              ) : item.path.startsWith('#') ? (
+              item.path.startsWith('#') ? (
                 <button
                   key={item.name}
                   onClick={() => handleLinkClick(item.path)}
@@ -130,15 +127,7 @@ export const Navigation = () => {
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-background border-b border-border">
             {navItems.map((item) => (
-              item.disabled ? (
-                <span
-                  key={item.name}
-                  className="block px-3 py-2 text-base font-medium text-muted-foreground/50 cursor-not-allowed"
-                  title="Coming soon"
-                >
-                  {item.name}
-                </span>
-              ) : item.path.startsWith('#') ? (
+              item.path.startsWith('#') ? (
                 <button
                   key={item.name}
                   onClick={() => handleLinkClick(item.path)}

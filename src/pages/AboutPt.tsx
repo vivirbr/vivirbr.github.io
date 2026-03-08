@@ -7,37 +7,37 @@ import gabrielaPhoto from '@/assets/team/gabriela-russo-lopes.jpg';
 import waynerPhoto from '@/assets/team/wayner-maia.jpg';
 import marianaPhoto from '@/assets/team/mariana-oliveira.png';
 
-const About = () => {
+const AboutPt = () => {
   const { elementRef, isVisible } = useScrollReveal();
 
   const team = [
     {
       name: 'Vivian Ribeiro',
-      role: 'Co-Founder & Principal Consultant',
+      role: 'Co-founder e Consultora Principal',
       photo: vivianPhoto,
       description:
-        'Team leader and digital product manager with over ten years of experience using data and technology to create sustainable and impactful solutions for agricultural commodity supply chains, with emphasis on domestic and international trade of beef, soy, palm oil, coffee, and cocoa.',
+        'Líder de equipe e gerente de produtos digitais, com mais de dez anos de experiência utilizando dados e tecnologia para criar soluções sustentáveis e impactantes para cadeias de commodities agrícolas, com ênfase no comércio doméstico e internacional de carne, soja, óleo de palma, café e cacau.',
     },
     {
       name: 'Gabriela Russo Lopes',
-      role: 'Co-Founder & Principal Consultant',
+      role: 'Co-founder e Consultora Principal',
       photo: gabrielaPhoto,
       description:
-        'Over eight years of experience with socio-environmental issues in research institutions, civil society, and international organizations. Focus on public policy formulation and implementation in the soy sector, engagement with local communities, and analysis of social impacts of agricultural expansion in Brazil.',
+        'Mais de oito anos de experiência com temas socioambientais em instituições de pesquisa, sociedade civil e organizações internacionais. Enfoque em formulação e implementação de políticas públicas no setor da soja, articulação com comunidades locais e análise de impactos sociais da expansão de áreas agrícolas no Brasil.',
     },
     {
       name: 'Wayner Maia',
-      role: 'Senior Developer — JavaScript | Vue | Flutter',
+      role: 'Desenvolvedor Sênior — JavaScript | Vue | Flutter',
       photo: waynerPhoto,
       description:
-        'Senior developer with over 8 years of experience in front-end, web, and mobile development. Led the development of several companies and initiatives such as Zupp, Mitra, and do Pasto ao Prato. Expert in creating high-performance, secure, and scalable applications.',
+        'Desenvolvedor sênior com mais de 8 anos de experiência em front-end e desenvolvimento web e mobile. Liderou o desenvolvimento de diversas empresas e iniciativas como Zupp, Mitra e do Pasto ao Prato. Especialista na criação de aplicações de alta performance, seguras e escaláveis.',
     },
     {
       name: 'Mariana Oliveira',
-      role: 'UX/UI Designer',
+      role: 'Designer UX/UI',
       photo: marianaPhoto,
       description:
-        'Designer with 10 years of experience exclusively dedicated to UI/UX projects. Works primarily in startups and tech companies, from discovery phase, wireframing to final design. Over 12 products delivered with high usability value and user-friendly interfaces.',
+        'Designer com 10 anos de experiência exclusivamente dedicada a projetos de UI/UX. Atua principalmente em startups e empresas de tecnologia, desde fase de descoberta, elaboração de wireframe e design final. Mais de 12 produtos entregues com alto valor de usabilidade e interface amigável.',
     },
   ];
 
@@ -55,13 +55,13 @@ const About = () => {
         </div>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <span className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary/8 border border-primary/15 text-primary rounded-full text-sm font-semibold mb-6">
-            About Us
+            Quem Somos
           </span>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-semibold text-foreground mb-6">
-            The team behind <span className="gradient-text">Diversa</span>
+            A equipe por trás da <span className="gradient-text">Diversa</span>
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            We are a multidisciplinary team passionate about translating complex sustainability data into actionable change that creates lasting impact.
+            Somos uma equipe multidisciplinar apaixonada por traduzir dados complexos de sustentabilidade em mudanças concretas que geram impacto duradouro.
           </p>
         </div>
       </section>
@@ -111,4 +111,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default AboutPt;

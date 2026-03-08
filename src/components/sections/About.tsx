@@ -32,12 +32,12 @@ export const About = () => {
   ];
 
   return (
-    <section id="about" className="py-24 bg-muted/30 section-with-shapes relative">
+    <section id="about" className="py-14 bg-muted/30 section-with-shapes relative">
       {/* Section divider at top */}
-      <div className="section-divider mb-20"></div>
+      <div className="section-divider mb-10"></div>
 
       <div ref={elementRef} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-20">
+        <div className="text-center mb-12">
           <div className="inline-block mb-4">
             <span className="px-4 py-2 bg-secondary/10 text-secondary rounded-full text-sm font-semibold">
               Who We Are
