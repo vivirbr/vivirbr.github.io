@@ -14,8 +14,8 @@ Circular theme inspired by logo design
     --diversa-green: 164 28% 51%;     /* #6A9C89 */
     --diversa-cream: 44 75% 96%;      /* #FFF5E4 */
     
-    /* Semantic Colors - Modern white base */
-    --background: 0 0% 100%;          /* Pure white background */
+    /* Semantic Colors - Warm cream base */
+    --background: 36 100% 98%;         /* Warm cream background */
     --foreground: 220 20% 20%;        /* Darker, more modern text */
 
     --card: 0 0% 100%;
@@ -30,7 +30,7 @@ Circular theme inspired by logo design
     --secondary: 164 28% 51%;         /* Green secondary */
     --secondary-foreground: 0 0% 100%; /* White on green */
 
-    --muted: 220 15% 96%;             /* Cool gray instead of cream */
+    --muted: 36 40% 95%;                /* Warm muted */
     --muted-foreground: 220 10% 45%;
 
     --accent: 164 28% 51%;
@@ -39,8 +39,8 @@ Circular theme inspired by logo design
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 15% 90%;
-    --input: 220 15% 95%;
+    --border: 36 30% 90%;
+    --input: 36 25% 95%;
     --ring: 20 90% 42%;
 
     --radius: 0.75rem;                /* Larger radius for modern feel */
@@ -409,5 +409,39 @@ Circular theme inspired by logo design
   .dark .gradient-border-primary {
     background: linear-gradient(hsl(var(--card)), hsl(var(--card))) padding-box,
                 linear-gradient(135deg, hsl(var(--diversa-orange)), hsl(var(--diversa-green))) border-box;
+  }
+
+  /* Alternating warm section backgrounds */
+  .section-bg-cream {
+    background: linear-gradient(180deg, hsl(36 60% 97%), hsl(36 50% 95%));
+  }
+
+  .section-bg-green-tint {
+    background: linear-gradient(180deg, hsl(164 25% 96%), hsl(164 20% 94%));
+  }
+
+  .section-bg-orange-tint {
+    background: linear-gradient(180deg, hsl(20 60% 97%), hsl(20 50% 95%));
+  }
+
+  /* Floating decorative blobs */
+  .floating-blob {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 0;
+    filter: blur(80px);
+  }
+
+  .blob-orange {
+    background: hsl(var(--diversa-orange) / 0.12);
+  }
+
+  .blob-green {
+    background: hsl(var(--diversa-green) / 0.12);
+  }
+
+  .blob-cream {
+    background: hsl(var(--diversa-cream) / 0.4);
   }
 }

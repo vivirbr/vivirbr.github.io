@@ -25,7 +25,10 @@ export const Clients = () => {
   const marqueeClients = [...clients, ...clients];
 
   return (
-    <section id="clients" className="py-14 bg-muted/30 relative overflow-hidden">
+    <section id="clients" className="py-14 section-bg-cream relative overflow-hidden">
+      {/* Floating blobs */}
+      <div className="floating-blob blob-green w-[280px] h-[280px] top-[5%] left-[-5%] animate-float-delayed" />
+      <div className="floating-blob blob-cream w-[200px] h-[200px] bottom-[-5%] right-[10%] animate-float" />
       <div className="section-divider mb-10"></div>
 
       <div ref={elementRef} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -48,8 +51,8 @@ export const Clients = () => {
       {/* Marquee */}
       <div className={`relative ${isVisible ? "animate-fade-up animation-delay-200" : "opacity-0"}`}>
         {/* Fade edges */}
-        <div className="absolute left-0 top-0 bottom-0 w-24 md:w-40 bg-gradient-to-r from-muted/80 to-transparent z-10 pointer-events-none" />
-        <div className="absolute right-0 top-0 bottom-0 w-24 md:w-40 bg-gradient-to-l from-muted/80 to-transparent z-10 pointer-events-none" />
+        <div className="absolute left-0 top-0 bottom-0 w-24 md:w-40 bg-gradient-to-r from-[hsl(36_60%_97%)] to-transparent z-10 pointer-events-none" />
+        <div className="absolute right-0 top-0 bottom-0 w-24 md:w-40 bg-gradient-to-l from-[hsl(36_60%_97%)] to-transparent z-10 pointer-events-none" />
         
         <div className="flex animate-scroll-x hover:[animation-play-state:paused]">
           {marqueeClients.map((client, index) => (
