@@ -271,6 +271,7 @@ Circular theme inspired by logo design
   }
 
   .animate-scale-in {
+    opacity: 0;
     animation: scale-in 0.5s ease-out forwards;
   }
 
