@@ -266,6 +266,7 @@ Circular theme inspired by logo design
   }
 
   .animate-fade-up {
+    opacity: 0;
     animation: fade-up 0.6s ease-out forwards;
   }
 
