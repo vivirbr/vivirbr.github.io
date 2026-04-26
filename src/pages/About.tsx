@@ -35,11 +35,11 @@ const About = () => {
         'Senior developer with over 8 years of experience in front-end, web, and mobile development. Led the development of several companies and initiatives such as Zupp, Mitra, and do Pasto ao Prato. Expert in creating high-performance, secure, and scalable applications.',
     },
     {
-      name: 'Mariana Oliveira',
-      role: 'UX/UI Designer',
-      photo: marianaPhoto,
+      name: 'Andrea Garcia, PhD',
+      role: 'Senior Data Scientist',
+      photo: andreaPhoto,
       description:
-        'Designer with 10 years of experience exclusively dedicated to UI/UX projects. Works primarily in startups and tech companies, from discovery phase, wireframing to final design. Over 12 products delivered with high usability value and user-friendly interfaces.',
+        'Andrea has over a decade of experience turning complex agricultural and environmental data into actionable tools to boost sustainability and nature-based solutions. She comfortably navigates institutional boundaries and cross-functional teams.',
     },
     {
       name: 'Felipe Lenti',
@@ -49,11 +49,11 @@ const About = () => {
         'Felipe integrates ecological science with scalable tools for territorial and environmental intelligence to advance climate change mitigation and sustainability agendas. His expertise spans field research, innovation-oriented spatial analysis, and academic production.',
     },
     {
-      name: 'Andrea Garcia, PhD',
-      role: 'Senior Data Scientist',
-      photo: andreaPhoto,
+      name: 'Mariana Oliveira',
+      role: 'UX/UI Designer',
+      photo: marianaPhoto,
       description:
-        'Andrea has over a decade of experience turning complex agricultural and environmental data into actionable tools to boost sustainability and nature-based solutions. She comfortably navigates institutional boundaries and cross-functional teams.',
+        'Designer with 10 years of experience exclusively dedicated to UI/UX projects. Works primarily in startups and tech companies, from discovery phase, wireframing to final design. Over 12 products delivered with high usability value and user-friendly interfaces.',
     },
   ];
 
