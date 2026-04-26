@@ -7,20 +7,21 @@ import gabrielaPhoto from '@/assets/team/vivian-ribeiro.jpg';
 import waynerPhoto from '@/assets/team/wayner-maia.jpg';
 import marianaPhoto from '@/assets/team/mariana-oliveira.png';
 import felipePhoto from '@/assets/team/felipe-lenti.png';
+import andreaPhoto from '@/assets/team/andrea-garcia.png';
 
 const AboutPt = () => {
   const { elementRef, isVisible } = useScrollReveal();
 
   const team = [
     {
-      name: 'Vivian Ribeiro',
+      name: 'Vivian Ribeiro, PhD',
       role: 'Co-founder e Consultora Principal',
       photo: vivianPhoto,
       description:
         'Líder de equipe e gerente de produtos digitais, com mais de dez anos de experiência utilizando dados e tecnologia para criar soluções sustentáveis e impactantes para cadeias de commodities agrícolas, com ênfase no comércio doméstico e internacional de carne, soja, óleo de palma, café e cacau.',
     },
     {
-      name: 'Gabriela Russo Lopes',
+      name: 'Gabriela Russo Lopes, PhD',
       role: 'Co-founder e Consultora Principal',
       photo: gabrielaPhoto,
       description:
@@ -46,6 +47,13 @@ const AboutPt = () => {
       photo: felipePhoto,
       description:
         'Felipe integra ciência ecológica com ferramentas escaláveis para inteligência territorial e ambiental, avançando agendas de mitigação às mudanças climáticas e sustentabilidade. Sua expertise abrange pesquisa de campo, análise espacial orientada à inovação e produção acadêmica.',
+    },
+    {
+      name: 'Andrea Garcia, PhD',
+      role: 'Cientista de Dados Sênior',
+      photo: andreaPhoto,
+      description:
+        'Andrea possui mais de uma década de experiência transformando dados agrícolas e ambientais complexos em ferramentas acionáveis para impulsionar a sustentabilidade e soluções baseadas na natureza. Ela transita com naturalidade entre fronteiras institucionais e equipes multifuncionais.',
     },
   ];
 

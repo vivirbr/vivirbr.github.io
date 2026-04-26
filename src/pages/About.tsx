@@ -7,20 +7,21 @@ import gabrielaPhoto from '@/assets/team/vivian-ribeiro.jpg';
 import waynerPhoto from '@/assets/team/wayner-maia.jpg';
 import marianaPhoto from '@/assets/team/mariana-oliveira.png';
 import felipePhoto from '@/assets/team/felipe-lenti.png';
+import andreaPhoto from '@/assets/team/andrea-garcia.png';
 
 const About = () => {
   const { elementRef, isVisible } = useScrollReveal();
 
   const team = [
     {
-      name: 'Vivian Ribeiro',
+      name: 'Vivian Ribeiro, PhD',
       role: 'Co-Founder & Principal Consultant',
       photo: vivianPhoto,
       description:
         'Team leader and digital product manager with over ten years of experience using data and technology to create sustainable and impactful solutions for agricultural commodity supply chains, with emphasis on domestic and international trade of beef, soy, palm oil, coffee, and cocoa.',
     },
     {
-      name: 'Gabriela Russo Lopes',
+      name: 'Gabriela Russo Lopes, PhD',
       role: 'Co-Founder & Principal Consultant',
       photo: gabrielaPhoto,
       description:
@@ -46,6 +47,13 @@ const About = () => {
       photo: felipePhoto,
       description:
         'Felipe integrates ecological science with scalable tools for territorial and environmental intelligence to advance climate change mitigation and sustainability agendas. His expertise spans field research, innovation-oriented spatial analysis, and academic production.',
+    },
+    {
+      name: 'Andrea Garcia, PhD',
+      role: 'Senior Data Scientist',
+      photo: andreaPhoto,
+      description:
+        'Andrea has over a decade of experience turning complex agricultural and environmental data into actionable tools to boost sustainability and nature-based solutions. She comfortably navigates institutional boundaries and cross-functional teams.',
     },
   ];
 
