@@ -6,6 +6,7 @@ import vivianPhoto from '@/assets/team/gabriela-russo-lopes.jpg';
 import gabrielaPhoto from '@/assets/team/vivian-ribeiro.jpg';
 import waynerPhoto from '@/assets/team/wayner-maia.jpg';
 import marianaPhoto from '@/assets/team/mariana-oliveira.png';
+import felipePhoto from '@/assets/team/felipe-lenti.png';
 
 const About = () => {
   const { elementRef, isVisible } = useScrollReveal();
@@ -38,6 +39,13 @@ const About = () => {
       photo: marianaPhoto,
       description:
         'Designer with 10 years of experience exclusively dedicated to UI/UX projects. Works primarily in startups and tech companies, from discovery phase, wireframing to final design. Over 12 products delivered with high usability value and user-friendly interfaces.',
+    },
+    {
+      name: 'Felipe Lenti',
+      role: 'Senior Data Scientist',
+      photo: felipePhoto,
+      description:
+        'Felipe integrates ecological science with scalable tools for territorial and environmental intelligence to advance climate change mitigation and sustainability agendas. His expertise spans field research, innovation-oriented spatial analysis, and academic production.',
     },
   ];
 
