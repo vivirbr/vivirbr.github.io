@@ -27,6 +27,7 @@ const ACCENT_STYLES = {
     line: 'bg-diversa-orange',
     chip: 'bg-diversa-orange/10 text-diversa-orange',
     barGradient: 'from-diversa-orange via-diversa-orange/60 to-transparent',
+    numberBadge: 'bg-diversa-orange text-white',
   },
   green: {
     softBg: 'bg-diversa-green/10',
@@ -34,6 +35,7 @@ const ACCENT_STYLES = {
     line: 'bg-diversa-green',
     chip: 'bg-diversa-green/10 text-diversa-green',
     barGradient: 'from-diversa-green via-diversa-green/60 to-transparent',
+    numberBadge: 'bg-diversa-green text-white',
   },
 } as const;
 
@@ -60,9 +62,6 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
 
           {/* Image card */}
           <div className="absolute inset-0 bg-white rounded-[2rem] shadow-modern-lg overflow-hidden group">
-            <div className="absolute top-4 left-5 text-6xl font-heading font-bold text-white/70 mix-blend-overlay leading-none z-20 pointer-events-none drop-shadow-sm">
-              0{index + 1}
-            </div>
             <img
               src={project.image}
               alt={project.imageAlt}
@@ -70,6 +69,13 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
             />
             <div className={`absolute bottom-0 left-0 right-0 h-1.5 bg-gradient-to-r ${styles.barGradient} z-10`} />
+          </div>
+
+          {/* Number badge */}
+          <div
+            className={`absolute -top-5 -left-5 w-16 h-16 rounded-2xl ${styles.numberBadge} shadow-modern-lg flex items-center justify-center text-2xl font-heading font-bold rotate-[-6deg] z-30`}
+          >
+            0{index + 1}
           </div>
         </div>
       </div>
