@@ -119,6 +119,12 @@ const AboutPt = () => {
               </Card>
             ))}
           </div>
+
+          <div className="mt-16 max-w-3xl mx-auto text-center">
+            <p className="text-lg text-muted-foreground leading-relaxed italic">
+              A Diversa é um coletivo de parceiros sênior independentes, e não uma agência tradicional. Reunimos nossa expertise especializada para garantir que nossos clientes recebam resultados de alto nível, orientados a impacto.
+            </p>
+          </div>
         </div>
       </section>
 
