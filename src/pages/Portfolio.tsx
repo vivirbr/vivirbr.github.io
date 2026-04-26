@@ -20,10 +20,27 @@ type Project = {
   accent: 'orange' | 'green';
 };
 
+const ACCENT_STYLES = {
+  orange: {
+    softBg: 'bg-diversa-orange/10',
+    veryFaint: 'bg-diversa-orange/5',
+    line: 'bg-diversa-orange',
+    chip: 'bg-diversa-orange/10 text-diversa-orange',
+    barGradient: 'from-diversa-orange via-diversa-orange/60 to-transparent',
+  },
+  green: {
+    softBg: 'bg-diversa-green/10',
+    veryFaint: 'bg-diversa-green/5',
+    line: 'bg-diversa-green',
+    chip: 'bg-diversa-green/10 text-diversa-green',
+    barGradient: 'from-diversa-green via-diversa-green/60 to-transparent',
+  },
+} as const;
+
 const ProjectCard = ({ project, index }: { project: Project; index: number }) => {
   const { elementRef, isVisible } = useScrollReveal(0.15);
   const isReverse = index % 2 === 1;
-  const accentColor = project.accent === 'orange' ? 'diversa-orange' : 'diversa-green';
+  const styles = ACCENT_STYLES[project.accent];
 
   return (
     <div
@@ -35,20 +52,12 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
       {/* Visual / Logo block */}
       <div className={`lg:col-span-5 ${isReverse ? 'lg:order-2' : ''}`}>
         <div className="relative aspect-square max-w-md mx-auto">
-          {/* Decorative geometric shapes */}
-          <div
-            className={`absolute inset-0 rounded-[2.5rem] bg-${accentColor}/10 rotate-6 transition-transform duration-500 group-hover:rotate-12`}
-          />
-          <div
-            className={`absolute inset-0 rounded-full bg-${accentColor}/5 -rotate-3`}
-          />
-          {/* Main card */}
+          <div className={`absolute inset-0 rounded-[2.5rem] ${styles.softBg} rotate-6 transition-transform duration-500`} />
+          <div className={`absolute inset-0 rounded-full ${styles.veryFaint} -rotate-3`} />
           <div className="absolute inset-4 bg-white rounded-[2rem] shadow-modern-lg flex flex-col items-center justify-center p-8 overflow-hidden">
-            {/* Number badge */}
             <div className="absolute top-6 left-6 text-7xl font-heading font-bold text-foreground/5 leading-none">
               0{index + 1}
             </div>
-            {/* Dot grid */}
             <div
               className="absolute inset-0 opacity-40"
               style={{
@@ -57,7 +66,6 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
                 backgroundSize: '20px 20px',
               }}
             />
-            {/* Logos */}
             <div className="relative flex items-center justify-center gap-6 flex-wrap z-10">
               {project.logos.map((logo, i) => (
                 <div
@@ -72,14 +80,7 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
                 </div>
               ))}
             </div>
-            {/* Bottom accent bar */}
-            <div
-              className={`absolute bottom-0 left-0 right-0 h-1.5 bg-gradient-to-r ${
-                project.accent === 'orange'
-                  ? 'from-diversa-orange via-diversa-orange/60 to-transparent'
-                  : 'from-diversa-green via-diversa-green/60 to-transparent'
-              }`}
-            />
+            <div className={`absolute bottom-0 left-0 right-0 h-1.5 bg-gradient-to-r ${styles.barGradient}`} />
           </div>
         </div>
       </div>
@@ -87,9 +88,7 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
       {/* Text content */}
       <div className={`lg:col-span-7 ${isReverse ? 'lg:order-1' : ''}`}>
         <div className="flex items-center gap-3 mb-4">
-          <span
-            className={`inline-block w-10 h-px bg-${accentColor}`}
-          />
+          <span className={`inline-block w-10 h-px ${styles.line}`} />
           <span className="text-xs font-semibold text-muted-foreground uppercase tracking-[0.2em]">
             Project 0{index + 1} · {project.client}
           </span>
@@ -101,7 +100,7 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
           {project.tags.map((tag, i) => (
             <span
               key={i}
-              className={`text-xs font-medium px-3 py-1 rounded-full bg-${accentColor}/10 text-${accentColor === 'diversa-orange' ? 'diversa-orange' : 'diversa-green'}`}
+              className={`text-xs font-medium px-3 py-1 rounded-full ${styles.chip}`}
             >
               {tag}
             </span>
