@@ -119,6 +119,12 @@ const About = () => {
               </Card>
             ))}
           </div>
+
+          <div className="mt-16 max-w-3xl mx-auto text-center">
+            <p className="text-lg text-muted-foreground leading-relaxed italic">
+              Diversa is a collective of independent senior partners rather than a traditional agency. We pool our specialized expertise to ensure our clients receive high-tier, results-driven outcomes.
+            </p>
+          </div>
         </div>
       </section>
 
