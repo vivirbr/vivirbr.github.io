@@ -3,16 +3,16 @@ import { Footer } from '@/components/ui/footer';
 import { Button } from '@/components/ui/button';
 import { ArrowUpRight } from 'lucide-react';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
-import ispnLogo from '@/assets/clients/ispn.png';
-import wwfLogo from '@/assets/clients/wwf.png';
-import imafloraLogo from '@/assets/clients/imaflora.webp';
-import traseLogo from '@/assets/clients/trase.png';
-import boiNaLinhaLogo from '@/assets/clients/boi-na-linha.svg';
+import project1Image from '@/assets/portfolio/project-1-observatorio.png';
+import project2Image from '@/assets/portfolio/project-2-boi-na-linha.png';
+import project3Image from '@/assets/portfolio/project-3-devida-diligencia.png';
+import project4Image from '@/assets/portfolio/project-4-trase-silos.png';
 
 type Project = {
   name: string;
   client: string;
-  logos: { src: string; alt: string }[];
+  image: string;
+  imageAlt: string;
   description: string;
   link: string;
   linkLabel: string;
@@ -51,35 +51,24 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
     >
       <div className={`lg:col-span-5 ${isReverse ? 'lg:order-2' : ''}`}>
         <div className="relative aspect-square max-w-md mx-auto">
-          <div className={`absolute inset-0 rounded-[2.5rem] ${styles.softBg} rotate-6 transition-transform duration-500`} />
-          <div className={`absolute inset-0 rounded-full ${styles.veryFaint} -rotate-3`} />
-          <div className="absolute inset-4 bg-white rounded-[2rem] shadow-modern-lg flex flex-col items-center justify-center p-8 overflow-hidden">
-            <div className="absolute top-6 left-6 text-7xl font-heading font-bold text-foreground/5 leading-none">
+          {/* Decorative geometric layers */}
+          <div className={`absolute -inset-3 rounded-[2.5rem] ${styles.softBg} rotate-6 transition-transform duration-500`} />
+          <div className={`absolute -inset-2 rounded-[2rem] ${styles.veryFaint} -rotate-3`} />
+          <div className={`absolute -top-4 -right-4 w-16 h-16 rounded-2xl ${styles.softBg} rotate-12 hidden md:block`} />
+          <div className={`absolute -bottom-5 -left-5 w-12 h-12 rounded-full ${styles.softBg} hidden md:block`} />
+
+          {/* Image card */}
+          <div className="absolute inset-0 bg-white rounded-[2rem] shadow-modern-lg overflow-hidden group">
+            <div className="absolute top-4 left-5 text-6xl font-heading font-bold text-white/70 mix-blend-overlay leading-none z-20 pointer-events-none drop-shadow-sm">
               0{index + 1}
             </div>
-            <div
-              className="absolute inset-0 opacity-40"
-              style={{
-                backgroundImage:
-                  'radial-gradient(circle, hsl(var(--foreground) / 0.06) 1px, transparent 1px)',
-                backgroundSize: '20px 20px',
-              }}
+            <img
+              src={project.image}
+              alt={project.imageAlt}
+              loading="lazy"
+              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
             />
-            <div className="relative flex items-center justify-center gap-6 flex-wrap z-10">
-              {project.logos.map((logo, i) => (
-                <div
-                  key={i}
-                  className="h-20 w-20 md:h-24 md:w-24 rounded-2xl bg-background flex items-center justify-center p-3 shadow-modern"
-                >
-                  <img
-                    src={logo.src}
-                    alt={logo.alt}
-                    className="max-h-full max-w-full object-contain"
-                  />
-                </div>
-              ))}
-            </div>
-            <div className={`absolute bottom-0 left-0 right-0 h-1.5 bg-gradient-to-r ${styles.barGradient}`} />
+            <div className={`absolute bottom-0 left-0 right-0 h-1.5 bg-gradient-to-r ${styles.barGradient} z-10`} />
           </div>
         </div>
       </div>
@@ -127,10 +116,8 @@ const PortfolioPt = () => {
     {
       name: 'Observatório Socioambiental',
       client: 'ISPN e WWF',
-      logos: [
-        { src: ispnLogo, alt: 'ISPN' },
-        { src: wwfLogo, alt: 'WWF' },
-      ],
+      image: project1Image,
+      imageAlt: 'Painel do Observatório Socioambiental mostrando dados de conflitos sociais no Brasil',
       description:
         'Atuamos como facilitadores estratégicos deste fórum da sociedade civil, sendo responsáveis por estabelecer e gerir a governança do grupo e por convocar as organizações parceiras. Nosso papel técnico central envolve a coleta, organização e processamento inteligente de dados para alimentar a Plataforma Socioambiental — um sistema interativo que monitora violações de direitos humanos, desmatamento e a expansão da agricultura industrial, fortalecendo o controle social e apoiando a devida diligência em cadeias de valor.',
       link: 'https://www.observatoriosocioambiental.com.br',
@@ -141,10 +128,8 @@ const PortfolioPt = () => {
     {
       name: 'Boi na Linha',
       client: 'Imaflora',
-      logos: [
-        { src: boiNaLinhaLogo, alt: 'Boi na Linha' },
-        { src: imafloraLogo, alt: 'Imaflora' },
-      ],
+      image: project2Image,
+      imageAlt: 'Mapa interativo do Boi na Linha mostrando a localização de frigoríficos na Amazônia brasileira',
       description:
         'O Boi na Linha é uma iniciativa do Imaflora voltada à transparência e ao monitoramento de boas práticas da cadeia da pecuária na Amazônia Brasileira. A Diversa liderou o desenvolvimento técnico da plataforma painel.boinalinha.org — desde a estruturação científica e engenharia de dados até design e desenvolvimento web. O resultado é um painel interativo que transforma dados geoespaciais complexos em informações acessíveis para empresas, pesquisadores e formuladores de políticas.',
       link: 'https://painel.boinalinha.org/',
@@ -155,7 +140,8 @@ const PortfolioPt = () => {
     {
       name: 'Devida Diligência em Direitos Humanos para Cadeias de Commodities',
       client: 'WWF',
-      logos: [{ src: wwfLogo, alt: 'WWF' }],
+      image: project3Image,
+      imageAlt: 'Capa do guia Devida Diligência em Direitos Humanos para Cadeias de Commodities',
       description:
         'Em colaboração com o WWF-Brasil, desenvolvemos um guia técnico essencial para empresas que operam em cadeias de commodities no Brasil. O projeto foca na implementação da Devida Diligência em Direitos Humanos (DDDH) — um processo contínuo que responsabiliza o setor privado pelos impactos de suas operações. O guia destaca a urgência de proteger biomas vulneráveis como o Cerrado e fornece um mapeamento detalhado de fontes de dados públicas brasileiras sobre questões agrárias, conflitos rurais e direitos trabalhistas.',
       link: 'https://wwfbrnew.awsassets.panda.org/downloads/devida-diligencia-em-direitos-humanos-para-cadeias-de-commodities.pdf',
@@ -166,7 +152,8 @@ const PortfolioPt = () => {
     {
       name: 'Detecção de Silos de Soja com IA',
       client: 'Trase',
-      logos: [{ src: traseLogo, alt: 'Trase' }],
+      image: project4Image,
+      imageAlt: 'Imagem de satélite de uma instalação de armazenamento de soja detectada por IA',
       description:
         'Apoiamos a Trase no uso de Inteligência Artificial e modelos geoespaciais avançados para fechar a lacuna de rastreabilidade na cadeia da soja no Brasil. Através de fluxos de trabalho automatizados que analisam imagens de satélite de alta resolução, expandimos o universo conhecido de instalações para mais de 9.300 unidades, detectando centenas de silos em áreas remotas que não constavam em registros oficiais — permitindo identificar riscos de desmatamento indireto.',
       link: 'https://trase.earth/insights/trase-uses-ai-to-close-the-traceability-gap-in-the-soy-supply-chain',
