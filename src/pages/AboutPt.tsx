@@ -6,6 +6,7 @@ import vivianPhoto from '@/assets/team/gabriela-russo-lopes.jpg';
 import gabrielaPhoto from '@/assets/team/vivian-ribeiro.jpg';
 import waynerPhoto from '@/assets/team/wayner-maia.jpg';
 import marianaPhoto from '@/assets/team/mariana-oliveira.png';
+import felipePhoto from '@/assets/team/felipe-lenti.png';
 
 const AboutPt = () => {
   const { elementRef, isVisible } = useScrollReveal();
@@ -38,6 +39,13 @@ const AboutPt = () => {
       photo: marianaPhoto,
       description:
         'Designer com 10 anos de experiência exclusivamente dedicada a projetos de UI/UX. Atua principalmente em startups e empresas de tecnologia, desde fase de descoberta, elaboração de wireframe e design final. Mais de 12 produtos entregues com alto valor de usabilidade e interface amigável.',
+    },
+    {
+      name: 'Felipe Lenti',
+      role: 'Cientista de Dados Sênior',
+      photo: felipePhoto,
+      description:
+        'Felipe integra ciência ecológica com ferramentas escaláveis para inteligência territorial e ambiental, avançando agendas de mitigação às mudanças climáticas e sustentabilidade. Sua expertise abrange pesquisa de campo, análise espacial orientada à inovação e produção acadêmica.',
     },
   ];
 
