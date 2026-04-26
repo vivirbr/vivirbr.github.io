@@ -35,11 +35,11 @@ const AboutPt = () => {
         'Desenvolvedor sênior com mais de 8 anos de experiência em front-end e desenvolvimento web e mobile. Liderou o desenvolvimento de diversas empresas e iniciativas como Zupp, Mitra e do Pasto ao Prato. Especialista na criação de aplicações de alta performance, seguras e escaláveis.',
     },
     {
-      name: 'Mariana Oliveira',
-      role: 'Designer UX/UI',
-      photo: marianaPhoto,
+      name: 'Andrea Garcia, PhD',
+      role: 'Cientista de Dados Sênior',
+      photo: andreaPhoto,
       description:
-        'Designer com 10 anos de experiência exclusivamente dedicada a projetos de UI/UX. Atua principalmente em startups e empresas de tecnologia, desde fase de descoberta, elaboração de wireframe e design final. Mais de 12 produtos entregues com alto valor de usabilidade e interface amigável.',
+        'Andrea possui mais de uma década de experiência transformando dados agrícolas e ambientais complexos em ferramentas acionáveis para impulsionar a sustentabilidade e soluções baseadas na natureza. Ela transita com naturalidade entre fronteiras institucionais e equipes multifuncionais.',
     },
     {
       name: 'Felipe Lenti',
@@ -49,11 +49,11 @@ const AboutPt = () => {
         'Felipe integra ciência ecológica com ferramentas escaláveis para inteligência territorial e ambiental, avançando agendas de mitigação às mudanças climáticas e sustentabilidade. Sua expertise abrange pesquisa de campo, análise espacial orientada à inovação e produção acadêmica.',
     },
     {
-      name: 'Andrea Garcia, PhD',
-      role: 'Cientista de Dados Sênior',
-      photo: andreaPhoto,
+      name: 'Mariana Oliveira',
+      role: 'Designer UX/UI',
+      photo: marianaPhoto,
       description:
-        'Andrea possui mais de uma década de experiência transformando dados agrícolas e ambientais complexos em ferramentas acionáveis para impulsionar a sustentabilidade e soluções baseadas na natureza. Ela transita com naturalidade entre fronteiras institucionais e equipes multifuncionais.',
+        'Designer com 10 anos de experiência exclusivamente dedicada a projetos de UI/UX. Atua principalmente em startups e empresas de tecnologia, desde fase de descoberta, elaboração de wireframe e design final. Mais de 12 produtos entregues com alto valor de usabilidade e interface amigável.',
     },
   ];
 
