@@ -3,16 +3,16 @@ import { Footer } from '@/components/ui/footer';
 import { Button } from '@/components/ui/button';
 import { ArrowUpRight } from 'lucide-react';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
-import ispnLogo from '@/assets/clients/ispn.png';
-import wwfLogo from '@/assets/clients/wwf.png';
-import imafloraLogo from '@/assets/clients/imaflora.webp';
-import traseLogo from '@/assets/clients/trase.png';
-import boiNaLinhaLogo from '@/assets/clients/boi-na-linha.svg';
+import project1Image from '@/assets/portfolio/project-1-observatorio.png';
+import project2Image from '@/assets/portfolio/project-2-boi-na-linha.png';
+import project3Image from '@/assets/portfolio/project-3-devida-diligencia.png';
+import project4Image from '@/assets/portfolio/project-4-trase-silos.png';
 
 type Project = {
   name: string;
   client: string;
-  logos: { src: string; alt: string }[];
+  image: string;
+  imageAlt: string;
   description: string;
   link: string;
   linkLabel: string;
@@ -49,38 +49,27 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
       }`}
     >
-      {/* Visual / Logo block */}
+      {/* Visual / Project image block */}
       <div className={`lg:col-span-5 ${isReverse ? 'lg:order-2' : ''}`}>
         <div className="relative aspect-square max-w-md mx-auto">
-          <div className={`absolute inset-0 rounded-[2.5rem] ${styles.softBg} rotate-6 transition-transform duration-500`} />
-          <div className={`absolute inset-0 rounded-full ${styles.veryFaint} -rotate-3`} />
-          <div className="absolute inset-4 bg-white rounded-[2rem] shadow-modern-lg flex flex-col items-center justify-center p-8 overflow-hidden">
-            <div className="absolute top-6 left-6 text-7xl font-heading font-bold text-foreground/5 leading-none">
+          {/* Decorative geometric layers */}
+          <div className={`absolute -inset-3 rounded-[2.5rem] ${styles.softBg} rotate-6 transition-transform duration-500`} />
+          <div className={`absolute -inset-2 rounded-[2rem] ${styles.veryFaint} -rotate-3`} />
+          <div className={`absolute -top-4 -right-4 w-16 h-16 rounded-2xl ${styles.softBg} rotate-12 hidden md:block`} />
+          <div className={`absolute -bottom-5 -left-5 w-12 h-12 rounded-full ${styles.softBg} hidden md:block`} />
+
+          {/* Image card */}
+          <div className="absolute inset-0 bg-white rounded-[2rem] shadow-modern-lg overflow-hidden group">
+            <div className="absolute top-4 left-5 text-6xl font-heading font-bold text-white/70 mix-blend-overlay leading-none z-20 pointer-events-none drop-shadow-sm">
               0{index + 1}
             </div>
-            <div
-              className="absolute inset-0 opacity-40"
-              style={{
-                backgroundImage:
-                  'radial-gradient(circle, hsl(var(--foreground) / 0.06) 1px, transparent 1px)',
-                backgroundSize: '20px 20px',
-              }}
+            <img
+              src={project.image}
+              alt={project.imageAlt}
+              loading="lazy"
+              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
             />
-            <div className="relative flex items-center justify-center gap-6 flex-wrap z-10">
-              {project.logos.map((logo, i) => (
-                <div
-                  key={i}
-                  className="h-20 w-20 md:h-24 md:w-24 rounded-2xl bg-background flex items-center justify-center p-3 shadow-modern"
-                >
-                  <img
-                    src={logo.src}
-                    alt={logo.alt}
-                    className="max-h-full max-w-full object-contain"
-                  />
-                </div>
-              ))}
-            </div>
-            <div className={`absolute bottom-0 left-0 right-0 h-1.5 bg-gradient-to-r ${styles.barGradient}`} />
+            <div className={`absolute bottom-0 left-0 right-0 h-1.5 bg-gradient-to-r ${styles.barGradient} z-10`} />
           </div>
         </div>
       </div>
@@ -129,10 +118,8 @@ const Portfolio = () => {
     {
       name: 'Socioenvironmental Observatory',
       client: 'ISPN & WWF',
-      logos: [
-        { src: ispnLogo, alt: 'ISPN' },
-        { src: wwfLogo, alt: 'WWF' },
-      ],
+      image: project1Image,
+      imageAlt: 'Socioenvironmental Observatory dashboard showing social conflict data in Brazil',
       description:
         'We act as strategic facilitators of this civil society forum, responsible for establishing and managing the group\'s governance and convening partner organizations. Our central technical role involves the collection, organization, and intelligent processing of data to power the Socioenvironmental Platform — an interactive system that monitors human rights violations, deforestation, and the expansion of industrial agriculture, strengthening social oversight and supporting due diligence in value chains.',
       link: 'https://www.observatoriosocioambiental.com.br',
@@ -143,10 +130,8 @@ const Portfolio = () => {
     {
       name: 'Beef on Track',
       client: 'Imaflora',
-      logos: [
-        { src: boiNaLinhaLogo, alt: 'Beef on Track' },
-        { src: imafloraLogo, alt: 'Imaflora' },
-      ],
+      image: project2Image,
+      imageAlt: 'Beef on Track interactive map showing slaughterhouse locations in the Brazilian Amazon',
       description:
         'Beef on Track is an Imaflora initiative focused on transparency and monitoring good practices in the cattle ranching chain in the Brazilian Amazon. Diversa led the technical development of painel.boinalinha.org — from scientific structuring and data engineering to design and web development. The result is an interactive dashboard that transforms complex geospatial data into accessible information for companies, researchers, and policymakers.',
       link: 'https://painel.boinalinha.org/',
@@ -157,7 +142,8 @@ const Portfolio = () => {
     {
       name: 'Human Rights Due Diligence for Commodity Chains',
       client: 'WWF',
-      logos: [{ src: wwfLogo, alt: 'WWF' }],
+      image: project3Image,
+      imageAlt: 'Cover of the Human Rights Due Diligence guide for commodity chains in Brazil',
       description:
         'In collaboration with WWF-Brazil, we developed an essential technical guide for companies operating in commodity chains in Brazil. The project focuses on Human Rights Due Diligence (HRDD) — an ongoing process that holds the private sector accountable for its impacts. The guide highlights the urgency of protecting vulnerable biomes like the Cerrado and provides a detailed mapping of Brazilian public data sources on agrarian issues, rural conflicts, and labor rights.',
       link: 'https://wwfbrnew.awsassets.panda.org/downloads/devida-diligencia-em-direitos-humanos-para-cadeias-de-commodities.pdf',
@@ -168,7 +154,8 @@ const Portfolio = () => {
     {
       name: 'Soy Silo Detection with AI',
       client: 'Trase',
-      logos: [{ src: traseLogo, alt: 'Trase' }],
+      image: project4Image,
+      imageAlt: 'Satellite image of a soy storage facility detected through AI analysis',
       description:
         'We supported Trase in using Artificial Intelligence and advanced geospatial models to close the traceability gap in Brazil\'s soy supply chain. Through automated workflows analyzing high-resolution satellite imagery, we expanded the known universe of facilities to over 9,300 units, detecting hundreds of silos in remote areas not listed in official records — enabling governments and companies to identify indirect deforestation risks.',
       link: 'https://trase.earth/insights/trase-uses-ai-to-close-the-traceability-gap-in-the-soy-supply-chain',
