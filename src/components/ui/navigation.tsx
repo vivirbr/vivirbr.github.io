@@ -14,11 +14,13 @@ export const Navigation = () => {
   const navItems = isPortuguese
     ? [
         { name: 'Início', path: '/pt' },
+        { name: 'Portfólio', path: '/pt/portfolio' },
         { name: 'Sobre nós', path: '/pt/about' },
         { name: 'Contato', path: '#contact' },
       ]
     : [
         { name: 'Home', path: '/' },
+        { name: 'Portfolio', path: '/portfolio' },
         { name: 'About', path: '/about' },
         { name: 'Contact', path: '#contact' },
       ];

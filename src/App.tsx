@@ -8,6 +8,8 @@ import Index from "./pages/Index";
 import IndexPt from "./pages/IndexPt";
 import About from "./pages/About";
 import AboutPt from "./pages/AboutPt";
+import Portfolio from "./pages/Portfolio";
+import PortfolioPt from "./pages/PortfolioPt";
 import Services from "./pages/Services";
 import NotFound from "./pages/NotFound";
 
@@ -23,6 +25,8 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/pt" element={<IndexPt />} />
+          <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/pt/portfolio" element={<PortfolioPt />} />
           <Route path="/about" element={<About />} />
           <Route path="/pt/about" element={<AboutPt />} />
           <Route path="/services" element={<Services />} />
