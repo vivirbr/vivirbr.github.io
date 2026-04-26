@@ -2,7 +2,7 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
 import imafloraLogo from "@/assets/clients/imaflora.webp";
 import globalCanopyLogo from "@/assets/clients/global-canopy.png";
 import ispnLogo from "@/assets/clients/ispn.png";
-import boiNaLinhaLogo from "@/assets/clients/boi-na-linha.png";
+import boiNaLinhaLogo from "@/assets/clients/boi-na-linha.svg";
 import traseLogo from "@/assets/clients/trase.png";
 import fernLogo from "@/assets/clients/fern.jpeg";
 import wwfLogo from "@/assets/clients/wwf.png";
