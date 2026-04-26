@@ -27,6 +27,20 @@ const ROUTE_META: Record<string, RouteMetaConfig> = {
     locale: "pt_BR",
     url: "https://diversa.earth/pt",
   },
+  "/portfolio": {
+    title: "Portfolio | Diversa Socioenvironmental Consultancy",
+    description:
+      "Selected projects by Diversa: socioenvironmental observatories, beef and soy supply chain platforms, and human rights due diligence guides.",
+    locale: "en_US",
+    url: "https://diversa.earth/portfolio",
+  },
+  "/pt/portfolio": {
+    title: "Portfólio | Diversa Consultoria Socioambiental",
+    description:
+      "Projetos selecionados da Diversa: observatórios socioambientais, plataformas de cadeias da pecuária e soja e guias de devida diligência em direitos humanos.",
+    locale: "pt_BR",
+    url: "https://diversa.earth/pt/portfolio",
+  },
   "/about": {
     title: "About Diversa | Socioenvironmental Consultancy",
     description:
