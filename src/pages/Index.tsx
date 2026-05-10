@@ -3,6 +3,7 @@ import { Footer } from '@/components/ui/footer';
 import { Hero } from '@/components/sections/Hero';
 import { About } from '@/components/sections/About';
 import { Services } from '@/components/sections/Services';
+import { PortfolioPreview } from '@/components/sections/PortfolioPreview';
 import { Clients } from '@/components/sections/Clients';
 import { Contact } from '@/components/sections/Contact';
 
@@ -13,6 +14,7 @@ const Index = () => {
       <Hero />
       <About />
       <Services />
+      <PortfolioPreview language="en" />
       <Clients />
       <Contact />
       <Footer />
