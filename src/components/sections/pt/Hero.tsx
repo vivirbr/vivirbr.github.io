@@ -66,22 +66,6 @@ export const HeroPt = () => {
             </Button>
           </div>
 
-          <div className="flex flex-wrap items-center justify-center gap-8 md:gap-16 pt-8 animate-fade-up animation-delay-400">
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-foreground">10+</div>
-              <div className="text-sm text-muted-foreground mt-1">Anos de Experiência</div>
-            </div>
-            <div className="w-px h-12 bg-border hidden md:block" />
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-foreground">3</div>
-              <div className="text-sm text-muted-foreground mt-1">Serviços Principais</div>
-            </div>
-            <div className="w-px h-12 bg-border hidden md:block" />
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold gradient-text">Global</div>
-              <div className="text-sm text-muted-foreground mt-1">Alcance & Expertise</div>
-            </div>
-          </div>
         </div>
       </div>
 
