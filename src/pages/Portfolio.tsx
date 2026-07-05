@@ -7,6 +7,7 @@ import project1Image from '@/assets/portfolio/project-1-observatorio.png';
 import project2Image from '@/assets/portfolio/project-2-boi-na-linha.png';
 import project3Image from '@/assets/portfolio/project-3-devida-diligencia.png';
 import project4Image from '@/assets/portfolio/project-4-trase-silos.png';
+import project5Image from '@/assets/portfolio/project-5-do-pasto-ao-prato.png';
 
 type Project = {
   name: string;
@@ -134,6 +135,18 @@ const Portfolio = () => {
       accent: 'orange',
     },
     {
+      name: 'Do Pasto ao Prato',
+      client: 'Trase & Partners',
+      image: project5Image,
+      imageAlt: 'Do Pasto ao Prato app and website interface showing beef supply chain transparency indicators',
+      description:
+        'Do Pasto ao Prato is an initiative co-founded by Vivian Ribeiro — one of Diversa\'s principal co-founders — alongside Trase and partners, designed to bring transparency to the beef supply chain in Brazil. By scanning product labels at the supermarket, consumers can uncover the environmental and social risks connected to the meat they buy, from deforestation and fire hotspots to labor rights and Indigenous land conflicts. Diversa developed and delivered both the mobile app and the website, translating complex traceability data into an accessible tool that empowers conscious consumption and holds the cattle chain accountable.',
+      link: 'https://www.dopastoaoprato.com.br/',
+      linkLabel: 'Visit the website',
+      tags: ['Mobile App', 'Web Platform', 'Traceability', 'Beef Chain'],
+      accent: 'green',
+    },
+    {
       name: 'Beef on Track',
       client: 'Imaflora',
       image: project2Image,
@@ -204,7 +217,7 @@ const Portfolio = () => {
               <span className="gradient-text">our clients</span>
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl">
-              Four projects that show how we translate complex socioenvironmental data into tools, guides, and platforms driving measurable impact across supply chains.
+              Five projects that show how we translate complex socioenvironmental data into tools, guides, and platforms driving measurable impact across supply chains.
             </p>
           </div>
 

@@ -7,6 +7,7 @@ import project1Image from '@/assets/portfolio/project-1-observatorio.png';
 import project2Image from '@/assets/portfolio/project-2-boi-na-linha.png';
 import project3Image from '@/assets/portfolio/project-3-devida-diligencia.png';
 import project4Image from '@/assets/portfolio/project-4-trase-silos.png';
+import project5Image from '@/assets/portfolio/project-5-do-pasto-ao-prato.png';
 
 type Project = {
   name: string;
@@ -132,6 +133,18 @@ const PortfolioPt = () => {
       accent: 'orange',
     },
     {
+      name: 'Do Pasto ao Prato',
+      client: 'Trase e parceiros',
+      image: project5Image,
+      imageAlt: 'Interface do aplicativo e site Do Pasto ao Prato mostrando indicadores de transparência da cadeia da carne',
+      description:
+        'O Do Pasto ao Prato é uma iniciativa cofundada por Vivian Ribeiro — uma das principais cofundadoras da Diversa — em conjunto com a Trase e parceiros, criada para trazer transparência à cadeia da carne bovina no Brasil. Ao escanear os selos dos produtos no supermercado, o consumidor descobre os riscos ambientais e sociais associados à carne que compra: desmatamento, focos de incêndio, direitos trabalhistas e conflitos em terras indígenas. A Diversa desenvolveu e entregou o aplicativo móvel e o site, traduzindo dados complexos de rastreabilidade em uma ferramenta acessível que fortalece o consumo consciente e responsabiliza a cadeia pecuária.',
+      link: 'https://www.dopastoaoprato.com.br/',
+      linkLabel: 'Acessar o site',
+      tags: ['Aplicativo', 'Plataforma Web', 'Rastreabilidade', 'Cadeia da Pecuária'],
+      accent: 'green',
+    },
+    {
       name: 'Boi na Linha',
       client: 'Imaflora',
       image: project2Image,
@@ -201,7 +214,7 @@ const PortfolioPt = () => {
               <span className="gradient-text">nossos clientes</span>
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl">
-              Quatro projetos que mostram como traduzimos dados socioambientais complexos em ferramentas, guias e plataformas que geram impacto mensurável em cadeias de valor.
+              Cinco projetos que mostram como traduzimos dados socioambientais complexos em ferramentas, guias e plataformas que geram impacto mensurável em cadeias de valor.
             </p>
           </div>
 

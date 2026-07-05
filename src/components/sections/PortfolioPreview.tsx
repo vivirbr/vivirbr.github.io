@@ -6,6 +6,7 @@ import project1Image from '@/assets/portfolio/project-1-observatorio.png';
 import project2Image from '@/assets/portfolio/project-2-boi-na-linha.png';
 import project3Image from '@/assets/portfolio/project-3-devida-diligencia.png';
 import project4Image from '@/assets/portfolio/project-4-trase-silos.png';
+import project5Image from '@/assets/portfolio/project-5-do-pasto-ao-prato.png';
 
 type Item = {
   name: string;
@@ -57,6 +58,13 @@ export const PortfolioPreview = ({ language = 'en' }: PortfolioPreviewProps) => 
       image: project1Image,
       tag: language === 'pt' ? 'Plataforma de Dados' : 'Data Platform',
       accent: 'orange',
+    },
+    {
+      name: 'Do Pasto ao Prato',
+      client: language === 'pt' ? 'Trase e parceiros' : 'Trase & Partners',
+      image: project5Image,
+      tag: language === 'pt' ? 'App & Web' : 'App & Web',
+      accent: 'green',
     },
     {
       name: language === 'pt' ? 'Boi na Linha' : 'Beef on Track',
