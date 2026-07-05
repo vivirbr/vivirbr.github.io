@@ -135,18 +135,6 @@ const Portfolio = () => {
       accent: 'orange',
     },
     {
-      name: 'Beef on Track',
-      client: 'Imaflora',
-      image: project2Image,
-      imageAlt: 'Beef on Track interactive map showing slaughterhouse locations in the Brazilian Amazon',
-      description:
-        'Beef on Track is an Imaflora initiative focused on transparency and monitoring good practices in the cattle ranching chain in the Brazilian Amazon. Diversa led the technical development of painel.boinalinha.org — from scientific structuring and data engineering to design and web development. The result is an interactive dashboard that transforms complex geospatial data into accessible information for companies, researchers, and policymakers.',
-      link: 'https://painel.boinalinha.org/',
-      linkLabel: 'Open the dashboard',
-      tags: ['Geospatial', 'Data Engineering', 'Web Platform', 'Cattle Chain'],
-      accent: 'green',
-    },
-    {
       name: 'Do Pasto ao Prato',
       client: 'Trase & Partners',
       image: project5Image,
@@ -156,6 +144,18 @@ const Portfolio = () => {
       link: 'https://www.dopastoaoprato.com.br/',
       linkLabel: 'Visit the website',
       tags: ['Mobile App', 'Web Platform', 'Traceability', 'Beef Chain'],
+      accent: 'green',
+    },
+    {
+      name: 'Beef on Track',
+      client: 'Imaflora',
+      image: project2Image,
+      imageAlt: 'Beef on Track interactive map showing slaughterhouse locations in the Brazilian Amazon',
+      description:
+        'Beef on Track is an Imaflora initiative focused on transparency and monitoring good practices in the cattle ranching chain in the Brazilian Amazon. Diversa led the technical development of painel.boinalinha.org — from scientific structuring and data engineering to design and web development. The result is an interactive dashboard that transforms complex geospatial data into accessible information for companies, researchers, and policymakers.',
+      link: 'https://painel.boinalinha.org/',
+      linkLabel: 'Open the dashboard',
+      tags: ['Geospatial', 'Data Engineering', 'Web Platform', 'Cattle Chain'],
       accent: 'green',
     },
     {
