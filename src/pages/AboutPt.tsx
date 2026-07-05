@@ -8,6 +8,7 @@ import waynerPhoto from '@/assets/team/wayner-maia.jpg';
 import marianaPhoto from '@/assets/team/mariana-oliveira.png';
 import felipePhoto from '@/assets/team/felipe-lenti.png';
 import andreaPhoto from '@/assets/team/andrea-garcia.png';
+import guilhermePhoto from '@/assets/team/guilherme-antunes-carvalhosa.jpg';
 
 const AboutPt = () => {
   const { elementRef, isVisible } = useScrollReveal();
