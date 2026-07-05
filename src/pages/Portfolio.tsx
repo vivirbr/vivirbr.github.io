@@ -147,6 +147,18 @@ const Portfolio = () => {
       accent: 'green',
     },
     {
+      name: 'Do Pasto ao Prato',
+      client: 'Trase & Partners',
+      image: project5Image,
+      imageAlt: 'Do Pasto ao Prato app and website interface showing beef supply chain transparency indicators',
+      description:
+        'Do Pasto ao Prato is an initiative co-founded by Vivian Ribeiro — one of Diversa\'s principal co-founders — alongside Trase and partners, designed to bring transparency to the beef supply chain in Brazil. By scanning product labels at the supermarket, consumers can uncover the environmental and social risks connected to the meat they buy, from deforestation and fire hotspots to labor rights and Indigenous land conflicts. Diversa developed and delivered both the mobile app and the website, translating complex traceability data into an accessible tool that empowers conscious consumption and holds the cattle chain accountable.',
+      link: 'https://www.dopastoaoprato.com.br/',
+      linkLabel: 'Visit the website',
+      tags: ['Mobile App', 'Web Platform', 'Traceability', 'Beef Chain'],
+      accent: 'green',
+    },
+    {
       name: 'Human Rights Due Diligence for Commodity Chains',
       client: 'WWF',
       image: project3Image,
