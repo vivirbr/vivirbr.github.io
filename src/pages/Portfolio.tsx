@@ -136,7 +136,7 @@ const Portfolio = () => {
     },
     {
       name: 'Do Pasto ao Prato',
-      client: 'Trase & Partners',
+      client: 'Trase & Stockholm Environment Institute',
       image: project5Image,
       imageAlt: 'Do Pasto ao Prato app and website interface showing beef supply chain transparency indicators',
       description:
@@ -172,7 +172,7 @@ const Portfolio = () => {
     },
     {
       name: 'Soy Silo Detection with AI',
-      client: 'Trase',
+      client: 'Trase & Global Canopy',
       image: project4Image,
       imageAlt: 'Satellite image of a soy storage facility detected through AI analysis',
       description:

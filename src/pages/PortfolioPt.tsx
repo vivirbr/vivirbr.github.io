@@ -134,7 +134,7 @@ const PortfolioPt = () => {
     },
     {
       name: 'Do Pasto ao Prato',
-      client: 'Trase e parceiros',
+      client: 'Trase & Stockholm Environment Institute',
       image: project5Image,
       imageAlt: 'Interface do aplicativo e site Do Pasto ao Prato mostrando indicadores de transparência da cadeia da carne',
       description:
@@ -170,7 +170,7 @@ const PortfolioPt = () => {
     },
     {
       name: 'Detecção de Silos de Soja com IA',
-      client: 'Trase',
+      client: 'Trase & Global Canopy',
       image: project4Image,
       imageAlt: 'Imagem de satélite de uma instalação de armazenamento de soja detectada por IA',
       description:
