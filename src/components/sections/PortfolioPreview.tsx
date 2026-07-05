@@ -61,7 +61,7 @@ export const PortfolioPreview = ({ language = 'en' }: PortfolioPreviewProps) => 
     },
     {
       name: 'Do Pasto ao Prato',
-      client: language === 'pt' ? 'Trase e parceiros' : 'Trase & Partners',
+      client: 'Trase',
       image: project5Image,
       tag: language === 'pt' ? 'App & Web' : 'App & Web',
       accent: 'green',
