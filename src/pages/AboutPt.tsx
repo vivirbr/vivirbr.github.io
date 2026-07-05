@@ -8,6 +8,7 @@ import waynerPhoto from '@/assets/team/wayner-maia.jpg';
 import marianaPhoto from '@/assets/team/mariana-oliveira.png';
 import felipePhoto from '@/assets/team/felipe-lenti.png';
 import andreaPhoto from '@/assets/team/andrea-garcia.png';
+import guilhermePhoto from '@/assets/team/guilherme-antunes-carvalhosa.jpg';
 
 const AboutPt = () => {
   const { elementRef, isVisible } = useScrollReveal();
@@ -54,6 +55,13 @@ const AboutPt = () => {
       photo: marianaPhoto,
       description:
         'Designer com 10 anos de experiência exclusivamente dedicada a projetos de UI/UX. Atua principalmente em startups e empresas de tecnologia, desde fase de descoberta, elaboração de wireframe e design final. Mais de 12 produtos entregues com alto valor de usabilidade e interface amigável.',
+    },
+    {
+      name: 'Guilherme Antunes Carvalhosa',
+      role: 'Especialista de Campo',
+      photo: guilhermePhoto,
+      description:
+        'Geógrafo com mais de dez anos de experiência em consultoria socioambiental e pesquisas de campo, desde a coleta à síntese de dados estratégicos, e Internacionalista em formação. Expertise com atuação em projetos de relações institucionais e educação ambiental em comunidades tradicionais, incluindo assentados, ribeirinhos, indígenas e quilombolas. Experiência na interlocução com produtores rurais, análise de cadeias produtivas, mitigação de impactos ambientais e promoção da sustentabilidade no agronegócio em biomas sensíveis, como a Amazônia e o Cerrado.',
     },
   ];
 

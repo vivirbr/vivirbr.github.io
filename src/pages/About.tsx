@@ -8,6 +8,7 @@ import waynerPhoto from '@/assets/team/wayner-maia.jpg';
 import marianaPhoto from '@/assets/team/mariana-oliveira.png';
 import felipePhoto from '@/assets/team/felipe-lenti.png';
 import andreaPhoto from '@/assets/team/andrea-garcia.png';
+import guilhermePhoto from '@/assets/team/guilherme-antunes-carvalhosa.jpg';
 
 const About = () => {
   const { elementRef, isVisible } = useScrollReveal();
@@ -54,6 +55,13 @@ const About = () => {
       photo: marianaPhoto,
       description:
         'Designer with 10 years of experience exclusively dedicated to UI/UX projects. Works primarily in startups and tech companies, from discovery phase, wireframing to final design. Over 12 products delivered with high usability value and user-friendly interfaces.',
+    },
+    {
+      name: 'Guilherme Antunes Carvalhosa',
+      role: 'Fieldwork Specialist',
+      photo: guilhermePhoto,
+      description:
+        'Geographer with over ten years of experience in socio-environmental consulting and field research, ranging from data collection to the synthesis of strategic data, and International Relations professional in training. Expertise includes institutional relations projects, environmental education with traditional communities — including land reform settlers, riverside dwellers, indigenous peoples, and quilombolas. Experience with direct engagement with rural producers, supply chain analysis, mitigation of environmental impacts, and the promotion of agribusiness sustainability within sensitive biomes such as the Amazon and the Cerrado.',
     },
   ];
 
