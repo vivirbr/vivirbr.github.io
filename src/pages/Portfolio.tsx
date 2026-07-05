@@ -217,7 +217,7 @@ const Portfolio = () => {
               <span className="gradient-text">our clients</span>
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl">
-              Four projects that show how we translate complex socioenvironmental data into tools, guides, and platforms driving measurable impact across supply chains.
+              Five projects that show how we translate complex socioenvironmental data into tools, guides, and platforms driving measurable impact across supply chains.
             </p>
           </div>
 
