@@ -140,7 +140,7 @@ const Portfolio = () => {
       image: project5Image,
       imageAlt: 'Do Pasto ao Prato app and website interface showing beef supply chain transparency indicators',
       description:
-        'Do Pasto ao Prato is a citizen science initiative, co-founded by one of Diversa\'s co-founders, alongside UCLouvain, Stockholm Environment Institute, and Global Canopy, designed to bring transparency to the beef supply chain in Brazil. By scanning product labels at the supermarket, consumers can uncover the environmental and social risks connected to the meat they buy, from deforestation and fire hotspots to labor rights and Indigenous land conflicts. Diversa worked on the development of both the mobile app and the website, translating complex traceability data into an accessible tool that empowers conscious consumption.',
+        'Do Pasto ao Prato is a citizen science initiative, co-founded by one of Diversa\'s co-founders, alongside UCLouvain, Stockholm Environment Institute, and Trase Global Canopy, designed to bring transparency to the beef supply chain in Brazil. By scanning product labels at the supermarket, consumers can uncover the environmental and social risks connected to the meat they buy, from deforestation and fire hotspots to labor rights and Indigenous land conflicts. Diversa worked on the development of both the mobile app and the website, translating complex traceability data into an accessible tool that empowers conscious consumption.',
       link: 'https://www.dopastoaoprato.com.br/',
       linkLabel: 'Visit the website',
       tags: ['Mobile App', 'Web Platform', 'Traceability', 'Beef Chain'],

@@ -138,7 +138,7 @@ const PortfolioPt = () => {
       image: project5Image,
       imageAlt: 'Interface do aplicativo e site Do Pasto ao Prato mostrando indicadores de transparência da cadeia da carne',
       description:
-        'O Do Pasto ao Prato é uma iniciativa de ciência cidadã, cofundada por um dos cofundadores da Diversa, junto com a UCLouvain, Stockholm Environment Institute e Global Canopy, criada para trazer transparência à cadeia da carne bovina no Brasil. Ao escanear os selos dos produtos no supermercado, o consumidor descobre os riscos ambientais e sociais associados à carne que compra: desmatamento, focos de incêndio, direitos trabalhistas e conflitos em terras indígenas. A Diversa trabalhou no desenvolvimento tanto do aplicativo móvel quanto do site, traduzindo dados complexos de rastreabilidade em uma ferramenta acessível que fortalece o consumo consciente.',
+        'O Do Pasto ao Prato é uma iniciativa de ciência cidadã, cofundada por um dos cofundadores da Diversa, junto com a UCLouvain, Stockholm Environment Institute e Trase Global Canopy, criada para trazer transparência à cadeia da carne bovina no Brasil. Ao escanear os selos dos produtos no supermercado, o consumidor descobre os riscos ambientais e sociais associados à carne que compra: desmatamento, focos de incêndio, direitos trabalhistas e conflitos em terras indígenas. A Diversa trabalhou no desenvolvimento tanto do aplicativo móvel quanto do site, traduzindo dados complexos de rastreabilidade em uma ferramenta acessível que fortalece o consumo consciente.',
       link: 'https://www.dopastoaoprato.com.br/',
       linkLabel: 'Acessar o site',
       tags: ['Aplicativo', 'Plataforma Web', 'Rastreabilidade', 'Cadeia da Pecuária'],
