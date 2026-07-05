@@ -7,6 +7,7 @@ import project1Image from '@/assets/portfolio/project-1-observatorio.png';
 import project2Image from '@/assets/portfolio/project-2-boi-na-linha.png';
 import project3Image from '@/assets/portfolio/project-3-devida-diligencia.png';
 import project4Image from '@/assets/portfolio/project-4-trase-silos.png';
+import project5Image from '@/assets/portfolio/project-5-do-pasto-ao-prato.png';
 
 type Project = {
   name: string;
