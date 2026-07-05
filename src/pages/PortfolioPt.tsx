@@ -133,18 +133,6 @@ const PortfolioPt = () => {
       accent: 'orange',
     },
     {
-      name: 'Boi na Linha',
-      client: 'Imaflora',
-      image: project2Image,
-      imageAlt: 'Mapa interativo do Boi na Linha mostrando a localização de frigoríficos na Amazônia brasileira',
-      description:
-        'O Boi na Linha é uma iniciativa do Imaflora voltada à transparência e ao monitoramento de boas práticas da cadeia da pecuária na Amazônia Brasileira. A Diversa liderou o desenvolvimento técnico da plataforma painel.boinalinha.org — desde a estruturação científica e engenharia de dados até design e desenvolvimento web. O resultado é um painel interativo que transforma dados geoespaciais complexos em informações acessíveis para empresas, pesquisadores e formuladores de políticas.',
-      link: 'https://painel.boinalinha.org/',
-      linkLabel: 'Abrir o painel',
-      tags: ['Geoespacial', 'Engenharia de Dados', 'Plataforma Web', 'Cadeia da Pecuária'],
-      accent: 'green',
-    },
-    {
       name: 'Do Pasto ao Prato',
       client: 'Trase e parceiros',
       image: project5Image,
@@ -154,6 +142,18 @@ const PortfolioPt = () => {
       link: 'https://www.dopastoaoprato.com.br/',
       linkLabel: 'Acessar o site',
       tags: ['Aplicativo', 'Plataforma Web', 'Rastreabilidade', 'Cadeia da Pecuária'],
+      accent: 'green',
+    },
+    {
+      name: 'Boi na Linha',
+      client: 'Imaflora',
+      image: project2Image,
+      imageAlt: 'Mapa interativo do Boi na Linha mostrando a localização de frigoríficos na Amazônia brasileira',
+      description:
+        'O Boi na Linha é uma iniciativa do Imaflora voltada à transparência e ao monitoramento de boas práticas da cadeia da pecuária na Amazônia Brasileira. A Diversa liderou o desenvolvimento técnico da plataforma painel.boinalinha.org — desde a estruturação científica e engenharia de dados até design e desenvolvimento web. O resultado é um painel interativo que transforma dados geoespaciais complexos em informações acessíveis para empresas, pesquisadores e formuladores de políticas.',
+      link: 'https://painel.boinalinha.org/',
+      linkLabel: 'Abrir o painel',
+      tags: ['Geoespacial', 'Engenharia de Dados', 'Plataforma Web', 'Cadeia da Pecuária'],
       accent: 'green',
     },
     {
