@@ -214,7 +214,7 @@ const PortfolioPt = () => {
               <span className="gradient-text">nossos clientes</span>
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl">
-              Quatro projetos que mostram como traduzimos dados socioambientais complexos em ferramentas, guias e plataformas que geram impacto mensurável em cadeias de valor.
+              Cinco projetos que mostram como traduzimos dados socioambientais complexos em ferramentas, guias e plataformas que geram impacto mensurável em cadeias de valor.
             </p>
           </div>
 
