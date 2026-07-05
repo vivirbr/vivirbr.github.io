@@ -60,6 +60,13 @@ export const PortfolioPreview = ({ language = 'en' }: PortfolioPreviewProps) => 
       accent: 'orange',
     },
     {
+      name: 'Do Pasto ao Prato',
+      client: language === 'pt' ? 'Trase e parceiros' : 'Trase & Partners',
+      image: project5Image,
+      tag: language === 'pt' ? 'App & Web' : 'App & Web',
+      accent: 'green',
+    },
+    {
       name: language === 'pt' ? 'Boi na Linha' : 'Beef on Track',
       client: 'Imaflora',
       image: project2Image,
