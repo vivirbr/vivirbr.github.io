@@ -117,6 +117,16 @@ export const Navigation = () => {
               size="sm"
               onClick={() => setIsOpen(!isOpen)}
               className="p-2"
+              aria-label={
+                isPortuguese
+                  ? isOpen
+                    ? 'Fechar menu'
+                    : 'Abrir menu'
+                  : isOpen
+                    ? 'Close menu'
+                    : 'Open menu'
+              }
+              aria-expanded={isOpen}
             >
               {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
             </Button>

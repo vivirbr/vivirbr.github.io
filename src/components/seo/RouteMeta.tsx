@@ -11,11 +11,11 @@ type RouteMetaConfig = {
 const SITE_NAME = "Diversa Consultoria Socioambiental";
 const OG_IMAGE_URL = "https://diversa-earth.lovable.app/og-image.png";
 const FALLBACK_META: RouteMetaConfig = {
-  title: "Diversa | Consultoria Socioambiental - Socioenvironmental Consultancy",
+  title: "Diversa | Socioenvironmental Consultancy",
   description:
-    "Diversa Consultoria Socioambiental. Traduzimos dados socioambientais complexos em impacto real. Soluções em dados, políticas públicas e engajamento comunitário para sustentabilidade.",
-  locale: "pt_BR",
-  url: "https://diversa.earth/",
+    "Diversa Socioenvironmental Consultancy. We translate complex socioenvironmental data into real impact — data solutions, public policy analysis, and community engagement for sustainability.",
+  locale: "en_US",
+  url: "https://www.diversa.earth/",
 };
 
 const ROUTE_META: Record<string, RouteMetaConfig> = {
@@ -25,42 +25,42 @@ const ROUTE_META: Record<string, RouteMetaConfig> = {
     description:
       "Diversa Consultoria Socioambiental. Traduzimos dados socioambientais complexos em impacto real com soluções em dados, políticas públicas e engajamento comunitário.",
     locale: "pt_BR",
-    url: "https://diversa.earth/pt",
+    url: "https://www.diversa.earth/pt",
   },
   "/portfolio": {
     title: "Portfolio | Diversa Socioenvironmental Consultancy",
     description:
       "Selected projects by Diversa: socioenvironmental observatories, beef and soy supply chain platforms, and human rights due diligence guides.",
     locale: "en_US",
-    url: "https://diversa.earth/portfolio",
+    url: "https://www.diversa.earth/portfolio",
   },
   "/pt/portfolio": {
     title: "Portfólio | Diversa Consultoria Socioambiental",
     description:
       "Projetos selecionados da Diversa: observatórios socioambientais, plataformas de cadeias da pecuária e soja e guias de devida diligência em direitos humanos.",
     locale: "pt_BR",
-    url: "https://diversa.earth/pt/portfolio",
+    url: "https://www.diversa.earth/pt/portfolio",
   },
   "/about": {
     title: "About Diversa | Socioenvironmental Consultancy",
     description:
       "Meet Diversa's multidisciplinary team and our experience turning complex sustainability data into actionable, long-term impact.",
     locale: "en_US",
-    url: "https://diversa.earth/about",
+    url: "https://www.diversa.earth/about",
   },
   "/pt/about": {
     title: "Quem Somos | Diversa Consultoria Socioambiental",
     description:
       "Conheça a equipe multidisciplinar da Diversa e nossa experiência em transformar dados complexos de sustentabilidade em impacto duradouro.",
     locale: "pt_BR",
-    url: "https://diversa.earth/pt/about",
+    url: "https://www.diversa.earth/pt/about",
   },
   "/services": {
     title: "Services | Diversa Socioenvironmental Consultancy",
     description:
-      "Conheça o portfólio de projetos da Diversa em soluções de dados, análise de políticas públicas e engajamento comunitário.",
+      "Explore Diversa's services through real client work: data platforms, AI-powered supply chain traceability, policy research, and community engagement for sustainability.",
     locale: "en_US",
-    url: "https://diversa.earth/services",
+    url: "https://www.diversa.earth/services",
   },
 };
 
