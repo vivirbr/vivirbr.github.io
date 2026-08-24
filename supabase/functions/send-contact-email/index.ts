@@ -2,10 +2,36 @@ import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 
 const RESEND_API_KEY = Deno.env.get("RESEND_API_KEY");
 
-const corsHeaders = {
-  "Access-Control-Allow-Origin": "*",
+// Only allow the contact form to be called from our own sites (no wildcard)
+const ALLOWED_ORIGINS = new Set([
+  "https://diversa.earth",
+  "https://www.diversa.earth",
+  "https://diversa-earth.lovable.app",
+  "https://id-preview--8afddf25-f18d-4ca9-9c22-fdc759388344.lovable.app",
+  "http://localhost:8080",
+  "http://localhost:5173",
+]);
+
+const baseCorsHeaders: Record<string, string> = {
   "Access-Control-Allow-Headers":
     "authorization, x-client-info, apikey, content-type, x-supabase-client-platform, x-supabase-client-platform-version, x-supabase-client-runtime, x-supabase-client-runtime-version",
+  "Access-Control-Allow-Methods": "POST, OPTIONS",
+};
+
+// Reflect the origin only when it is on the allowlist
+const getCorsHeaders = (origin: string | null): Record<string, string> => {
+  const headers: Record<string, string> = { ...baseCorsHeaders };
+  if (origin && ALLOWED_ORIGINS.has(origin)) {
+    headers["Access-Control-Allow-Origin"] = origin;
+  }
+  return headers;
+};
+
+// Browser requests must come from an allowed origin; non-browser clients
+// (no Origin header) are still rate-limited and input-validated below
+const isOriginAllowed = (origin: string | null): boolean => {
+  if (!origin) return true;
+  return ALLOWED_ORIGINS.has(origin);
 };
 
 interface ContactEmailRequest {
@@ -86,9 +112,23 @@ const checkRateLimit = (ip: string): boolean => {
 };
 
 const handler = async (req: Request): Promise<Response> => {
+  const origin = req.headers.get("origin");
+  const corsHeaders = getCorsHeaders(origin);
+
   // Handle CORS preflight requests
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders });
+  }
+
+  // Reject cross-origin browser calls from non-allowlisted sites
+  if (!isOriginAllowed(origin)) {
+    return new Response(
+      JSON.stringify({ success: false, error: "Forbidden" }),
+      {
+        status: 403,
+        headers: { "Content-Type": "application/json", ...corsHeaders },
+      }
+    );
   }
 
   try {
