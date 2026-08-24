@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://diversa.earth/sitemap.xml
+Sitemap: https://www.diversa.earth/sitemap.xml

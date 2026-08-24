@@ -4,7 +4,7 @@ import { Footer } from "@/components/ui/footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Database, FileBarChart, Users, MapPin, Calendar } from "lucide-react";
+import { Database, FileBarChart, Users, ArrowUpRight } from "lucide-react";
 
 const Services = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>("All");
@@ -13,139 +13,72 @@ const Services = () => {
 
   const projects = [
     {
-      title: "Global Climate Data Dashboard",
-      client: "International Environmental Organization",
+      title: "Socioenvironmental Observatory",
+      client: "ISPN & WWF",
       category: "Data Solutions",
       description:
-        "Developed an interactive dashboard that aggregates climate data from 50+ countries, enabling real-time monitoring of environmental indicators and policy impacts.",
-      technologies: ["Python", "D3.js", "PostgreSQL", "React"],
+        "We act as strategic facilitators of this civil society forum, responsible for governance and for the collection, organization, and intelligent processing of data that powers the Socioenvironmental Platform — an interactive system monitoring human rights violations, deforestation, and the expansion of industrial agriculture in Brazil.",
+      technologies: ["Data Platform", "Governance", "Geospatial Data", "Due Diligence"],
       outcomes: [
-        "Reduced data analysis time by 75%",
-        "Enabled evidence-based policy recommendations",
-        "Improved stakeholder engagement through visual storytelling",
+        "Interactive platform monitoring human rights violations and deforestation",
+        "Strengthened social oversight across value chains",
+        "Support for corporate due diligence processes",
       ],
-      timeline: "6 months",
-      location: "Global",
+      link: "https://www.observatoriosocioambiental.com.br",
     },
     {
-      title: "Sustainable Agriculture Policy Framework",
-      client: "Government Ministry",
-      category: "Policy Analysis",
-      description:
-        "Conducted comprehensive analysis of agricultural sustainability practices and developed policy recommendations for national implementation.",
-      technologies: ["Statistical Analysis", "GIS Mapping", "Stakeholder Interviews"],
-      outcomes: [
-        "Informed national agriculture strategy",
-        "Identified 15 key policy interventions",
-        "Projected 30% reduction in environmental impact",
-      ],
-      timeline: "8 months",
-      location: "Latin America",
-    },
-    {
-      title: "Community Water Management Platform",
-      client: "Local Water Authority",
-      category: "Data Solutions",
-      description:
-        "Built a comprehensive water resource management system that tracks usage, quality, and distribution across multiple communities.",
-      technologies: ["IoT Integration", "Mobile App", "Cloud Infrastructure"],
-      outcomes: [
-        "Improved water distribution efficiency by 40%",
-        "Reduced water waste through better monitoring",
-        "Enhanced community participation in conservation",
-      ],
-      timeline: "4 months",
-      location: "Sub-Saharan Africa",
-    },
-    {
-      title: "Stakeholder Alignment Workshop Series",
-      client: "International Development NGO",
+      title: "Do Pasto ao Prato",
+      client: "Trase & Stockholm Environment Institute",
       category: "Community Engagement",
       description:
-        "Facilitated multi-stakeholder workshops to align diverse groups around shared sustainability goals and develop collaborative action plans.",
-      technologies: ["Workshop Facilitation", "Conflict Resolution", "Action Planning"],
+        "A citizen science initiative bringing transparency to the Brazilian beef supply chain. By scanning product labels at the supermarket, consumers uncover the environmental and social risks connected to the meat they buy. Diversa developed both the mobile app and the website, translating complex traceability data into an accessible tool.",
+      technologies: ["Mobile App", "Web Platform", "Traceability", "Citizen Science"],
       outcomes: [
-        "Achieved consensus among 12 diverse stakeholder groups",
-        "Developed unified sustainability action plan",
-        "Established ongoing collaboration framework",
+        "Consumers can scan labels to uncover environmental and social risks",
+        "Complex traceability data translated into an accessible tool",
+        "Empowers conscious consumption in the beef chain",
       ],
-      timeline: "3 months",
-      location: "Southeast Asia",
+      link: "https://www.dopastoaoprato.com.br/",
     },
     {
-      title: "Biodiversity Conservation Database",
-      client: "Research Institute",
+      title: "Beef on Track",
+      client: "Imaflora",
       category: "Data Solutions",
       description:
-        "Designed and implemented a comprehensive database system for tracking biodiversity metrics across protected areas and conservation sites.",
-      technologies: ["PostgreSQL", "R", "ArcGIS", "Python"],
+        "Beef on Track is an Imaflora initiative focused on transparency and good practices in the cattle ranching chain in the Brazilian Amazon. Diversa led the technical development of painel.boinalinha.org — from scientific structuring and data engineering to design and web development.",
+      technologies: ["Geospatial", "Data Engineering", "Web Platform", "Cattle Chain"],
       outcomes: [
-        "Centralized data from 25 conservation sites",
-        "Enabled predictive modeling for species protection",
-        "Improved research collaboration and data sharing",
+        "Interactive dashboard for monitoring the cattle chain in the Brazilian Amazon",
+        "Complex geospatial data made accessible to companies, researchers, and policymakers",
       ],
-      timeline: "5 months",
-      location: "Global",
+      link: "https://painel.boinalinha.org/",
     },
     {
-      title: "Corporate Sustainability Reporting Toolkit",
-      client: "Fortune 500 Company",
+      title: "Human Rights Due Diligence for Commodity Chains",
+      client: "WWF",
       category: "Policy Analysis",
       description:
-        "Developed comprehensive toolkit and guidelines for ESG reporting alignment with international sustainability standards.",
-      technologies: ["ESG Frameworks", "Data Visualization", "Compliance Mapping"],
+        "In collaboration with WWF-Brazil, we developed an essential technical guide on Human Rights Due Diligence (HRDD) for companies operating in commodity chains in Brazil, highlighting the urgency of protecting vulnerable biomes like the Cerrado.",
+      technologies: ["Policy Research", "Human Rights", "Public Data Mapping"],
       outcomes: [
-        "Streamlined reporting process by 60%",
-        "Achieved alignment with GRI and SASB standards",
-        "Improved stakeholder transparency and trust",
+        "Detailed mapping of Brazilian public data on agrarian issues, rural conflicts, and labor rights",
+        "Practical guidance for private-sector accountability on human rights impacts",
       ],
-      timeline: "7 months",
-      location: "North America",
+      link: "https://wwfbrnew.awsassets.panda.org/downloads/devida-diligencia-em-direitos-humanos-para-cadeias-de-commodities.pdf",
     },
     {
-      title: "Indigenous Community Media Campaign",
-      client: "Conservation Partnership",
-      category: "Community Engagement",
-      description:
-        "Created culturally-sensitive media content and advocacy materials to amplify indigenous voices in forest conservation efforts.",
-      technologies: ["Content Creation", "Social Media Strategy", "Cultural Consultation"],
-      outcomes: [
-        "Reached 2M+ people with conservation message",
-        "Strengthened indigenous land rights advocacy",
-        "Built lasting community partnerships",
-      ],
-      timeline: "5 months",
-      location: "Amazon Region",
-    },
-    {
-      title: "Urban Air Quality Monitoring System",
-      client: "City Government",
+      title: "Soy Silo Detection with AI",
+      client: "Trase & Global Canopy",
       category: "Data Solutions",
       description:
-        "Implemented IoT sensor network and data platform for real-time urban air quality monitoring and public health alerts.",
-      technologies: ["IoT Sensors", "Real-time Analytics", "Public Dashboard"],
+        "We supported Trase in using Artificial Intelligence and advanced geospatial models to close the traceability gap in Brazil's soy supply chain, through automated workflows analyzing high-resolution satellite imagery.",
+      technologies: ["AI / Machine Learning", "Satellite Imagery", "Traceability"],
       outcomes: [
-        "Deployed 50+ monitoring stations",
-        "Provided real-time data to 500K+ residents",
-        "Informed targeted pollution reduction policies",
+        "Expanded the known universe of soy facilities to over 9,300 units",
+        "Detected hundreds of silos in remote areas missing from official records",
+        "Enabled governments and companies to identify indirect deforestation risks",
       ],
-      timeline: "9 months",
-      location: "Asia",
-    },
-    {
-      title: "Climate Adaptation Policy Brief Series",
-      client: "Regional Government Alliance",
-      category: "Policy Analysis",
-      description:
-        "Produced evidence-based policy briefs on climate adaptation strategies tailored to regional vulnerabilities and capacities.",
-      technologies: ["Climate Modeling", "Economic Analysis", "Policy Research"],
-      outcomes: [
-        "Published 8 comprehensive policy briefs",
-        "Influenced regional climate action plans",
-        "Facilitated inter-governmental coordination",
-      ],
-      timeline: "6 months",
-      location: "Caribbean",
+      link: "https://trase.earth/insights/trase-uses-ai-to-close-the-traceability-gap-in-the-soy-supply-chain",
     },
   ];
 
@@ -187,11 +120,11 @@ const Services = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-heading font-semibold text-foreground mb-6">
-              Our <span className="text-primary">Portfolio</span>
+              Our <span className="text-primary">Services</span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Explore our portfolio of successful projects that demonstrate our commitment to transforming complex
-              sustainability data into actionable solutions.
+              Data solutions, policy analysis, and community engagement — see how our services come to life in real
+              projects delivered with our clients.
             </p>
           </div>
         </div>
@@ -200,6 +133,10 @@ const Services = () => {
       {/* Filter and Projects Section */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-heading font-semibold text-foreground text-center mb-10">
+            Selected <span className="gradient-text">case studies</span>
+          </h2>
+
           {/* Category Filter */}
           <div className="flex flex-wrap gap-3 justify-center mb-12">
             {categories.map((category) => {
@@ -275,15 +212,16 @@ const Services = () => {
                         </ul>
                       </div>
 
-                      <div className="flex items-center justify-between text-sm text-muted-foreground pt-4 border-t border-border">
-                        <div className="flex items-center">
-                          <Calendar className="h-4 w-4 mr-1" />
-                          {project.timeline}
-                        </div>
-                        <div className="flex items-center">
-                          <MapPin className="h-4 w-4 mr-1" />
-                          {project.location}
-                        </div>
+                      <div className="pt-4 border-t border-border">
+                        <a
+                          href={project.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1 text-sm font-medium text-primary hover:underline"
+                        >
+                          Learn more about this project
+                          <ArrowUpRight className="h-4 w-4" />
+                        </a>
                       </div>
                     </div>
                   </CardContent>
@@ -299,9 +237,9 @@ const Services = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Card className="border-primary/20 bg-gradient-to-r from-primary/5 to-secondary/5">
             <CardContent className="p-8 md:p-12 text-center">
-              <h3 className="text-2xl md:text-3xl font-heading font-semibold text-foreground mb-6">
+              <h2 className="text-2xl md:text-3xl font-heading font-semibold text-foreground mb-6">
                 Ready to Start Your Project?
-              </h3>
+              </h2>
               <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto mb-8">
                 Every successful project starts with understanding your unique challenges and objectives. Let's discuss
                 how we can help transform your sustainability data into actionable solutions.
@@ -312,13 +250,13 @@ const Services = () => {
                     Get in touch
                   </Button>
                 </a>
-                <a href="/#services" className="inline-block">
+                <a href="/portfolio" className="inline-block">
                   <Button
                     size="lg"
                     variant="outline"
                     className="border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-smooth"
                   >
-                    View Our Services
+                    View Our Portfolio
                   </Button>
                 </a>
               </div>

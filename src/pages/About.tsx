@@ -93,6 +93,9 @@ const About = () => {
       {/* Team */}
       <section className="py-14">
         <div ref={elementRef} className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-heading font-semibold text-foreground text-center mb-10">
+            Meet our <span className="gradient-text">team</span>
+          </h2>
           <div className="grid md:grid-cols-2 gap-8">
             {team.map((member, index) => (
               <Card
