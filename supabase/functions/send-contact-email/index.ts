@@ -112,9 +112,23 @@ const checkRateLimit = (ip: string): boolean => {
 };
 
 const handler = async (req: Request): Promise<Response> => {
+  const origin = req.headers.get("origin");
+  const corsHeaders = getCorsHeaders(origin);
+
   // Handle CORS preflight requests
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders });
+  }
+
+  // Reject cross-origin browser calls from non-allowlisted sites
+  if (!isOriginAllowed(origin)) {
+    return new Response(
+      JSON.stringify({ success: false, error: "Forbidden" }),
+      {
+        status: 403,
+        headers: { "Content-Type": "application/json", ...corsHeaders },
+      }
+    );
   }
 
   try {
