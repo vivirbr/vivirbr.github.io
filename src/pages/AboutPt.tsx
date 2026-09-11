@@ -9,6 +9,8 @@ import marianaPhoto from '@/assets/team/mariana-oliveira.png';
 import felipePhoto from '@/assets/team/felipe-lenti.png';
 import andreaPhoto from '@/assets/team/andrea-garcia.png';
 import guilhermePhoto from '@/assets/team/guilherme-antunes-carvalhosa.jpg';
+import isabelPhoto from '@/assets/team/isabel-mesquita.jpg';
+import filippoPhoto from '@/assets/team/filippo-balboni.webp';
 
 const AboutPt = () => {
   const { elementRef, isVisible } = useScrollReveal();
