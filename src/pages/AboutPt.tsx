@@ -65,6 +65,20 @@ const AboutPt = () => {
       description:
         'Geógrafo com mais de dez anos de experiência em consultoria socioambiental e pesquisas de campo, desde a coleta à síntese de dados estratégicos, e Internacionalista em formação. Expertise com atuação em projetos de relações institucionais e educação ambiental em comunidades tradicionais, incluindo assentados, ribeirinhos, indígenas e quilombolas. Experiência na interlocução com produtores rurais, análise de cadeias produtivas, mitigação de impactos ambientais e promoção da sustentabilidade no agronegócio em biomas sensíveis, como a Amazônia e o Cerrado.',
     },
+    {
+      name: 'Isabel Mesquita',
+      role: 'Especialista em Povos Indígenas e Facilitação',
+      photo: isabelPhoto,
+      description:
+        'Cientista social com atuação voltada ao fortalecimento da governança florestal liderada por indígenas e comunidades com 15 anos de experiência atuando com povos indígenas e organizações ambientais na Amazônia e em fóruns internacionais de políticas públicas. Planejou e facilitou mais de 50 atividades presenciais, virtuais e híbridas (cursos, oficinas e reuniões) com representantes indígenas e outros atores nos níveis local, nacional e internacional, sempre com foco na participação equitativa e inclusiva.',
+    },
+    {
+      name: 'Filippo Balboni',
+      role: 'Especialista em Economia da Sociobiodiversidade',
+      photo: filippoPhoto,
+      description:
+        'Economista com 10 anos de experiência interdisciplinar em gestão de projetos nas áreas de tecnologia, meio ambiente, comunicação, marketing e análise de dados. Liderança no desenvolvimento de soluções de software para diferentes indústrias, desde a definição de necessidades e prioridades até a implementação com equipes técnicas. Desenvolve também pesquisas de campo e facilita dinâmicas participativas de análise e estimativa de custos junto a povos indígenas, comunidades tradicionais e cooperativas da sociobioeconomia.',
+    },
   ];
 
   return (

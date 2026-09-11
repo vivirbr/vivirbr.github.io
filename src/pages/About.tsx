@@ -65,6 +65,20 @@ const About = () => {
       description:
         'Geographer with over ten years of experience in socio-environmental consulting and field research, ranging from data collection to the synthesis of strategic data, and International Relations professional in training. Expertise includes institutional relations projects, environmental education with traditional communities — including land reform settlers, riverside dwellers, indigenous peoples, and quilombolas. Experience with direct engagement with rural producers, supply chain analysis, mitigation of environmental impacts, and the promotion of agribusiness sustainability within sensitive biomes such as the Amazon and the Cerrado.',
     },
+    {
+      name: 'Isabel Mesquita',
+      role: 'Indigenous Peoples and Mediation Specialist',
+      photo: isabelPhoto,
+      description:
+        'Social scientist focused on strengthening indigenous- and community-led forest governance, with 15 years of experience working with indigenous peoples and environmental organizations in the Amazon and in international public policy forums. She has planned and facilitated more than 50 in-person, virtual, and hybrid activities (courses, workshops, and meetings) with indigenous representatives and other actors at the local, national, and international levels, always with a focus on equitable and inclusive participation.',
+    },
+    {
+      name: 'Filippo Balboni',
+      role: 'Sociobiodiversity Economy Specialist',
+      photo: filippoPhoto,
+      description:
+        'Economist with 10 years of interdisciplinary experience in project management across technology, environment, communications, marketing, and data analysis. He has led the development of software solutions for different industries, from defining needs and priorities to implementation with technical teams. He also conducts field research and facilitates participatory cost analysis and estimation dynamics with indigenous peoples, traditional communities, and sociobioeconomy cooperatives.',
+    },
   ];
 
   return (
