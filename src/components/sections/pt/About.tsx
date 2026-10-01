@@ -46,9 +46,9 @@ export const AboutPt = () => {
               Quem Somos
             </span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-6">Conectando dados e ação</h2>
+          <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-6">Evidência, território e estratégia</h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Construímos soluções de dados customizadas e aproveitamos nossa experiência internacional e de campo para produzir relatórios estratégicos e policy briefs. Também nos especializamos em engajamento comunitário e advocacy para construir alinhamento entre stakeholders.
+            A Diversa é um coletivo de especialistas seniores que atua na interseção entre dados, políticas públicas e prática socioambiental. Combinamos tecnologia, pesquisa aplicada e diálogo com atores locais para transformar evidências em decisões, ferramentas e resultados no território.
           </p>
         </div>
 
