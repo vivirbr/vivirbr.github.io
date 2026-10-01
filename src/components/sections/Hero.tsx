@@ -40,15 +40,15 @@ export const Hero = () => {
 
           {/* Heading */}
           <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-heading font-semibold text-foreground leading-[1.05] animate-fade-up animation-delay-100">
-            Translating complex{' '}
-            <span className="gradient-text">sustainability data</span>{' '}
-            into actionable change
+            We translate complex data into{' '}
+            <span className="gradient-text">socioenvironmental impact</span>
           </h1>
 
           {/* Subtitle */}
           <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-2xl mx-auto animate-fade-up animation-delay-200">
-            We combine analytical integrity with on-the-ground 
-            experience and respect for diverse perspectives to create meaningful, lasting change.
+            We combine analytical rigor, fieldwork experience, and dialogue across
+            diverse perspectives to turn complex information into practical, strategic
+            pathways for organizations, governments, and socioenvironmental initiatives.
           </p>
 
           {/* CTA Buttons */}
