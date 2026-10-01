@@ -13,7 +13,7 @@ const OG_IMAGE_URL = "https://diversa-earth.lovable.app/og-image.png";
 const FALLBACK_META: RouteMetaConfig = {
   title: "Diversa | Socioenvironmental Consultancy",
   description:
-    "Diversa Socioenvironmental Consultancy. We translate complex socioenvironmental data into real impact — data solutions, public policy analysis, and community engagement for sustainability.",
+    "Diversa Socioenvironmental Consultancy. We translate complex data into socioenvironmental impact — data and technology, policy and strategy, and engagement with the territory.",
   locale: "en_US",
   url: "https://www.diversa.earth/",
 };
@@ -23,7 +23,7 @@ const ROUTE_META: Record<string, RouteMetaConfig> = {
   "/pt": {
     title: "Diversa | Consultoria Socioambiental",
     description:
-      "Diversa Consultoria Socioambiental. Traduzimos dados socioambientais complexos em impacto real com soluções em dados, políticas públicas e engajamento comunitário.",
+      "Diversa Consultoria Socioambiental. Traduzimos dados complexos em impacto socioambiental — dados e tecnologia, políticas e estratégia, e engajamento com o território.",
     locale: "pt_BR",
     url: "https://www.diversa.earth/pt",
   },
