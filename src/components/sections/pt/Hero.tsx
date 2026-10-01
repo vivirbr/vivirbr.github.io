@@ -37,14 +37,14 @@ export const HeroPt = () => {
           </div>
 
           <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-heading font-semibold text-foreground leading-[1.05] animate-fade-up animation-delay-100">
-            Traduzindo{' '}
-            <span className="gradient-text">dados socioambientais complexos</span>{' '}
-            em impacto
+            Traduzimos dados complexos em{' '}
+            <span className="gradient-text">impacto socioambiental</span>
           </h1>
 
           <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-2xl mx-auto animate-fade-up animation-delay-200">
-            Combinamos integridade analítica com experiência de campo e 
-            respeito por perspectivas diversas para criar mudanças significativas e duradouras.
+            Unimos rigor analítico, experiência de campo e diálogo com perspectivas
+            diversas para transformar informações complexas em caminhos práticos e
+            estratégicos para organizações, governos e iniciativas socioambientais.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-up animation-delay-300">

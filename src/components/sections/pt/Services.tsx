@@ -7,22 +7,22 @@ export const ServicesPt = () => {
   const services = [
     {
       icon: Database,
-      title: "Soluções de dados",
-      description: "Serviços abrangentes de dados que transformam informação em insights acionáveis",
+      title: "Dados e tecnologia",
+      description: "Metodologias, bancos de dados, dashboards, aplicativos e plataformas que transformam informação bruta em inteligência para decisão",
       features: ["Metodologias", "Bancos de dados", "Dashboards", "Kits de ferramentas", "Aplicativos e plataformas"],
       color: "orange",
     },
     {
       icon: FileBarChart,
-      title: "Análise de políticas",
-      description: "Pesquisa e análise baseada em evidências para tomada de decisões informadas",
+      title: "Políticas e estratégia",
+      description: "Pesquisa e análise baseadas em evidências que orientam estratégias para cadeias de valor, territórios e políticas públicas e privadas",
       features: ["Relatórios", "Diretrizes", "Policy briefs", "White papers", "Artigos"],
       color: "green",
     },
     {
       icon: Users,
-      title: "Engajamento comunitário",
-      description: "Construindo pontes entre stakeholders para impacto sustentável",
+      title: "Engajamento e território",
+      description: "Facilitação, campanhas e alinhamento entre múltiplos atores que conectam evidências à ação no território",
       features: ["Cartas para formuladores de políticas", "Facilitação de workshops", "Conteúdo de mídia", "Construção de alinhamento"],
       color: "primary",
     },
@@ -43,7 +43,7 @@ export const ServicesPt = () => {
           </div>
           <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-6">Nossos serviços</h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Soluções abrangentes que fazem a ponte entre dados socioambientais complexos e impacto no chão.
+            Três pilares conectados — dados e tecnologia, políticas e estratégia, e engajamento com o território — que fazem a ponte entre dados socioambientais complexos e a ação no chão.
           </p>
         </div>
 

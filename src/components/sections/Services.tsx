@@ -7,22 +7,22 @@ export const Services = () => {
   const services = [
     {
       icon: Database,
-      title: "Data solutions",
-      description: "Comprehensive data services that transform information into actionable insights",
+      title: "Data & technology",
+      description: "Methodologies, databases, dashboards, apps, and platforms that turn raw information into decision-ready intelligence",
       features: ["Methodologies", "Databases", "Dashboards", "Toolkits", "Apps and platforms"],
       color: "orange",
     },
     {
       icon: FileBarChart,
-      title: "Policy analysis",
-      description: "Evidence-based research and analysis for informed decision-making",
+      title: "Policy & strategy",
+      description: "Evidence-based research and analysis that guides strategy for value chains, territories, and public and private policy",
       features: ["Reports", "Guidelines", "Policy briefs", "White papers", "Articles"],
       color: "green",
     },
     {
       icon: Users,
-      title: "Community engagement",
-      description: "Building bridges between stakeholders for sustainable impact",
+      title: "Engagement & territory",
+      description: "Facilitation, campaigns, and multi-stakeholder alignment that connect evidence to action on the ground",
       features: ["Letters to policy makers", "Workshop facilitation", "Media content", "Alignment building"],
       color: "primary",
     },
@@ -43,8 +43,8 @@ export const Services = () => {
           </div>
           <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-6">Our services</h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Comprehensive solutions that bridge the gap between complex social and sustainability data and meaningful
-            action on the ground.
+            Three connected pillars — data and technology, policy and strategy, and engagement with the territory —
+            that bridge the gap between complex socioenvironmental data and action on the ground.
           </p>
         </div>
 

@@ -46,11 +46,11 @@ export const About = () => {
               Who We Are
             </span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-6">Bridging data and action</h2>
+          <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-6">Evidence, territory, and strategy</h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            We build custom data solutions and leverage our international and fieldwork expertise to produce strategic
-            reports and policy briefs. We also specialize in community engagement and advocacy to build stakeholder
-            alignment.
+            Diversa is a collective of senior specialists working at the intersection of data, public policy, and
+            socioenvironmental practice. We combine technology, applied research, and engagement with local actors to
+            turn evidence into decisions, tools, and results on the ground.
           </p>
         </div>
 
