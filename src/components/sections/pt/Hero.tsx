@@ -29,12 +29,6 @@ export const HeroPt = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10 w-full">
         <div className="max-w-4xl mx-auto text-center space-y-10">
-          <div className="animate-fade-up">
-            <span className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary/8 border border-primary/15 text-primary rounded-full text-sm font-semibold backdrop-blur-sm">
-              <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-              Especialistas em soluções socioambientais
-            </span>
-          </div>
 
           <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-heading font-semibold text-foreground leading-[1.05] animate-fade-up animation-delay-100">
             Traduzimos dados complexos em{' '}
