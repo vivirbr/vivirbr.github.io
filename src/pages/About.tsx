@@ -6,7 +6,6 @@ import vivianPhoto from '@/assets/team/gabriela-russo-lopes.jpg';
 import gabrielaPhoto from '@/assets/team/vivian-ribeiro.jpg';
 import waynerPhoto from '@/assets/team/wayner-maia.jpg';
 import marianaPhoto from '@/assets/team/mariana-oliveira.png';
-import felipePhoto from '@/assets/team/felipe-lenti.png';
 import andreaPhoto from '@/assets/team/andrea-garcia.png';
 import guilhermePhoto from '@/assets/team/guilherme-antunes-carvalhosa.jpg';
 import isabelPhoto from '@/assets/team/isabel-mesquita.jpg';
@@ -43,13 +42,6 @@ const About = () => {
       photo: andreaPhoto,
       description:
         'Andrea has over a decade of experience turning complex agricultural and environmental data into actionable tools to boost sustainability and nature-based solutions. She comfortably navigates institutional boundaries and cross-functional teams.',
-    },
-    {
-      name: 'Felipe Lenti',
-      role: 'Senior Data Scientist',
-      photo: felipePhoto,
-      description:
-        'Felipe integrates ecological science with scalable tools for territorial and environmental intelligence to advance climate change mitigation and sustainability agendas. His expertise spans field research, innovation-oriented spatial analysis, and academic production.',
     },
     {
       name: 'Mariana Oliveira',
