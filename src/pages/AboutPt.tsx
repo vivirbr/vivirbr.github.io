@@ -6,7 +6,6 @@ import vivianPhoto from '@/assets/team/gabriela-russo-lopes.jpg';
 import gabrielaPhoto from '@/assets/team/vivian-ribeiro.jpg';
 import waynerPhoto from '@/assets/team/wayner-maia.jpg';
 import marianaPhoto from '@/assets/team/mariana-oliveira.png';
-import felipePhoto from '@/assets/team/felipe-lenti.png';
 import andreaPhoto from '@/assets/team/andrea-garcia.png';
 import guilhermePhoto from '@/assets/team/guilherme-antunes-carvalhosa.jpg';
 import isabelPhoto from '@/assets/team/isabel-mesquita.jpg';
@@ -43,13 +42,6 @@ const AboutPt = () => {
       photo: andreaPhoto,
       description:
         'Andrea possui mais de uma década de experiência transformando dados agrícolas e ambientais complexos em ferramentas acionáveis para impulsionar a sustentabilidade e soluções baseadas na natureza. Ela transita com naturalidade entre fronteiras institucionais e equipes multifuncionais.',
-    },
-    {
-      name: 'Felipe Lenti',
-      role: 'Cientista de Dados Sênior',
-      photo: felipePhoto,
-      description:
-        'Felipe integra ciência ecológica com ferramentas escaláveis para inteligência territorial e ambiental, avançando agendas de mitigação às mudanças climáticas e sustentabilidade. Sua expertise abrange pesquisa de campo, análise espacial orientada à inovação e produção acadêmica.',
     },
     {
       name: 'Mariana Oliveira',
